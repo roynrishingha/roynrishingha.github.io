@@ -125,7 +125,7 @@
     <meta name="theme-color" content="#00DCDC" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
     />
     <link
       rel="stylesheet"
@@ -134,7 +134,193 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"
+    ></script>
     <link rel="stylesheet" href="/assets/css/root.css" />
     <title>Rust Software Engineer | Open Source Contributor</title>
   </head>
+  <body>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/gtag/js?id=G-Y2WC626ZNY"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+    <nav class="hide-on-small-only">
+      <ul class="side-nav fixed section table-of-contents">
+        <li class="logo">
+          <a
+            id="logo-container"
+            aria-label="Navigate to the beginning of the page"
+            href="#intro"
+            class="brand-logo grey-blue-text"
+          >
+            <img
+              src="/assets/img/roy/profile.png"
+              class="circle img-responsive profile-pic"
+              alt="avatar"
+            />
+          </a>
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the About section"
+            href="#about"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-social-person small"></i><span>About</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Skills section"
+            href="#skills"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-action-assessment small"></i><span>Skills</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Experience section"
+            href="#experience"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-action-trending-up small"></i
+            ><span>Experience</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Projects section"
+            href="#projects"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-av-my-library-books small"></i
+            ><span>Projects</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Contact section"
+            href="#contact"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-content-mail small"></i><span>Contact</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Open royrustdev's resume in a new tab"
+            href="https://royrustdev.com/assets/resume/royrustdev_resume.pdf"
+            target="_blank"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-file-folder-open small"></i><span>Resume</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <nav class="hide-on-large only trigger z-depth-1">
+      <a
+        aria-label="Toggle visibility of the mobile navbar"
+        href="#"
+        data-activates="slide-out"
+        class="button-collapse"
+        ><i class="mdi-navigation-menu"></i
+      ></a>
+      <div class="name-title">
+        <a
+          id="name"
+          aria-label="Navigate to the beginning of the page"
+          href="#"
+          class="teal-text"
+          >Nrishinghananda Roy</a
+        ><span class="black-text"
+          >Rust Software Engineer | Open Source Contributor</span
+        >
+      </div>
+    </nav>
+    <nav class="hide-on-large only">
+      <ul id="slide-out" class="side-nav">
+        <li class="bold">
+          <a
+            aria-label="Navigate to the About section"
+            href="#about"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-social-person small"></i><span>About</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Skills section"
+            href="#skills"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-action-assessment small"></i><span>Skills</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Experience section"
+            href="#experience"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-action-trending-up small"></i
+            ><span>Experience</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Projects section"
+            href="#projects"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-av-my-library-books small"></i
+            ><span>Projects</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Navigate to the Contact section"
+            href="#contact"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-content-mail small"></i><span>Contact</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Open Varad's Resume in a new tab"
+            href="https://royrustdev.com/assets/resume/royrustdev_resume.pdf"
+            target="_blank"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-file-folder-open small"></i><span>Resume</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- scripts -->
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script type="text/javascript">
+      var typed = new Typed(".typing", {
+        strings: ["Rust Software Engineer", "Open Source Contributor"],
+        loop: true,
+        typeSpeed: 80,
+        backSpeed: 40,
+      });
+    </script>
+    <script>
+      // Materialize - Initializers
+      $(document).ready(function () {
+        $(".scrollspy").scrollSpy();
+        // Initialize collapse button
+        $(".button-collapse").sideNav({
+          menuWidth: 190, // Default is 240
+          edge: "left", // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        });
+      });
+    </script>
+  </body>
 </html>
