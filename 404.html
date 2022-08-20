@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#00DCDC" />
+    <title>Redirecting</title>
+  </head>
+  <style>
+    .container--error {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container--error--img {
+      width: 50%;
+      height: 50%;
+    }
+  </style>
+  <body onload="redirect()">
+    <div class="container--error">
+      <img
+        src="/assets/img/error.jpg"
+        alt="Image not loaded"
+        class="container--error--img"
+      />
+    </div>
+    <script>
+      function redirect() {
+        setTimeout(function () {
+          window.location.replace("/");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
