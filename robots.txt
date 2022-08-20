@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: royrustdev.com/sitemap.xml
