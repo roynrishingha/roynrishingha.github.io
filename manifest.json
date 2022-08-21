@@ -1,5 +1,11 @@
 {
   "name": "royrustdev",
+  "short_name": "royrustdev",
+  "start_url": "index.html",
+  "theme_color": "#00DCDC",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "/assets/favicon/android-icon-36x36.png",
@@ -37,8 +43,5 @@
       "type": "image/png",
       "density": "4.0"
     }
-  ],
-  "theme_color": "#00DCDC",
-  "background_color": "#00DCDC",
-  "display": "standalone"
+  ]
 }
