@@ -123,10 +123,13 @@
       content="/assets/favicon/ms-icon-144x144.png"
     />
     <meta name="theme-color" content="#00DCDC" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
     />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script defer src="https://kit.fontawesome.com/6bad5663aa.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css"
@@ -134,7 +137,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script defer src="https://kit.fontawesome.com/6bad5663aa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/root.css" />
     <title>Rust Software Engineer | Open Source Contributor</title>
   </head>
@@ -690,8 +692,6 @@
     <footer id="footer">
       <p>Made with ❤️ by Nrishinghananda Roy aka royrustdev</p>
     </footer>
-
-      <!-- typed.js -->
     <script src="assets/vendor/typed.js/typed.min.js"></script>
     <script type="text/javascript">
       var typed = new Typed('.typing',{
@@ -701,19 +701,11 @@
         backSpeed: 40
       });
     </script>
-
-    <!-- jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-    <!-- Materialize - Compiled and minified JavaScript-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
     <script>
-      // Materialize - Initializers
       $(document).ready(function () {
         $(".scrollspy").scrollSpy()
-        // Initialize collapse button
         $(".button-collapse").sideNav({
-          menuWidth: 190, // Default is 240
+          menuWidth: 210, // Default is 240
           edge: "left", // Choose the horizontal origin
           closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
         })
