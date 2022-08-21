@@ -4,11 +4,9 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.royrustdev {
+.royrustdev-logo {
   max-width: 200px;
   max-height: 200px;
-  border-radius: 50%;
-  border: 6px solid #00DCDC;
 }
 
 .profile-pic {
