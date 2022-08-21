@@ -1,3 +1,8 @@
+#royrustdev {
+  max-width: 240px;
+  max-height: 240px;
+}
+
 .profile-pic {
   position: relative;
   max-width:130px;
