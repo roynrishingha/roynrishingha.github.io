@@ -1,6 +1,14 @@
-#royrustdev {
-  max-width: 240px;
-  max-height: 240px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.royrustdev {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  border: 6px solid #00DCDC;
 }
 
 .profile-pic {
@@ -32,8 +40,6 @@
   bottom: 0; 
   right: 0;
 }
-
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 .social {
   margin: 0 auto;
   width: auto;
@@ -301,17 +307,10 @@ h3 {
   height: 100vh;
 }
 
-/* Original */
-
 #intro.section {
   background: url(/assets/img/ai-wallpaper.jpg) no-repeat top center/cover;
   position: relative;
 }
-
-/* #intro.section {
-  background: url(/assets/img/brain-network.png) no-repeat top center/cover;
-  position: relative;
-} */
 
 #intro.section .container {
   color: white;
@@ -520,6 +519,10 @@ a.hoverline:hover {
   text-align: center;
 }
 
+#footer {
+  text-align: center;
+}
+
 .fa-external-link:before {
   left: 3px;
   position: relative;
@@ -635,10 +638,6 @@ small {
     right: initial;
     top: initial;
   }
-}
-
-#footer {
-  text-align: center;
 }
 
 @media (max-width: 600px) {
