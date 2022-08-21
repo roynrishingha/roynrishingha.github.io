@@ -9,37 +9,37 @@
   "icons": [
     {
       "src": "/assets/favicon/android-icon-36x36.png",
-      "sizes": "36x36",
+      "sizes": "29x36",
       "type": "image/png",
       "density": "0.75"
     },
     {
       "src": "/assets/favicon/android-icon-48x48.png",
-      "sizes": "48x48",
+      "sizes": "38x48",
       "type": "image/png",
       "density": "1.0"
     },
     {
       "src": "/assets/favicon/android-icon-72x72.png",
-      "sizes": "72x72",
+      "sizes": "58x72",
       "type": "image/png",
       "density": "1.5"
     },
     {
       "src": "/assets/favicon/android-icon-96x96.png",
-      "sizes": "96x96",
+      "sizes": "77x96",
       "type": "image/png",
       "density": "2.0"
     },
     {
       "src": "/assets/favicon/android-icon-144x144.png",
-      "sizes": "144x144",
+      "sizes": "115x144",
       "type": "image/png",
       "density": "3.0"
     },
     {
       "src": "/assets/favicon/android-icon-192x192.png",
-      "sizes": "192x192",
+      "sizes": "154x192",
       "type": "image/png",
       "density": "4.0"
     }
