@@ -1,1 +1,1 @@
-![image](/assets/img/ai-wallpaper.jpg)
+![image](/assets/img/background/ai-wallpaper.jpg)
