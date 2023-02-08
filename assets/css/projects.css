@@ -13,13 +13,14 @@ em {
     height: -moz-fit-content;
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .card {
     display: inline-flex;
     flex-direction: column;
     color: #1D263B;
+    margin-bottom: 10px;
 }
 
 .card:not(:last-child) {
