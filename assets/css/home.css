@@ -138,21 +138,27 @@ h3 a:hover {
     .big-title {
         font-size: 3.5em;
     }
+
     .short-bio {
         max-width: 90%;
     }
+
     .art-me {
         display: block;
     }
+
     #home {
         flex-direction: row;
     }
+
     .landing-page-socials ul {
         flex-direction: column;
     }
+
     .landing-page-socials ul li a i {
         margin: 5px 0;
     }
+
     .email-container {
         margin: 0;
     }

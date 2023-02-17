@@ -13,7 +13,9 @@ body {
     background-color: #1D263B;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Fira Mono', monospace;
 }
 
@@ -32,7 +34,8 @@ h3 {
     letter-spacing: 0.1em;
 }
 
-a, span {
+a,
+span {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -52,6 +55,7 @@ a, span {
     font-weight: inherit;
     color: #fd1c7a;
 }
+
 
 ul {
     list-style-type: none;
@@ -89,6 +93,24 @@ section .hyperlink {
 }
 
 section .hyperlink:hover {
+    color: #33ed98;
+}
+
+.section-intro {
+    text-align: left;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+}
+
+.section-intro-article p {
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    /* color: #33ed98; */
+}
+
+.custom-section-title {
+    text-align: center;
     color: #33ed98;
 }
 
@@ -143,6 +165,7 @@ section .hyperlink:hover {
     h2 {
         font-size: 2.5em;
     }
+
     h3 {
         font-size: 2em;
     }

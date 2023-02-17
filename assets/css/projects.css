@@ -13,7 +13,6 @@ em {
     height: -moz-fit-content;
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .card {
@@ -107,7 +106,7 @@ em {
 
 @media only screen and (min-width: 768px) {
     .project-cards-container {
-        column-count: 2;
-        column-gap: 2em;
+        gap: 2em;
+        grid-template-columns: 1fr 1fr;
     }
 }
