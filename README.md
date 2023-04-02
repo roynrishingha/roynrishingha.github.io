@@ -1,1 +1,1 @@
-![image](/assets/img/background/ai-wallpaper.jpg)
+# Personal website

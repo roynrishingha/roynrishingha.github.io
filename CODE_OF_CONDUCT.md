@@ -4,7 +4,7 @@ The original version of this document [can be found online](https://www.rust-lan
 
 ## Conduct
 
-**Contact**: [royrustdev@gmail.com](mailto:royrustdev@gmail.com)
+**Contact**: [roynrishingha@gmail.com](mailto:roynrishingha@gmail.com)
 
 * We are committed to providing a friendly, safe and welcoming environment for all, regardless of level of experience,
   gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age,
