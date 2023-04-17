@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#fd1c7a" />
-    <title>Redirecting</title>
-  </head>
-  <style>
-    .container--error {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5TNMPCQ');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fd1c7a" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icons/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/icons/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/ico" href="./assets/icons/favicon.ico" />
+  <link rel="manifest" href="./assets/icons/site.webmanifest" />
+  <title>Redirecting</title>
+</head>
+<style>
+  .container--error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container--error--img {
+    width: 50%;
+    height: 50%;
+  }
+</style>
+
+<body onload="redirect()">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TNMPCQ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="container--error">
+    <img src="./assets/img/background/error.jpg" alt="Image not loaded" class="container--error--img" />
+  </div>
+  <script>
+    function redirect() {
+      setTimeout(function () {
+        window.location.replace("/");
+      }, 3000);
     }
-    .container--error--img {
-      width: 50%;
-      height: 50%;
-    }
-  </style>
-  <body onload="redirect()">
-    <div class="container--error">
-      <img
-        src="./assets/img/background/error.jpg"
-        alt="Image not loaded"
-        class="container--error--img"
-      />
-    </div>
-    <script>
-      function redirect() {
-        setTimeout(function () {
-          window.location.replace("/");
-        }, 3000);
-      }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
