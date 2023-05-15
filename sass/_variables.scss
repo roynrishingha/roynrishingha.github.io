@@ -1,0 +1,37 @@
+:root {
+    --color-background: rgb(22, 22, 22);
+    --color-muted: rgb(42, 42, 42);
+    --color-accent: rgb(114, 63, 137);
+    --color-link: rgb(164, 118, 186);
+    --color-link-muted: rgb(185, 166, 194);
+    --color-text: #CCCCCC;
+    --font-text: "Delius", sans-serif;
+    --font-heading: "Architects Daughter", cursive;
+    --font-code: "Fira Code";
+    --font-size-text: 14pt;
+    --margins: 2vw;
+    --gradient-fade-up: linear-gradient(0deg, rgba(22, 22, 22, 1) 0%, rgba(22, 22, 22, .9) 20%, rgba(22, 22, 22, .8) 50%, rgba(22, 22, 22, 0) 100%);
+    --gradient-fade-down: linear-gradient(0deg, rgba(22, 22, 22, 0) 0%, rgba(22, 22, 22, .7) 50%, rgba(22, 22, 22, .9) 80%, rgba(22, 22, 22, 1) 100%);
+    --gradient-splash-background: linear-gradient(336deg, rgba(0, 0, 0, 0) 40%, rgba(58, 54, 24, 0.4), rgba(0, 0, 0, 0)),
+        linear-gradient(127deg, rgba(0, 0, 0, 0) 40%, rgba(39, 57, 31, .4), rgba(0, 0, 0, 0)),
+        radial-gradient(rgba(51, 32, 50), rgb(17, 17, 17));
+}
+
+@media only screen and (min-width : 1024px) {
+    :root {
+        --margins: 10vw !important;
+    }
+}
+
+
+@media only screen and (min-width : 1444px) {
+    :root {
+        --margins: 15vw !important;
+    }
+}
+
+@media only screen and (min-width : 2160px) {
+    :root {
+        --margins: 30vw !important;
+    }
+}

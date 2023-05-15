@@ -1,1 +1,9 @@
+# zola stuff
+public
+static/processed_images
+static/syntax-highlighting.css
+bin
+zola.tar.gz
+
+# Macos
 .DS_Store

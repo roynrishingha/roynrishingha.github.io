@@ -1,0 +1,16 @@
+nav {
+
+    &#tree>ul,
+    {
+    padding-left: 0;
+
+    &>li {
+        display: inline-block;
+        margin-left: 0 !important;
+
+        &:not(:first-child):before {
+            content: " | ";
+        }
+    }
+}
+}
