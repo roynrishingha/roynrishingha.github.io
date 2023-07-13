@@ -1,7 +1,7 @@
 +++
 template = "page.html"
-title = "Ana, Hoverbear 🐻"
-description = "I have been, and will be, many things, but what I shall always be, is me."
+title = "About Me"
+description = "Embracing Challenges, Building a Path to Success"
 weight = 1
 
 [extra]
@@ -9,60 +9,58 @@ in_menu = true
 
 [extra.image]
 path = "cover.png"
-photographer = "@ubepom"
-source = "https://twitter.com/ubepom"
 +++
 
-Hello,
 
-My name is Ana Hobden. It's pronounced [-aːna](https://en.wiktionary.org/wiki/Rhymes:Icelandic/a%CB%90na), like the end of 'Banana.' I also go by [**Hoverbear**, or any of it's translations](#translations-of-hoverbear).
+# Introduction:
 
-I live in Lək̓ʷəŋən territory on Vancouver Island, in Canada. There are around 92,000 residents in the city, and just under a million on the island. I grew up here, adore the cultures, green spaces, sustainable living, the island pace, and the community attitudes. It's also conveniently located close to Vancouver and Seattle, with connections to most of the world.
+Hello there!
+My name is Nrishinghananda Roy, an ambitious software engineer hailing from the vibrant land of India. 
+Overcoming hurdles and embracing self-learning, I have charted a unique path in the realm of technology. 
+This personal journey has honed my skills in DevOps, open-source contributions, Rust programming, and API development. 
+As I delve into the fascinating fields of prompt engineering, machine learning, and database systems, I envision a future that merges my passion for database systems, API development, and a solid foundation in DevOps. 
 
-You may know of me because of my background in technology, but there is much more that defines me. My [partner](https://twitter.com/j_dowadi) and I love going hiking, road tripping, and camping with our Golden Retriever, [*Nami*](https://twitter.com/nami_num_nums). We're also avid video gamers, chefs, and bakers. You can get an idea of the projects I've been involved with by checking the rest of this site, as well as my [Github profile](https://github.com/hoverbear/). Things like Rust, distributed consensus, storage, networking, automation, operations, WASM, and embedded are within my interests.
+This brief glimpse into my life will provide you with a comprehensive understanding of my experiences, expertise, and aspirations.
 
-I have ancestral ties to Norway, France, England, and the Listuguj Mi'kmaq. I am a patchwork. I will not view you worse because of your ethnicity, sexuality, gender, physique, disabilities, or anything else. I will do my best to respect your wishes around how you define yourself, and will apologize when I make mistakes. The only reason I will treat you differently or disrespect you is if I see you disrespecting or harming others. We're all in this together, we've all suffered enough.
+# Early Life and Self-Start:
 
-Life draws me into many interesting adventures and teachings. I try to use this site to catalog and document some of it. While it documents edited and often well researched topics, it does not capture the true *texture* of life. When I write I try to take you along on my exploration, but that is by no means a substitute for your own adventures.
+I was born and raised in India, a country teeming with rich culture and diverse opportunities. From a young age, I exhibited a strong curiosity and fascination with technology. 
+However, my path to becoming a software engineer was not a conventional one. 
+Due to financial constraints, I had to make the difficult decision to drop out of formal education, leaving me without an engineering degree.
 
-Friendships are something I am constantly looking to build, if you need someone to talk to, or some help with a problem, let me know. I'd love to try to help. Alternatively, if you're giving your life some texture and wholeness, I'd love to talk and learn about how you are doing that.
+Undeterred by this setback, I embarked on a journey of self-learning, leveraging my determination, resilience, and unyielding passion for coding. 
+Equipped with unwavering dedication, I began my pursuit of knowledge, immersing myself in a myriad of online resources, coding tutorials, and open-source communities. 
+This period of independent study allowed me to forge my own path, acquire invaluable skills, and ultimately shape my destiny as a software engineer.
 
-The greatest impact I could have on you would be to inspire you to explore and seek knowledge.
+# Professional Journey:
 
+After years of self-study and relentless practice, I ventured into the world of freelancing. 
+This phase not only allowed me to apply my coding skills but also provided valuable exposure to diverse projects and clients. 
+The challenges I encountered during this period honed my problem-solving abilities, strengthened my communication skills, and deepened my understanding of software development lifecycles.
 
-# Background
+Currently, I am employed as a Software Engineer, specializing in the dynamic field of DevOps. 
+My role entails harnessing various tools and technologies such as AWS, GCP, Docker, Github Actions, Terraform, Ansible, Nginx, Certbot, Golang, and Python to streamline and automate development processes. 
+This position has provided me with invaluable insights into building scalable and efficient infrastructures while emphasizing the importance of collaboration, continuous integration, and continuous deployment.
 
-Out of high school, the [VNFC](http://www.vnfc.ca/) changed my life: They invested in me. They gave me a bursary to start post-secondary.
+# Open-Source Contributions and Mastery of Rust:
 
-While in University, I worked for [Science Venture](http://www.scienceventure.ca/) teaching and doing robotics clubs, science clubs, and on-reserve outreach, SIMBIOSES/LEED Lab (a predecessor of the [Health Data Coalition](http://hdcbc.ca/)) working on distributed privacy-aware aggregate health data, the [BCAAFC](http://bcaafc.com/) running the technical side of BC's largest annual (2200+ person) youth conference, and the [(Mod)ularity Squad](https://yvonnecoady.com/) Distributed Systems lab. I graduated in the top 15% of my class, I was the first person in my family to graduate university. Because others invested in me.
+Beyond my professional endeavors, I have actively engaged in open-source projects, an integral part of the software development community. 
+One of my key areas of expertise lies in Rust programming, a powerful and safe systems programming language. 
+I have dedicated considerable time and effort to contribute to Rust projects, including the highly regarded Rust Clippy. 
+Through these contributions, I have enhanced my understanding of Rust's nuances, best practices, and idiomatic expressions, solidifying my position as a skilled Rust developer.
 
-Out of university, [Asquera](http://asquera.de/) invited me to Germany to work with them. It was a great honor. With them, I worked on maintaining [Wheelmap](https://wheelmap.org/), giving Rust trainings to engineers at places like [Mozilla](https://www.mozilla.org/en-US/) and [RIPE NCC](https://www.ripe.net/), as well as other non-disclosable work. I spoke, taught courses, and co-hosted workshops all over Europe that year. Because others invested in me.
+# API Development and Future Aspirations:
 
-While in Europe, I was able to be a founding organizer of [RustFest (2016-2018)](https://rustfest.global/) and [Rust Belt Rust (2016-2017)](https://www.rust-belt-rust.com/). I was able to travel much of Europe and some of the US those years. I was so honoured to be in the orbit of the various hackerspaces there, and the time I spent at [33c3](https://media.ccc.de/c/33c3) and [34c3](https://media.ccc.de/c/34c3) taught me so much.
+As I embark on the next phase of my career, I am delving into the fascinating realms of prompt engineering, machine learning, and database systems. 
+These domains captivate me due to their potential to revolutionize technology and reshape industries. 
+With a keen interest in database systems, I aim to leverage my existing skill set in DevOps and API development to craft innovative solutions that empower businesses to harness the power of data effectively.
 
-Later, I moved home. [PingCAP](http://pingcap.com/) recruited me as a Senior Engineer onto their fledgling international team. With them, I helped build [TiKV](http://tikv.org/), helped organize the first [RustCon Asia 2019](https://rustcon.asia/), and hosted (or supported) numerous talks or workshops.
+I am eager to explore opportunities where I can apply my expertise in database systems, API development, and DevOps fundamentals. 
+Whether it be joining a forward-thinking organization or taking on short-term contracts, I am open to new challenges that enable me to contribute meaningfully and continue my professional growth.
 
-At the start of 2020, life lead me to start my own consultancy. Through it, I am able to work internationally, create partnerships, and spark ideas. I had the pleasure of taking on a long term maintenance role in [Vector](https://vector.dev/), as well as running workshops with [Ferrous Systems](https://ferrous-systems.com/).
+# Conclusion:
 
-My company is a contributor to the [Natives in Tech](https://nativesintech.org/) organization. It was a supporter of [Natives in Tech Conference 2020](https://www.youtube.com/watch?v=kV8IpFhZmHs).
-
-At the start of 2021, I was a Senior Engineer at [Maya Data](https://mayadata.io/) working on [Mayastor](https://github.com/openebs/Mayastor). I later started working with [TCDI](https://www.tcdi.com/) to expand the [`pgx`](https://github.com/zombodb/pgx) project where I enhanced the ability for users to generate SQL schemas for their Rust code, improved the `cargo` plugin, and helped design more user friendly APIs.
-
-Since late 2022 I have been working with [Determinate Systems](https://determinate.systems/) to help make the Nix ecosystem easier to adopt for developers and teams.
-
-
-# Translations of 'Hoverbear'
-
-I have been honoured with many translations of my nickname into a variety of languages. You are welcome to call me by these names as well.
-
-My nick translates to {{ internationalized_hoverbear() }}. You are welcome to address me by any of them.
-
-I am always seeking to learn new translations, particularly for Restigouche Míkmaq (which I believe would combine Āoonpitkōgwĕk and Noosĕ'skw), lək̓ʷəŋiʔnəŋ, or W̱SÁNEĆ.
-
-# Introducing Me
-
-**Want to verbally introduce me at an event?** Please, use this:
-
-> Ana is a hacker working in the Rust and Nix ecosystems. She's from Lək̓ʷəŋən territory in the Pacific Northwest, and holds a B.Sc. in Computer Science from the University of Victoria. She takes care of a golden retriever named [*Nami*](https://twitter.com/nami_num_nums) with her partner.
-
-Thank you for respecting me.
+In conclusion, my name is Nrishinghananda Roy, and I have emerged as a self-taught software engineer driven by curiosity, determination, and an unwavering passion for coding. 
+Through my journey, I have navigated challenges, honed my skills, and established myself as a proficient DevOps practitioner, open-source contributor, and Rust enthusiast. 
+Looking ahead, I aspire to combine my expertise in database systems, API development, and DevOps to create impactful solutions in the ever-evolving world of technology. 
+With an open mind and an insatiable appetite for growth, I eagerly anticipate the next chapter of my professional journey.
