@@ -1,1 +1,3 @@
-All contributions are welcome and under MIT license.
+# CONTRIBUTION GUIDELINES
+
+All contributions are accepted. Feel free to open issues and PR.

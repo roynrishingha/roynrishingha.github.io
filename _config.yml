@@ -1,0 +1,11 @@
+title: Nrishinghananda Roy
+encoding: UTF-8
+email: roynrishingha@gmail.com
+description: >
+  Software Engineer
+permalink: /blog/:title/
+include: [".well-known"]
+kramdown:
+  input: GFM
+  hard_wrap: false
+repository: roynrishingha/roynrishingha.github.io
