@@ -1,9 +1,6 @@
 # Macos
 .DS_Store
 
-# Jekyll
-_site/
+# Zola
 public/
-vendor/
-.bundle/
-.jekyll-cache/
+static/processed_images/
