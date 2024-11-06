@@ -4,8 +4,10 @@ default_language = "en"
 base_url = "https://roynrishingha.com"
 compile_sass = true
 build_search_index = true
-generate_feed = true
-
+generate_feeds = true
+generate_sitemap = true
+generate_robots_txt = true
+minify_html = true
 
 taxonomies = [{ name = "tags" }]
 
