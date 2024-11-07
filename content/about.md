@@ -4,12 +4,12 @@ template = "page.html"
 
 # ABOUT ME
 
-Hi, I’m **Nrishinghananda Roy**, a self-taught developer with a deep passion for coding and an insatiable curiosity for technology. My journey began in the heart of India, where traditions and innovation blend seamlessly. Growing up, I found myself fascinated by the endless possibilities of science and technology, but financial circumstances led me down a unique path: I became my own teacher, diving into the world of programming without formal education.
+Hello, I’m **Nrishinghananda Roy**, a self-taught developer driven by resilience, curiosity, and an unwavering commitment to mastering my craft. My journey into tech was far from traditional. Growing up in a rural village in India, with financial hardships and limited resources, I faced an uphill battle from an early age. Navigating a life with limited support, I learned the value of perseverance and self-reliance.
 
-Throughout this journey, I developed a strong connection with Rust, a language that feels as natural to me as breathing. Rust’s power, performance, and safety have inspired me to dig deeper into the realms of API development and DevOps. The cloud-native world, with its potential to shape data and create efficient solutions, continues to fuel my desire to innovate.
+Without access to formal university education, I took my future into my own hands. I taught myself programming, not out of convenience, but necessity. Along the way, I discovered Rust, a language that immediately resonated with me. Rust’s emphasis on safety, performance, and reliability captivated me, and I knew I’d found my path. Today, I’m deeply committed to Rust, backend development, and building efficient, secure, and high-performance systems. Rust isn’t just a skill for me; it’s a craft I’m constantly honing and applying in innovative ways.
 
-My passion for technology also extends to the open-source community, a place where collaboration and shared learning thrive. Though I'm relatively new to the community, I'm excited to contribute, learn from experts, and grow alongside others who share a love for open-source. It’s my way of giving back, creating positive change, and learning from the collective wisdom of those around me.
+I’m passionate about contributing to the open-source community. It’s an environment where I can both share my work and learn from others, and I believe deeply in the power of collaborative knowledge and growth. Though I’m relatively new to open-source, I’m eager to contribute and become a more active member in Rust and backend projects.
 
-I’m grateful to mentors and fellow developers who’ve offered guidance along the way. Their support has been invaluable, and I’m excited to keep growing, exploring new frontiers in technology, and building meaningful solutions.
+Despite the challenges, I’ve developed a foundation in backend development, particularly with Rust, and am comfortable with frontend and infrastructure work. My goal is to bring my skills to a team that values resilience, dedication, and the desire to innovate in a fast-evolving tech landscape.
 
-Thank you for taking the time to learn a bit about me. I look forward to connecting, learning, and collaborating as we explore the endless possibilities in tech together!
+Thank you for taking the time to learn about my journey. I’m excited to connect with like-minded professionals, continue learning, and contribute to projects that drive meaningful impact in tech.
