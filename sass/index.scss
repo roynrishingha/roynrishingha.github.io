@@ -4,12 +4,15 @@
   0% {
     clip-path: polygon(5% 3%, 96% 3%, 97% 93%, 11% 96%);
   }
+
   25% {
     clip-path: polygon(9% 4%, 99% 1%, 95% 97%, 7% 93%);
   }
+
   75% {
     clip-path: polygon(5% 6%, 93% 2%, 94% 94%, 13% 96%);
   }
+
   100% {
     clip-path: polygon(5% 3%, 96% 3%, 97% 93%, 11% 96%);
   }
@@ -19,12 +22,15 @@
   0% {
     clip-path: polygon(3% 2%, 98% 2%, 95% 92%, 9% 92%);
   }
+
   25% {
     clip-path: polygon(5% 3%, 96% 1%, 97% 93%, 11% 96%);
   }
+
   75% {
     clip-path: polygon(9% 4%, 99% 1%, 95% 97%, 7% 93%);
   }
+
   100% {
     clip-path: polygon(3% 2%, 98% 2%, 95% 92%, 9% 92%);
   }
@@ -34,12 +40,15 @@
   0% {
     clip-path: polygon(7% 0, 100% 4%, 92% 93%, 7% 90%);
   }
+
   25% {
     clip-path: polygon(3% 2%, 98% 2%, 95% 92%, 9% 92%);
   }
+
   75% {
     clip-path: polygon(5% 3%, 96% 1%, 97% 93%, 11% 96%);
   }
+
   100% {
     clip-path: polygon(7% 0, 100% 4%, 92% 93%, 7% 90%);
   }
@@ -50,7 +59,7 @@ nav {
 }
 
 main {
-  max-width: 820px;
+  max-width: 1000px;
   padding-top: 0;
   display: flex;
   align-items: center;
@@ -67,6 +76,8 @@ main {
   margin-right: 48px;
   flex-shrink: 0;
   position: relative;
+  margin-top: 60px;
+  align-self: flex-start;
 
   .profile-container {
     width: 280px;
