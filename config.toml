@@ -22,7 +22,7 @@ external_links_target_blank = true
 [extra]
 author = "Nrishinghananda Roy"
 
-nav = [{ name = "About", path = "/about/" }, { name = "Blog", path = "/blog/" }]
+nav = [{ name = "Blog", path = "/blog/" }]
 
 latest_text = "Check out my latest post:"
 
@@ -39,7 +39,11 @@ Follow me on [Github](https://github.com/roynrishingha) (if you like).
 """
 
 footer_page = """
-© 2024, all rights reserved
+[X](https://x.com/roynrishingha) [LinkedIn](https://www.linkedin.com/in/roynrishingha) [GitHub](https://www.github.com/roynrishingha) [Email](mailto:roynrishingha@gmail.com)
+
+\n
+
+© 2025, all rights reserved
 """
 
 not_found_message = """
