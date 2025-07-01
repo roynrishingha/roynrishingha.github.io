@@ -33,6 +33,8 @@ profile_large = "roynrishingha.png"
 accent = "#05a081"
 accent_light = "#82d0c0"
 
+dark_mode = true
+
 
 footer_about = """
 Follow me on [Github](https://github.com/roynrishingha) (if you like).

@@ -109,6 +109,12 @@ main {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .profile .profile-container img {
+    opacity: 1;
+  }
+}
+
 body {
   background-color: var(--body-bg);
   color: var(--body-color);
