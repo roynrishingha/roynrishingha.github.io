@@ -2,12 +2,8 @@
 title = "roynrishingha"
 +++
 
-I’m Nrishinghananda Roy—a backend engineer who finds deep satisfaction in building systems that are fast, correct, and thoughtfully designed. I work primarily with **Rust** because it aligns with how I think: precise, performance-aware, and safety-conscious.
+I’m Nrishinghananda Roy — a software engineer with 3 years of experience building backend systems in Rust at early-stage startups. I have been working in small teams where engineers are expected to solve real problems quickly and independently — whether that means optimizing APIs, rewriting slow services, or shipping infrastructure that doesn’t break under traffic.
 
-I’ve spent the last 3 years working with startups, shipping production systems in Rust, optimizing slow pipelines, replacing legacy services with clean, native solutions, and occasionally diving into frontend and infrastructure when needed. But the deeper I go, the more I find myself drawn toward the foundations: runtimes, compilers, developer tools, and infrastructure.
+Over time, I’ve grown more interested in what powers software at a deeper level. I’ve started contributing to open-source WebAssembly runtimes and studying the internals of Cranelift and Wasmtime to understand how these systems work under the hood. It’s slow and technical, but I enjoy the process of reading real code and learning from it.
 
-WebAssembly especially fascinates me. There’s something powerful about code that runs anywhere, safely and efficiently, without being tied to a specific platform. I’ve been learning how WASM works under the hood—from memory models to runtimes to compilers—and I’m actively building the skills to contribute meaningfully to that ecosystem.
-
-Outside of work, I contribute to Rust Clippy, where I’ve written and refined lints that help other developers write better Rust. Digging into the compiler internals has taught me more than any book could. It’s made me a better engineer—and a more careful one.
-
-I care about clean code, real ownership, and work that means something. I learn quickly, question things deeply, and bring a strong sense of focus to every problem I take on. If you’re building backend systems, developer tools, compilers, or infrastructure with Rust and WebAssembly—and you're looking for someone who doesn’t just write code, but builds systems—[I'd love to connect](mailto:roynrishingha@gmail.com).
+Right now I’m looking for a remote role on a small team working on runtimes, compiler infrastructure, or developer tooling. I want to build alongside engineers who care about clarity, correctness, and thoughtful engineering. If that sounds like you — I’d love to hear from you: [roynrishingha@gmail.com](mailto:roynrishingha@gmail.com)
