@@ -1,5 +1,5 @@
 title = "roynrishingha"
-description = "A self-taught software engineer working with Rust to make a more stable world"
+description = "A Software Engineer working with Rust to make a more stable world"
 default_language = "en"
 base_url = "https://roynrishingha.com"
 compile_sass = true
@@ -42,10 +42,6 @@ Follow me on [Github](https://github.com/roynrishingha) (if you like).
 
 footer_page = """
 [X](https://x.com/roynrishingha) [LinkedIn](https://www.linkedin.com/in/roynrishingha) [GitHub](https://www.github.com/roynrishingha) [Email](mailto:roynrishingha@gmail.com)
-
-\n
-
-© 2025, all rights reserved
 """
 
 not_found_message = """
