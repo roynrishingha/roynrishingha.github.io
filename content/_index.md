@@ -1,9 +1,15 @@
 +++
-title = "roynrishingha"
+title = "Nrishinghananda Roy | roynrishingha"
 +++
 
-I’m Nrishinghananda Roy — a software engineer with 3 years of experience building backend systems in Rust at early-stage startups. I have been working in small teams where engineers are expected to solve real problems quickly and independently — whether that means optimizing APIs, rewriting slow services, or shipping infrastructure that doesn’t break under traffic.
+Hi 👋 I’m Nrishinghananda Roy.
 
-Over time, I’ve grown more interested in what powers software at a deeper level. I’ve started contributing to open-source WebAssembly runtimes and studying the internals of Cranelift and Wasmtime to understand how these systems work under the hood. It’s slow and technical, but I enjoy the process of reading real code and learning from it.
+For the past few years, I’ve been building backend systems at early-stage startups — mostly using Rust  🦀, sometimes Python and TypeScript. I’ve worked in small teams where the problems don’t come pre-packaged or neatly scoped. You figure it out, you ship it, and if it breaks under pressure, it’s on you to fix it. That kind of environment shaped how I think: you learn fast, you take responsibility, and you build things that won’t fall apart at 2 a.m.
 
-Right now I’m looking for a remote role on a small team working on runtimes, compiler infrastructure, or developer tooling. I want to build alongside engineers who care about clarity, correctness, and thoughtful engineering. If that sounds like you — I’d love to hear from you: [roynrishingha@gmail.com](mailto:roynrishingha@gmail.com)
+I’ve always been drawn to the quieter parts of engineering — the layers that most people don’t see but that everything else depends on. Not flashy features or pixel-perfect UIs, but the systems behind the scenes: infrastructure, runtimes, observability, performance bottlenecks. I care about how things work — deeply, internally, at the level where correctness and clarity really matter.
+
+Over time, I’ve found myself diving deeper into the Rust ecosystem — contributing to tools like Clippy, exploring production-grade open source projects, and learning how large-scale systems are built with precision and care. It’s not easy work, but it’s the kind of work that holds up. And that’s what I’m here for — engineering that lasts.
+
+Right now, I’m focused on backend systems written in Rust — especially projects that build infrastructure for developers. I’m contributing to open-source projects, leveling up my skills, and learning how to solve problems. What drives me is the pursuit of mastery, not just “more experience” but deeper experience — the kind you earn by putting in the reps on real systems that serve real users.
+
+I’m not here to chase trends. I’m here to build things that work, with people who take their craft seriously. If that’s you too, I’d love to connect: [roynrishingha@gmail.com](mailto:roynrishingha@gmail.com)
