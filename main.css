@@ -155,6 +155,18 @@ main {
   cursor: pointer;
 }
 
+.content strong {
+  display: block;
+  margin-bottom: 0.25rem; /* tighter spacing below the heading */
+  font-size: 1.1rem;      /* optional: make it look more like a subheading */
+}
+
+.content p,
+.content ul {
+  margin-top: 0;          /* remove top gap */
+  margin-bottom: 1rem;    /* keep consistent bottom spacing */
+}
+
 a,
 a:visited {
   color: var(--accent-color);
