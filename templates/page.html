@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block seo %}
+<title>{{ page.title }} | {{ config.title }}</title>
+<meta
+    name="description"
+    content="{{ page.description | default(value=config.description) }}"
+/>
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:type" content="article" />
+{% endblock seo %} {% block content %}
+<article class="section single-post">
+    <div class="container">
+        <header class="post-header">
+            <div class="timeline-meta">
+                <span class="date"
+                    >{{ page.date | date(format="%B %d, %Y") }}</span
+                >
+                <span class="tag">{{ page.reading_time }} min read</span>
+            </div>
+            <h1 class="section-title">{{ page.title }}</h1>
+        </header>
+
+        <div class="typography">{{ page.content | safe }}</div>
+    </div>
+</article>
+{% endblock content %}

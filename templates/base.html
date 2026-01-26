@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        {% block seo %}
+        <title>{{ config.title }} | Rust Software Engineer</title>
+        <meta name="description" content="{{ config.description }}" />
+        <meta property="og:title" content="{{ config.title }}" />
+        <meta property="og:description" content="{{ config.description }}" />
+        <meta
+            property="og:image"
+            content="{{ config.base_url }}{{ config.extra.og_image }}"
+        />
+        <meta name="twitter:title" content="{{ config.title }}" />
+        <meta name="twitter:description" content="{{ config.description }}" />
+        {% endblock seo %}
+
+        <meta name="author" content="{{ config.extra.author }}" />
+        <link
+            rel="canonical"
+            href="{{ current_url | default(value=config.base_url) }}"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="{{ current_url | default(value=config.base_url) }}"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:image"
+            content="{{ config.base_url }}{{ config.extra.og_image }}"
+        />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/og-image.png" />
+        <meta
+            name="keywords"
+            content="Nrishinghananda Roy, Rust Developer, Software Engineer, Backend Engineer, Systems Architect, Apache Arrow, DataFusion, Remote Engineer, Rust, TypeScript"
+        />
+
+        <link rel="stylesheet" href="/css/index.css" />
+        <script src="/js/spark.js" defer></script>
+        <script src="/js/app.js" defer></script>
+        <script src="/js/analytics.js" defer></script>
+
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-HSKV9DG2ZE"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-HSKV9DG2ZE");
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Nrishinghananda Roy",
+                "url": "https://roynrishingha.com",
+                "image": "https://roynrishingha.com/roynrishingha.png",
+                "jobTitle": "Software Engineer",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Freelance"
+                },
+                "alumniOf": [
+                    {
+                        "@type": "Organization",
+                        "name": "Codefy GmbH"
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "Dhiway"
+                    }
+                ],
+                "sameAs": [
+                    "https://github.com/roynrishingha",
+                    "https://linkedin.com/in/roynrishingha",
+                    "mailto:roynrishingha@gmail.com"
+                ],
+                "knowsAbout": [
+                    "Rust",
+                    "Systems Engineering",
+                    "Apache Arrow",
+                    "DataFusion",
+                    "TypeScript",
+                    "Amazon Web Services",
+                    "AWS",
+                    "Backend Development",
+                    "Performance Optimization",
+                    "React",
+                    "Frontend Development",
+                    "Full Stack Development"
+                ]
+            }
+        </script>
+    </head>
+    <body>
+        <div class="bg-layer"></div>
+
+        <header class="nav-header">
+            <nav class="nav-bar">
+                <a href="/" class="nav-logo-wrapper" aria-label="Home">
+                    <img
+                        src="/roynrishingha.png"
+                        alt="Nrishinghananda Roy"
+                        class="nav-logo-img"
+                    />
+                </a>
+
+                <div class="nav-links">
+                    <a
+                        href="/blog"
+                        class="nav-link"
+                        data-analytics-category="Social"
+                        data-analytics-action="click_blog"
+                    >
+                        <span class="nav-link-text">Blog</span>
+                        <div class="nav-link-dot"></div>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="app-container">
+            {% block content %}{% endblock content %}
+
+            <footer class="footer">
+                <div class="container footer__container">
+                    <h2 class="footer__title">
+                        Ready to Build Something Extraordinary?
+                    </h2>
+                    <p class="footer__text">
+                        I'm looking for remote Rust backend or full-stack roles
+                        working on performance-critical systems.
+                    </p>
+
+                    <div class="footer__links">
+                        <a
+                            href="https://github.com/roynrishingha"
+                            target="_blank"
+                            class="footer__link"
+                            data-analytics-category="Social"
+                            data-analytics-action="click_github"
+                            >GitHub</a
+                        >
+                        <a
+                            href="https://linkedin.com/in/roynrishingha"
+                            target="_blank"
+                            class="footer__link"
+                            data-analytics-category="Social"
+                            data-analytics-action="click_linkedin"
+                            >LinkedIn</a
+                        >
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

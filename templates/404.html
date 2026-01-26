@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block seo %}
+<title>404 | Page Not Found</title>
+<meta name="robots" content="noindex" />
+{% endblock seo %} {% block content %}
+<section class="section error-page">
+    <div class="container error-container">
+        <h1 class="error-code" data-text="404">404</h1>
+
+        <h2 class="error-title">Signal Lost</h2>
+        <p class="error-desc">
+            The coordinate you are looking for does not exist in this sector.
+        </p>
+
+        <div class="redirect-box">
+            <p>Returning to base in <span id="countdown">5</span> seconds...</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <a href="/" class="btn btn--primary">
+            <span>Return Home Now</span>
+        </a>
+    </div>
+</section>
+
+<script>
+    // Auto-Redirect Logic
+    let seconds = 5;
+    const countdownEl = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+        seconds--;
+        if (countdownEl) countdownEl.textContent = seconds;
+
+        if (seconds <= 0) {
+            clearInterval(interval);
+            window.location.href = "/";
+        }
+    }, 1000);
+</script>
+{% endblock content %}

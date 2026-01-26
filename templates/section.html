@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block seo %}
+<title>Engineering Blog | {{ config.title }}</title>
+<meta
+    name="description"
+    content="Technical deep-dives on Rust, Systems Engineering, and Performance Optimization."
+/>
+{% endblock seo %} {% block content %}
+<section class="section blog-list">
+    <div class="container">
+        <div class="section-header">
+            <h1 class="hero-title">
+                Technical <span class="text-gradient-rust">Writing</span>
+            </h1>
+            <p class="hero-bio">
+                Deep dives into Rust internals, database storage engines, and
+                system architecture.
+            </p>
+        </div>
+
+        <div class="grid grid--2-cols">
+            {% for page in section.pages %}
+            <a
+                href="{{ page.permalink }}"
+                class="bento-card medium glow-border"
+            >
+                <div class="card-content">
+                    <div class="timeline-meta">
+                        <span class="date"
+                            >{{ page.date | date(format="%B %d, %Y") }}</span
+                        >
+                        {% if page.extra.tags %}
+                        <span class="tag">{{ page.extra.tags[0] }}</span>
+                        {% endif %}
+                    </div>
+                    <h3>{{ page.title }}</h3>
+                    <p>{{ page.description }}</p>
+                    <span class="read-more">Read Article →</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

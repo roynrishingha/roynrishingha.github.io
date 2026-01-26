@@ -1,0 +1,17 @@
+base_url = "https://roynrishingha.com"
+title = "Nrishinghananda Roy"
+description = "Software Engineer specializing in Rust backends and high-performance systems."
+default_language = "en"
+compile_sass = false
+minify_html = true
+
+[extra]
+author = "Nrishinghananda Roy"
+twitter_username = "roynrishingha"
+github_username = "roynrishingha"
+linkedin_username = "roynrishingha"
+keywords = "Rust, Backend Engineer, Full Stack Engineer, Systems Engineer, DataFusion, Apache Arrow"
+og_image = "/og-image.png"
+profile_image = "/roynrishingha.png"
+github_icon = "/imgs/github.svg"
+gmail_icon = "/imgs/gmail.svg"
