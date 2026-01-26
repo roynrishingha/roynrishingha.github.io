@@ -1,124 +1,738 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="./static/favicon.png" />
+        <title>
+            Nrishinghananda Roy | Rust Software Engineer | Full Stack Developer
+        </title>
+        <meta
+            name="description"
+            content="Senior Software Engineer specializing in Rust backends, high-performance systems, and data infrastructure. Available for remote roles in backend & systems engineering."
+        />
+        <meta
+            name="keywords"
+            content="Nrishinghananda Roy, Rust Developer, Software Engineer, Backend Engineer, Systems Architect, Apache Arrow, DataFusion, Remote Engineer, Rust, TypeScript"
+        />
+        <meta name="author" content="Nrishinghananda Roy" />
+        <link rel="canonical" href="https://roynrishingha.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://roynrishingha.com/" />
+        <meta
+            property="og:title"
+            content="Nrishinghananda Roy | Software Engineer | Rust Developer"
+        />
+        <meta
+            property="og:description"
+            content="I build high-performance Rust backends and data systems. Replaced legacy Java systems with Rust for 15x performance gains. Check out my portfolio."
+        />
+        <meta
+            property="og:image"
+            content="https://roynrishingha.com/static/og-image.png"
+        />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nrishinghananda Roy | roynrishingha</title>
-  <meta name="description" content="Expert Rust Software Engineer and problem solver">
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:url"
+            content="https://roynrishingha.com/static/og-image.png"
+        />
+        <meta
+            name="twitter:title"
+            content="Nrishinghananda Roy | Software Engineer | Rust Developer"
+        />
+        <meta
+            name="twitter:description"
+            content="Specializing in Rust backends and high-performance systems. Available for hire."
+        />
+        <meta
+            name="twitter:image"
+            content="https://roynrishingha.com/static/og-image.png"
+        />
+        <link rel="apple-touch-icon" href="./static/og-image.png" />
 
-  <meta name="author" content="Nrishinghananda Roy <roynrishingha@gmail.com>">
+        <link rel="stylesheet" href="./index.css" />
+        <script src="./js/spark.js" defer></script>
+        <script src="./js/app.js" defer></script>
+        <script src="./js/analytics.js" defer></script>
 
-  <meta name="theme-color" content="#05a081">
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-HSKV9DG2ZE"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-HSKV9DG2ZE");
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Nrishinghananda Roy",
+                "url": "https://roynrishingha.com",
+                "image": "https://roynrishingha.com/roynrishingha.png",
+                "jobTitle": "Software Engineer",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Freelance"
+                },
+                "alumniOf": [
+                    {
+                        "@type": "Organization",
+                        "name": "Codefy GmbH"
+                    },
+                    {
+                        "@type": "Organization",
+                        "name": "Dhiway"
+                    }
+                ],
+                "sameAs": [
+                    "https://github.com/roynrishingha",
+                    "https://linkedin.com/in/roynrishingha",
+                    "mailto:roynrishingha@gmail.com"
+                ],
+                "knowsAbout": [
+                    "Rust",
+                    "Systems Engineering",
+                    "Apache Arrow",
+                    "DataFusion",
+                    "TypeScript",
+                    "Amazon Web Services",
+                    "AWS",
+                    "Backend Development",
+                    "Performance Optimization",
+                    "React",
+                    "Frontend Development",
+                    "Full Stack Development"
+                ]
+            }
+        </script>
+    </head>
+    <body>
+        <div class="bg-layer"></div>
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://roynrishingha.com/">
+        <main class="main-wrapper">
+            <section class="hero" id="home">
+                <div class="container hero__container">
+                    <div class="hero__content">
+                        <div class="hero__status-pill">
+                            <span class="status-dot"></span>
+                            <span>Available for new projects</span>
+                        </div>
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Nrishinghananda Roy - Software Developer">
-  <meta property="og:description" content="Expert Rust Software Engineer and problem solver">
-  <meta property="og:url" content="https://roynrishingha.com/">
-  <meta property="og:type" content="website">
+                        <h1 class="hero__name">Nrishinghananda Roy</h1>
+                        <h2 class="hero__role">Software Engineer</h2>
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@roynrishingha">
-  <meta name="twitter:creator" content="@roynrishingha">
-  <meta name="twitter:title" content="Nrishinghananda Roy - Software Developer">
-  <meta name="twitter:description" content="Expert Rust Software Engineer and problem solver">
+                        <div class="hero__bio-wrapper">
+                            <p class="hero__bio">
+                                I work across the stack but specialize in
+                                <strong>Rust backends</strong> where performance
+                                and correctness matter.
+                            </p>
+                            <p class="hero__bio">
+                                With 3 years of experience, I've built
+                                end-to-end high-performance products for
+                                startups in
+                                <strong>Germany, France, and India</strong
+                                >—turning slow systems into fast, scalable ones.
+                            </p>
+                            <p class="hero__bio">
+                                Right now I'm diving into data-intensive
+                                systems, learning
+                                <strong>Apache Arrow</strong> and
+                                <strong>DataFusion</strong> through open source
+                                contributions.
+                            </p>
+                        </div>
 
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nrishinghananda Roy",
-    "email": "roynrishingha@gmail.com",
-    "url": "https://roynrishingha.com",
-    "image": "roynrishingha.jpg",
-    "sameAs": [
-      "https://github.com/roynrishingha",
-      "https://linkedin.com/in/roynrishingha",
-      "https://x.com/roynrishingha",
-      "https://bsky.app/profile/roynrishingha.bsky.social"
-    ],
-    "jobTitle": "Software Developer"
-  }
-  </script>
+                        <div class="hero__actions">
+                            <a
+                                href="mailto:roynrishingha@gmail.com"
+                                class="btn btn--primary"
+                                data-analytics-category="Email"
+                                data-analytics-action="click_email"
+                            >
+                                <span class="btn__icon">
+                                    <img src="./static/gmail.svg" />
+                                </span>
+                                <span class="btn__text">Get in Touch</span>
+                            </a>
+                            <a
+                                href="https://github.com/roynrishingha"
+                                target="_blank"
+                                class="btn btn--secondary"
+                                data-analytics-category="Social"
+                                data-analytics-action="click_github"
+                            >
+                                <span class="btn__icon">
+                                    <img src="./static/github.svg" />
+                                </span>
+                                <span class="btn__text">GitHub</span>
+                            </a>
+                            <a
+                                href="https://github.com/roynrishingha"
+                                target="_blank"
+                                class="btn btn--secondary"
+                                data-analytics-category="Social"
+                                data-analytics-action="click_blog"
+                            >
+                                <span class="btn__icon"> 🦀 </span>
+                                <span class="btn__text">Blog</span>
+                            </a>
+                        </div>
+                    </div>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet">
+                    <div class="hero__visual">
+                        <div class="profile-wrapper" id="profileWrapper">
+                            <canvas id="sparkCanvas"></canvas>
+                            <img
+                                src="./static/roynrishingha.png"
+                                alt="Nrishinghananda Roy"
+                                class="profile-image"
+                                id="profileImage"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <link rel="stylesheet" href="./main.css">
+            <section class="section impact" id="impact">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            How I Drive Business Impact
+                        </h2>
+                        <p class="section-subtitle">
+                            Technology is just a tool. What matters is solving
+                            real problems. Here's how I help startups move
+                            faster and scale smarter.
+                        </p>
+                    </div>
 
-  <link href="./profile_small.png" rel="icon">
+                    <div class="grid grid--3-cols impact__grid">
+                        <article class="card impact-card">
+                            <div class="card__header">
+                                <div class="card__icon-box">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title">
+                                    Turn Slow Systems Fast
+                                </h3>
+                            </div>
+                            <p class="card__desc">
+                                Replaced a 3-second API with a 200ms
+                                solution—15x faster. This allowed the firm to
+                                grow without buying more servers.
+                            </p>
+                            <div class="card__metrics">
+                                <div class="metric">
+                                    <span class="metric__value">15x</span>
+                                    <span class="metric__label">Faster</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric__value">$0</span>
+                                    <span class="metric__label"
+                                        >Infra Cost</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Rust</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">System Design</span>
+                            </div>
+                        </article>
 
-</head>
+                        <article class="card impact-card">
+                            <div class="card__header">
+                                <div class="card__icon-box">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <rect
+                                            x="3"
+                                            y="3"
+                                            width="18"
+                                            height="18"
+                                            rx="2"
+                                        />
+                                        <path
+                                            d="M9 3v18M3 9h18M3 15h18M15 3v18"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title">
+                                    Ship Complete Solutions
+                                </h3>
+                            </div>
+                            <p class="card__desc">
+                                I build end-to-end—backend APIs, frontends, DBs,
+                                deployments. Shipped a React Native app to the
+                                App Store in a month with zero prior mobile
+                                experience.
+                            </p>
+                            <ul class="check-list">
+                                <li>Full-stack capabilities</li>
+                                <li>Learn fast, ship faster</li>
+                                <li>Production-ready from day one</li>
+                            </ul>
+                        </article>
 
-<body>
+                        <article class="card impact-card">
+                            <div class="card__header">
+                                <div class="card__icon-box">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path d="M12 2v20M2 12h20" />
+                                        <circle cx="12" cy="12" r="4" />
+                                    </svg>
+                                </div>
+                                <h3 class="card__title">Automate What Hurts</h3>
+                            </div>
+                            <p class="card__desc">
+                                Rewrote document generation at Codefy. Cut
+                                manual prep time by 70%. Lawyers got more
+                                billable hours; business made more money.
+                            </p>
+                            <div class="card__highlight-stat">
+                                <span class="stat-large">70%</span>
+                                <span class="stat-text"
+                                    >Time Saved on Manual Work</span
+                                >
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-  <header>
-    <a class="profile-icon" href="/">
-      <img src="./profile_small.png" alt="profile picture" />
-    </a>
+            <section class="section capabilities">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            What I Bring to Your Startup
+                        </h2>
+                    </div>
 
-    <nav>
-      <a href="/">Blog</a>
-    </nav>
-  </header>
+                    <div class="grid grid--3-cols capabilities__grid">
+                        <div class="capability-item">
+                            <span class="capability-num">01</span>
+                            <h4>Problem Solver, Not Just Coder</h4>
+                            <p>
+                                I don't wait for specs. I understand the
+                                business problem and propose solutions.
+                            </p>
+                        </div>
+                        <div class="capability-item">
+                            <span class="capability-num">02</span>
+                            <h4>Build for Scale</h4>
+                            <p>
+                                Managed 50+ blockchain nodes globally. I know
+                                what breaks at scale.
+                            </p>
+                        </div>
+                        <div class="capability-item">
+                            <span class="capability-num">03</span>
+                            <h4>Technical Depth</h4>
+                            <p>
+                                Built LSM-tree DBs from scratch. Contributing to
+                                Rust Clippy. I understand internals.
+                            </p>
+                        </div>
+                        <div class="capability-item">
+                            <span class="capability-num">04</span>
+                            <h4>Learn Any Stack</h4>
+                            <p>
+                                Zero React Native experience? Shipped to App
+                                Store in weeks. I adapt fast.
+                            </p>
+                        </div>
+                        <div class="capability-item">
+                            <span class="capability-num">05</span>
+                            <h4>Startup Velocity</h4>
+                            <p>
+                                Worked across Germany, France, India. I ship
+                                fast, iterate, validate.
+                            </p>
+                        </div>
+                        <div class="capability-item">
+                            <span class="capability-num">06</span>
+                            <h4>Business Impact First</h4>
+                            <p>
+                                Every line of code should move metrics. I think
+                                ROI, not just "cool tech".
+                            </p>
+                        </div>
+                    </div>
 
-  <main>
-    <div class="profile">
-      <div class="profile-container">
-        <img src="./nrishinghananda.jpg" alt="Image of Nrishinghananda Roy" />
-      </div>
+                    <div class="tech-note">
+                        <div class="tech-note__icon">ℹ️</div>
+                        <div class="tech-note__content">
+                            <h4>About Technology Choices</h4>
+                            <p>
+                                Proficient in Rust, TypeScript, React, Vue,
+                                PostgreSQL, AWS. But what matters is choosing
+                                the right tool for the problem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    </div>
+            <section class="section journey" id="journey">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Professional Journey</h2>
+                    </div>
 
-    <article class="content">
-      <strong>Who I am</strong>
-      <p>
-        Hi 👋 I'm Nrishinghananda Roy, a Rust-focused software engineer with 3+ years building backend and systems
-        software for startups in Germany, France, and India. I work best where speed and reliability both matter.
-      </p>
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="timeline__marker"></div>
+                            <div class="timeline__content">
+                                <span class="timeline__badge">Current</span>
+                                <div class="timeline__header">
+                                    <h3>
+                                        Open Source Contributor & Freelance
+                                        Engineer
+                                    </h3>
+                                    <span class="timeline__date"
+                                        >Nov 2024 - Present</span
+                                    >
+                                </div>
+                                <p class="timeline__location">Remote</p>
+                                <ul class="timeline__list">
+                                    <li>
+                                        Actively contributing to the
+                                        <strong
+                                            >Rust open-source ecosystem</strong
+                                        >
+                                        (OpenObserve, Rust Clippy).
+                                    </li>
+                                    <li>
+                                        Built a mobile app for ISKCON Phoenix's
+                                        Ratha Yatra festival using
+                                        <strong
+                                            >React Native, Expo, and
+                                            Firebase</strong
+                                        >. Shipped to Apple App Store with 100+
+                                        downloads.
+                                    </li>
+                                    <li>
+                                        Developed web application for education
+                                        consultancy connecting Indian students
+                                        with international medical universities.
+                                        Built frontend with React/TypeScript and
+                                        backend with
+                                        <strong
+                                            >Rust (axum), AWS DynamoDB, and
+                                            S3</strong
+                                        >.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-      <strong>What I do</strong>
-      <ul>
-        <li>Ship features end-to-end: from API design to infra deployment.</li>
-        <li>Replace slow code with fast Rust implementations.</li>
-        <li>Contribute to open-source Rust projects.</li>
-        <li>Build developer tools and system-level libraries.</li>
-      </ul>
+                        <div class="timeline__item">
+                            <div class="timeline__marker"></div>
+                            <div class="timeline__content">
+                                <div class="timeline__header">
+                                    <h3>Software Engineer</h3>
+                                    <span class="timeline__date"
+                                        >Nov 2023 - Oct 2024</span
+                                    >
+                                </div>
+                                <p class="timeline__company">
+                                    Codefy GmbH | Remote, Germany
+                                </p>
+                                <ul class="timeline__list">
+                                    <li>
+                                        Built end-to-end features for a legal
+                                        case management system used by 20+
+                                        lawyers, shipping client intake,
+                                        document automation, and case tracking
+                                        workflows.
+                                    </li>
+                                    <li>
+                                        <strong>15x Performance:</strong>
+                                        Eliminated bottleneck by replacing a
+                                        Java microservice with in-house Rust
+                                        service. Rebuilt ~21 APIs
+                                        (Axum/PostgreSQL), reducing response
+                                        times from 3s to
+                                        <strong>under 200ms</strong>.
+                                    </li>
+                                    <li>
+                                        <strong>70% Efficiency:</strong>
+                                        Automated document generation by
+                                        rewriting Python workflows in Rust.
+                                        Added PDF/DOCX parsing and S3 uploads,
+                                        resulting in
+                                        <strong>7x faster generation</strong>.
+                                    </li>
+                                    <li>
+                                        Improved React frontend performance by
+                                        <strong>60%</strong> through hook
+                                        refactoring, component memoization, and
+                                        caching using Tanstack Query.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-      <strong>How I work</strong>
-      <ul>
-        <li>Take loosely defined problems and return working solutions.</li>
-        <li>Own my code in production—if it breaks, I know how to fix it.</li>
-        <li>Balance speed with reliability—ship quickly without cutting corners.</li>
-        <li>Care about performance, correctness, and clarity, not hype-driven features.</li>
-      </ul>
+                        <div class="timeline__item">
+                            <div class="timeline__marker"></div>
+                            <div class="timeline__content">
+                                <div class="timeline__header">
+                                    <h3>Associate Software Engineer</h3>
+                                    <span class="timeline__date"
+                                        >Apr 2023 - Oct 2023</span
+                                    >
+                                </div>
+                                <p class="timeline__company">
+                                    Dhiway | Remote, India
+                                </p>
+                                <ul class="timeline__list">
+                                    <li>
+                                        Managed production blockchain
+                                        infrastructure across
+                                        <strong
+                                            >50-55 global blockchain
+                                            nodes</strong
+                                        >.
+                                    </li>
+                                    <li>
+                                        Automated infrastructure provisioning
+                                        with
+                                        <strong>Terraform on AWS EC2</strong>.
+                                    </li>
+                                    <li>
+                                        Set up monitoring using Prometheus,
+                                        Grafana, and Loki. Enabled real-time
+                                        visibility and used metrics to optimize
+                                        instance sizing and reduce costs.
+                                    </li>
+                                    <li>
+                                        Built
+                                        <strong>CI/CD pipelines</strong> with
+                                        security scanning and automated
+                                        deployments, maintaining high code
+                                        quality and system stability.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-      <strong>Where I'm going</strong>
-      <p>
-        Deepening expertise in Rust systems and developer tooling. My focus is software that
-        lasts—tools and infrastructure teams can rely on long after version one.
-      </p>
+                        <div class="timeline__item">
+                            <div class="timeline__marker"></div>
+                            <div class="timeline__content">
+                                <div class="timeline__header">
+                                    <h3>Frontend Developer</h3>
+                                    <span class="timeline__date"
+                                        >Jan 2022 - Mar 2023</span
+                                    >
+                                </div>
+                                <p class="timeline__company">
+                                    Trustforum | Remote, France
+                                </p>
+                                <ul class="timeline__list">
+                                    <li>
+                                        Developed
+                                        <strong>Vue3 application</strong> with
+                                        TypeScript and composition API.
+                                    </li>
+                                    <li>
+                                        Built component architecture and state
+                                        management from scratch for an
+                                        early-stage community platform.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    </article>
+            <section class="section opensource">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Open Source Impact</h2>
+                        <p class="section-subtitle">
+                            Contributing to tools developers use daily.
+                        </p>
+                    </div>
 
-  </main>
+                    <div class="grid grid--2-cols">
+                        <article class="card os-card os-card--featured">
+                            <span class="badge">Currently Contributing</span>
+                            <div class="os-card__header">
+                                <h3>OpenObserve</h3>
+                                <a
+                                    href="https://github.com/openobserve/openobserve/pulls?q=is%3Apr+author%3Aroynrishingha"
+                                    target="_blank"
+                                    class="os-link"
+                                    data-analytics-category="Open Source"
+                                    data-analytics-action="click_openobserve_repo"
+                                    >↗</a
+                                >
+                            </div>
+                            <p>
+                                High-performance observability platform built
+                                with Rust. Working on data-intensive systems,
+                                Apache Arrow, and DataFusion.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Rust</span>
+                                <span class="tag">Performance</span>
+                                <span class="tag">Systems</span>
+                            </div>
+                        </article>
 
-  <footer>
-    <div class="social-links">
-      <a href="mailto:roynrishingha@gmail.com">Email</a>
-      <a href="https://github.com/roynrishingha" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/roynrishingha" target="_blank">LinkedIn</a>
-      <a href="https://bsky.app/profile/roynrishingha.bsky.social" target="_blank">Bluesky</a>
-      <a href="https://x.com/roynrishingha" target="_blank">X</a>
-    </div>
-  </footer>
-</body>
+                        <article class="card os-card">
+                            <div class="os-card__header">
+                                <h3>Rust Clippy</h3>
+                                <a
+                                    href="https://github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha"
+                                    target="_blank"
+                                    class="os-link"
+                                    data-analytics-category="Open Source"
+                                    data-analytics-action="click_clippy_repo"
+                                    >↗</a
+                                >
+                            </div>
+                            <p>
+                                Authored multiple lints used by Rust developers
+                                worldwide. Improving code quality and developer
+                                productivity across the ecosystem.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
+            <section class="section projects" id="projects">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Featured Projects</h2>
+                    </div>
+
+                    <div class="projects__stack">
+                        <article class="project-item">
+                            <div class="project__visual">
+                                <div class="project__tech-overlay">
+                                    <span class="tag">React Native</span>
+                                    <span class="tag">Firebase</span>
+                                    <span class="tag">Expo</span>
+                                </div>
+                            </div>
+                            <div class="project__content">
+                                <div class="project__header">
+                                    <h3>Jagannath Ratha Yatra App</h3>
+                                    <a
+                                        href="https://apps.apple.com/us/app/jagannath-ry-iskcon-phoenix/id6757489211"
+                                        target="_blank"
+                                        class="project-link-btn"
+                                        data-analytics-category="Project"
+                                        data-analytics-action="click_app_store_ratha_yatra"
+                                        >App Store ↗</a
+                                    >
+                                </div>
+                                <p>
+                                    Shipped to App Store in weeks with zero
+                                    prior mobile experience. Handles festival
+                                    info, real-time volunteer management, and
+                                    role-based auth.
+                                    <strong>100+ Downloads</strong>.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="project-item">
+                            <div class="project__visual">
+                                <div class="project__tech-overlay">
+                                    <span class="tag">Rust</span>
+                                    <span class="tag">Database Internals</span>
+                                    <span class="tag">Storage Engines</span>
+                                </div>
+                            </div>
+                            <div class="project__content">
+                                <div class="project__header">
+                                    <h3>LSM-Tree Key-Value Database</h3>
+                                    <a
+                                        href="https://github.com/roynrishingha/lsmdb"
+                                        target="_blank"
+                                        class="project-link-btn"
+                                        data-analytics-category="Project"
+                                        data-analytics-action="click_github_lsmdb"
+                                        >GitHub ↗</a
+                                    >
+                                </div>
+                                <p>
+                                    Built from scratch in Rust. Features
+                                    Write-Ahead Log (WAL), SSTables, Memtables,
+                                    Bloom Filters, and compaction strategies.
+                                    Demonstrates deep systems knowledge.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container footer__container">
+                    <h2 class="footer__title">
+                        Ready to Build Something Extraordinary?
+                    </h2>
+                    <p class="footer__text">
+                        I'm looking for remote Rust backend or full-stack roles
+                        working on performance-critical systems.
+                    </p>
+
+                    <div class="footer__links">
+                        <a
+                            href="https://github.com/roynrishingha"
+                            target="_blank"
+                            class="footer__link"
+                            data-analytics-category="Social"
+                            data-analytics-action="click_github"
+                            >GitHub</a
+                        >
+                        <a
+                            href="https://linkedin.com/in/roynrishingha"
+                            target="_blank"
+                            class="footer__link"
+                            data-analytics-category="Social"
+                            data-analytics-action="click_linkedin"
+                            >LinkedIn</a
+                        >
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </body>
 </html>
