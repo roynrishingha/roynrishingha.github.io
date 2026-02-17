@@ -1,0 +1,131 @@
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn--primary {
+    background: var(--text-main);
+    color: var(--bg-void);
+    border: 1px solid var(--text-main);
+}
+
+.btn--primary:hover {
+    background: #e2e2e2;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-light);
+}
+
+.btn--secondary:hover {
+    border-color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* General Cards */
+.card {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: var(--transition);
+    backdrop-filter: var(--glass-blur);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    border-color: var(--border-hover);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.card__icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+}
+
+.card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.card__desc {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+/* Tags & Badges */
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    color: var(--accent-primary);
+    background: rgba(255, 77, 46, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+/* Lists */
+.check-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: bold;
+}

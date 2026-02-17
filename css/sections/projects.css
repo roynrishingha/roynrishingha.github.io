@@ -1,0 +1,178 @@
+.projects__stack {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Generous spacing between premium cards */
+}
+
+/* --- The Main Card Container --- */
+.project-item {
+    display: flex; /* Horizontal layout */
+    align-items: stretch; /* Ensure both sides are same height */
+    min-height: 450px; /*Substantial height for premium feel */
+
+    /* Premium Dark Gradient Background */
+    background: linear-gradient(135deg, var(--bg-surface) 0%, #151520 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px; /* Very large, modern rounded corners */
+    overflow: hidden;
+    position: relative;
+    box-shadow:
+        0 30px 60px -20px rgba(0, 0, 0, 0.8),
+        /* Deep shadow underneath */ inset 0 1px 1px rgba(255, 255, 255, 0.1); /* Subtle top inner glow */
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Subtle hover lift */
+.project-item:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 40px 80px -20px rgba(0, 0, 0, 0.9),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Left Side: Visual & Image --- */
+.project__visual {
+    /* Takes up 50% width, doesn't shrink or grow */
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+    /* Optional: Add a subtle inner shadow over the image */
+    box-shadow: inset -20px 0 40px -20px rgba(0, 0, 0, 0.8);
+}
+
+/* The Image Itself */
+.project__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills space without stretching */
+    transition: transform 0.6s ease;
+}
+
+/* Slight zoom effect on hover */
+.project-item:hover .project__img {
+    transform: scale(1.03);
+}
+
+/* Floating Tags Overlay */
+.project__tech-overlay {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+/* Update tags to look good over images */
+.project__tech-overlay .tag {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+/* --- Right Side: Content --- */
+.project__content {
+    flex: 1; /* Takes remaining space */
+    padding: 60px 50px; /* Generous padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    position: relative;
+    z-index: 1;
+}
+
+/* Add a subtle ambient light glow behind the content */
+.project__content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: var(--accent-glow);
+    filter: blur(100px);
+    opacity: 0.15;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.project__header {
+    display: flex;
+    flex-direction: column; /* Stack title and button */
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.project__header h3 {
+    font-size: 2.25rem; /* Much larger title */
+    font-weight: 800;
+    line-height: 1.1;
+    background: linear-gradient(to right, #ffffff, #c4c4cc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project__content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+.project__content p strong {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+/* Redesign the link to look like a premium button */
+.project-link-btn {
+    align-self: flex-start; /* Align left */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-light);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+.project-link-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+    box-shadow: 0 10px 20px -5px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 960px) {
+    .project-item {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        min-height: auto;
+    }
+
+    .project__visual {
+        flex: 0 0 300px; /* Fixed height for image container */
+        width: 100%;
+    }
+
+    .project__content {
+        padding: 40px 30px;
+    }
+
+    .project__header h3 {
+        font-size: 1.75rem;
+    }
+}

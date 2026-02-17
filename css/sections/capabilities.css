@@ -1,0 +1,165 @@
+.capabilities__grid {
+    margin-bottom: 80px;
+    gap: 24px;
+}
+
+/* --- The Card: Deep, Dark & Glassy --- */
+.capability-item {
+    position: relative;
+    /* Subtle gradient for depth, not flat color */
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 40px 32px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* --- Hover State: Interactive Luxury --- */
+.capability-item:hover {
+    transform: translateY(-5px);
+    /* Brighter border on hover */
+    border-color: rgba(255, 255, 255, 0.2);
+    /* Deep shadow lift */
+    box-shadow:
+        0 20px 40px -20px rgba(0, 0, 0, 0.8),
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
+    /* Lighten background slightly */
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+}
+
+/* --- The "Progress Line" Animation --- */
+/* A line that draws across the top when you hover */
+.capability-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; /* Starts at 0 width */
+    height: 2px;
+    background: var(--accent-primary); /* Your orange/red brand color */
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.capability-item:hover::after {
+    width: 100%; /* Draws to full width */
+}
+
+/* --- The Watermark Number Effect --- */
+/* Moves the number from a list item to a background art element */
+.capability-num {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 4rem; /* Huge text */
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03); /* Barely visible */
+    font-family: "JetBrains Mono", monospace;
+    line-height: 1;
+    pointer-events: none; /* Let clicks pass through */
+    transition: all 0.5s ease;
+    z-index: 0; /* Behind the text */
+}
+
+/* On hover, the number lights up slightly and shifts */
+.capability-item:hover .capability-num {
+    color: rgba(255, 77, 46, 0.1);
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* --- Content Styling --- */
+/* Ensure text sits ON TOP of the watermark number */
+.capability-item h4 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    /* Gradient Text for Title */
+    background: linear-gradient(to right, #fff, #a1a1aa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.capability-item p {
+    position: relative;
+    z-index: 1;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* --- Tech Note: The "System HUD" Look --- */
+.tech-note {
+    background: rgba(10, 10, 12, 0.6);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    /* Blue inner glow */
+    box-shadow:
+        0 0 0 1px rgba(59, 130, 246, 0.05),
+        inset 0 0 20px rgba(59, 130, 246, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative glow blob behind the note */
+.tech-note::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle,
+        rgba(59, 130, 246, 0.08) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.tech-note__icon {
+    position: relative;
+    z-index: 1;
+    font-size: 2rem;
+    /* Glowing icon */
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+}
+
+.tech-note__content {
+    position: relative;
+    z-index: 1;
+}
+
+.tech-note__content h4 {
+    color: #60a5fa; /* Brighter blue for contrast */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.tech-note__content p {
+    font-size: 1rem;
+    color: #a1a1aa;
+}

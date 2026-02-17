@@ -1,0 +1,118 @@
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin-top: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 19px;
+    width: 2px;
+    background: var(--border-light);
+}
+
+.timeline__item {
+    position: relative;
+    padding-left: 60px;
+    padding-bottom: 60px;
+}
+
+.timeline__marker {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--bg-void);
+    border: 2px solid var(--text-muted);
+    z-index: 2;
+}
+
+/* Specific styling for the first item (Current) */
+.timeline__item:first-child .timeline__marker {
+    border-color: var(--accent-primary);
+    background: var(--accent-primary);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.timeline__content {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: var(--transition);
+}
+
+.timeline__content:hover {
+    border-color: var(--border-hover);
+    transform: translateX(5px);
+}
+
+.timeline__badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--bg-void);
+    background: var(--accent-primary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.timeline__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.timeline__header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.timeline__date {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.timeline__company,
+.timeline__location {
+    color: var(--text-main);
+    font-weight: 500;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.timeline__list {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--text-muted);
+}
+
+.timeline__list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+.timeline__list strong {
+    color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 9px;
+    }
+    .timeline__marker {
+        left: 0;
+    }
+    .timeline__item {
+        padding-left: 32px;
+    }
+}
