@@ -1,9 +1,11 @@
 .timeline {
     position: relative;
-    max-width: 800px;
-    margin-top: 40px;
+    max-width: 900px; /* Slightly wider for better readability */
+    margin-top: 60px;
+    padding-bottom: 40px;
 }
 
+/* --- The Vertical "Time Beam" --- */
 .timeline::before {
     content: "";
     position: absolute;
@@ -11,108 +13,213 @@
     bottom: 0;
     left: 19px;
     width: 2px;
-    background: var(--border-light);
+    /* Gradient line: Bright at top (Current), fading to dark at bottom */
+    background: linear-gradient(
+        to bottom,
+        var(--accent-primary) 0%,
+        var(--border-light) 40%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    border-radius: 2px;
 }
 
 .timeline__item {
     position: relative;
-    padding-left: 60px;
+    padding-left: 80px; /* More spacing from the line */
     padding-bottom: 60px;
 }
 
+/* --- The Nodes (Markers) --- */
 .timeline__marker {
     position: absolute;
-    left: 10px;
-    top: 5px;
-    width: 20px;
-    height: 20px;
+    left: 6px; /* Centered on the 2px line (19px left + 1px center - 14px radius) */
+    top: 0;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: var(--bg-void);
-    border: 2px solid var(--text-muted);
+    border: 2px solid var(--border-light);
+    box-shadow: 0 0 0 4px var(--bg-void); /* Creates a "gap" between line and dot */
     z-index: 2;
+    transition: all 0.4s ease;
 }
 
-/* Specific styling for the first item (Current) */
+/* Hovering a card lights up its marker */
+.timeline__item:hover .timeline__marker {
+    border-color: var(--text-main);
+    background: var(--border-light);
+    transform: scale(1.1);
+}
+
+/* --- "Current Role" Special Styling --- */
 .timeline__item:first-child .timeline__marker {
     border-color: var(--accent-primary);
-    background: var(--accent-primary);
-    box-shadow: 0 0 15px var(--accent-glow);
+    background: var(--bg-void);
+    box-shadow:
+        0 0 0 4px var(--bg-void),
+        0 0 15px var(--accent-glow);
 }
 
+/* Add a pulsing core to the current marker */
+.timeline__item:first-child .timeline__marker::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- The Glass Card --- */
 .timeline__content {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    padding: 24px;
-    transition: var(--transition);
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.01) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 32px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .timeline__content:hover {
-    border-color: var(--border-hover);
-    transform: translateX(5px);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.06) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    transform: translateX(10px); /* Smooth slide to the right */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
 }
 
+/* --- Badge (Current) --- */
 .timeline__badge {
     display: inline-block;
     font-size: 0.7rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 800;
+    letter-spacing: 0.05em;
     color: var(--bg-void);
     background: var(--accent-primary);
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-bottom: 12px;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
+/* --- Header & Typography --- */
 .timeline__header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start; /* Align top for multi-line titles */
+    gap: 16px;
+    margin-bottom: 8px;
     flex-wrap: wrap;
-    margin-bottom: 4px;
 }
 
 .timeline__header h3 {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
 }
 
 .timeline__date {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.85rem;
     color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
 }
 
-.timeline__company,
-.timeline__location {
-    color: var(--text-main);
-    font-weight: 500;
-    margin-bottom: 16px;
-    font-size: 0.95rem;
+.timeline__company {
+    font-size: 1rem;
+    color: var(--accent-primary); /* Highlight company name */
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
+/* --- The List Items --- */
 .timeline__list {
-    list-style: disc;
-    padding-left: 20px;
-    color: var(--text-muted);
+    list-style: none; /* Custom bullets */
+    padding: 0;
 }
 
 .timeline__list li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-}
-.timeline__list strong {
-    color: var(--text-main);
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
 }
 
+/* Custom Bullet Points */
+.timeline__list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-primary);
+    font-family: monospace;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.timeline__list li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline__list strong {
+    color: var(--text-main); /* White text for emphasis */
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle underline */
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
     .timeline::before {
         left: 9px;
     }
     .timeline__marker {
-        left: 0;
+        left: -4px; /* Recalculate center based on new line position */
     }
     .timeline__item {
-        padding-left: 32px;
+        padding-left: 48px; /* Reduce padding */
+    }
+
+    .timeline__header {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .timeline__content {
+        padding: 24px;
     }
 }
