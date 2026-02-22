@@ -28,11 +28,9 @@
 .hero__glow--2 {
     bottom: -40%;
     right: -20%;
-    background: radial-gradient(
-        circle,
-        var(--accent-primary) 0%,
-        transparent 70%
-    );
+    background: radial-gradient(circle,
+            var(--accent-primary) 0%,
+            transparent 70%);
 }
 
 .hero__container {
@@ -62,11 +60,9 @@
 }
 
 .text-gradient {
-    background: linear-gradient(
-        135deg,
-        var(--accent-primary) 20%,
-        #ff9f80 100%
-    );
+    background: linear-gradient(135deg,
+            var(--accent-primary) 20%,
+            #ff9f80 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -147,12 +143,10 @@
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(255, 255, 255, 0.8) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(to right,
+            transparent 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            transparent 100%);
     transform: skewX(-25deg);
     animation: shine 6s infinite;
 }
@@ -160,11 +154,13 @@
 /* --- Visual Section (Right Side) --- */
 .hero__visual {
     display: flex;
-    flex-direction: column; /* Stack Image and Skills */
+    flex-direction: column;
+    /* Stack Image and Skills */
     align-items: center;
     justify-content: center;
     position: relative;
-    gap: 40px; /* Space between image and tech stack */
+    gap: 40px;
+    /* Space between image and tech stack */
 }
 
 /* Wrapper */
@@ -221,7 +217,8 @@
 /* --- NEW: Profile Status Badge (The LinkedIn Style Pill) --- */
 .profile-status-badge {
     position: absolute;
-    bottom: -15px; /* Overlaps bottom edge */
+    bottom: -15px;
+    /* Overlaps bottom edge */
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -256,7 +253,8 @@
 .status-dot {
     width: 8px;
     height: 8px;
-    background: #34d399; /* Status Green */
+    background: #34d399;
+    /* Status Green */
     border-radius: 50%;
     box-shadow: 0 0 10px #34d399;
     animation: pulse 2s infinite;
@@ -266,7 +264,8 @@
 .hero__tech-stack {
     display: inline-flex;
     flex-direction: column;
-    align-items: center; /* Center content */
+    align-items: center;
+    /* Center content */
     gap: 16px;
     padding: 24px 40px;
     background: var(--bg-glass);
@@ -306,30 +305,32 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
+    flex-shrink: 0;
 }
+
 .rust-dot {
     background: var(--accent-primary);
     box-shadow: 0 0 8px var(--accent-primary);
 }
-.py-dot {
+
+.db-dot {
     background: var(--accent-blue);
     box-shadow: 0 0 8px var(--accent-blue);
 }
+
 .aws-dot {
     background: #eab308;
     box-shadow: 0 0 8px #eab308;
 }
-.sec-dot {
-    background: #ef4444;
-    box-shadow: 0 0 8px #ef4444;
-}
 
 /* Animations */
 @keyframes shine {
+
     0%,
     80% {
         left: -100%;
     }
+
     100% {
         left: 200%;
     }
@@ -339,9 +340,11 @@
     0% {
         box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
     }
+
     70% {
         box-shadow: 0 0 0 10px rgba(52, 211, 153, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
     }
@@ -352,6 +355,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -376,7 +380,8 @@
     }
 
     .hero__visual {
-        order: -1; /* Image stays top on smaller screens */
+        order: -1;
+        /* Image stays top on smaller screens */
         margin-bottom: 20px;
     }
 
@@ -389,6 +394,7 @@
     .hero {
         padding: 100px 0;
     }
+
     .hero__title {
         font-size: 3rem;
     }

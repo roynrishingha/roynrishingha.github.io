@@ -8,11 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
     rootMargin: "0px 0px -50px 0px", // Offset slightly so it triggers before bottom
   };
 
+  let delayCounter = 0;
+  let resetTimeout;
+
   const revealOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${delayCounter * 0.1}s`;
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target); // Only animate once
+
+        delayCounter++;
+        clearTimeout(resetTimeout);
+        resetTimeout = setTimeout(() => {
+          delayCounter = 0;
+        }, 150);
       }
     });
   }, revealOptions);
@@ -78,8 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const y = e.clientY - rect.top;
 
       // Calculate distance from center
-      const xMove = (x - rect.width / 2) * 0.3; // 0.3 = Magnetic strength
-      const yMove = (y - rect.height / 2) * 0.3;
+      const xMove = (x - rect.width / 2) * 0.5; // 0.5 = Stronger magnetic strength
+      const yMove = (y - rect.height / 2) * 0.5;
 
       btn.style.transform = `translate(${xMove}px, ${yMove}px)`;
     });

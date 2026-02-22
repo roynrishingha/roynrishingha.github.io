@@ -19,9 +19,11 @@
 }
 
 .btn--primary:hover {
-    background: #e2e2e2;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(255, 77, 46, 0.3);
 }
 
 .btn--secondary {
@@ -50,8 +52,8 @@
 
 .card:hover {
     border-color: var(--border-hover);
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-5px);
+    background: var(--bg-glass-hover);
+    transform: translateY(-6px) scale(1.01);
     box-shadow: var(--shadow-card);
 }
 
