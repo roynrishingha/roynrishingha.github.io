@@ -1,24 +1,31 @@
 .projects__stack {
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Generous spacing between premium cards */
+    gap: 80px;
+    /* Generous spacing between premium cards */
 }
 
 /* --- The Main Card Container --- */
 .project-item {
-    display: flex; /* Horizontal layout */
-    align-items: stretch; /* Ensure both sides are same height */
-    min-height: 450px; /*Substantial height for premium feel */
+    display: flex;
+    /* Horizontal layout */
+    align-items: stretch;
+    /* Ensure both sides are same height */
+    min-height: 450px;
+    /*Substantial height for premium feel */
 
     /* Premium Dark Gradient Background */
     background: linear-gradient(135deg, var(--bg-surface) 0%, #151520 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 40px; /* Very large, modern rounded corners */
+    border-radius: 40px;
+    /* Very large, modern rounded corners */
     overflow: hidden;
     position: relative;
     box-shadow:
         0 30px 60px -20px rgba(0, 0, 0, 0.8),
-        /* Deep shadow underneath */ inset 0 1px 1px rgba(255, 255, 255, 0.1); /* Subtle top inner glow */
+        /* Deep shadow underneath */
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    /* Subtle top inner glow */
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease;
@@ -47,7 +54,8 @@
 .project__img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image fills space without stretching */
+    object-fit: cover;
+    /* Ensures image fills space without stretching */
     transition: transform 0.6s ease;
 }
 
@@ -69,8 +77,10 @@
 
 /* Update tags to look good over images */
 .project__tech-overlay .tag {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent dark background */
+    backdrop-filter: blur(10px);
+    /* Frosted glass effect */
     color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-weight: 600;
@@ -78,11 +88,14 @@
 
 /* --- Right Side: Content --- */
 .project__content {
-    flex: 1; /* Takes remaining space */
-    padding: 60px 50px; /* Generous padding */
+    flex: 1;
+    /* Takes remaining space */
+    padding: 60px 50px;
+    /* Generous padding */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
+    justify-content: center;
+    /* Vertically center content */
     position: relative;
     z-index: 1;
 }
@@ -105,13 +118,15 @@
 
 .project__header {
     display: flex;
-    flex-direction: column; /* Stack title and button */
+    flex-direction: column;
+    /* Stack title and button */
     gap: 24px;
     margin-bottom: 24px;
 }
 
 .project__header h3 {
-    font-size: 2.25rem; /* Much larger title */
+    font-size: 2.25rem;
+    /* Much larger title */
     font-weight: 800;
     line-height: 1.1;
     background: linear-gradient(to right, #ffffff, #c4c4cc);
@@ -134,37 +149,41 @@
 
 /* Redesign the link to look like a premium button */
 .project-link-btn {
-    align-self: flex-start; /* Align left */
+    align-self: flex-start;
+    /* Align left */
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 12px 28px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-light);
+    background: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
     border-radius: 100px;
     font-weight: 700;
     font-size: 0.9rem;
-    color: var(--text-main);
+    color: white;
+    box-shadow: 0 10px 20px -5px var(--accent-glow);
     transition: all 0.3s ease;
 }
 
 .project-link-btn:hover {
-    background: var(--accent-primary);
-    border-color: var(--accent-primary);
-    color: white;
-    box-shadow: 0 10px 20px -5px var(--accent-glow);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-light);
+    color: var(--text-main);
+    box-shadow: none;
     transform: translateY(-2px);
 }
 
 /* --- Responsive Design --- */
 @media (max-width: 960px) {
     .project-item {
-        flex-direction: column; /* Stack vertically on smaller screens */
+        flex-direction: column;
+        /* Stack vertically on smaller screens */
         min-height: auto;
     }
 
     .project__visual {
-        flex: 0 0 300px; /* Fixed height for image container */
+        flex: 0 0 300px;
+        /* Fixed height for image container */
         width: 100%;
     }
 
@@ -174,5 +193,121 @@
 
     .project__header h3 {
         font-size: 1.75rem;
+    }
+}
+
+/* --- Project Detailed Content (LSMDB) --- */
+.lsmdb-project {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.lsmdb-project .project__visual-diagram {
+    padding: 0;
+    background: #0a0a0f;
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-height: 450px;
+}
+
+.lsmdb-project .project__visual-diagram .architecture-diagram {
+    margin: 0;
+    padding: 60px 40px;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    background: transparent;
+}
+
+.lsmdb-project .project__visual-diagram .architecture-diagram pre {
+    font-size: 0.80rem;
+    line-height: 1.5;
+    color: var(--accent-primary);
+}
+
+.lsmdb-project .project__visual-diagram .project__tech-overlay {
+    top: 30px;
+    left: 30px;
+}
+
+.lsmdb-project .project__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+
+.lsmdb-project .project__header-text {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.lsmdb-project .project-title {
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.lsmdb-project .project-desc {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.lsmdb-project .core-architecture {
+    margin-top: 0;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lsmdb-project .core-architecture-title {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #fff;
+    margin-bottom: 35px;
+    /* Explicit space between architecture title and the tag cloud */
+}
+
+.lsmdb-project .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    /* Space among each of the architectural tags: 20px vertical, 30px horizontal */
+}
+
+.lsmdb-project .tag-cloud .tag {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px 18px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .lsmdb-project {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .lsmdb-project .project__visual-diagram {
+        min-height: auto;
+    }
+
+    .lsmdb-project .project__visual-diagram .architecture-diagram {
+        padding: 40px 20px;
+        overflow-x: auto;
     }
 }

@@ -114,12 +114,15 @@
     color: var(--bg-void);
     border: 1px solid var(--text-main);
     box-shadow: 0 10px 40px -10px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .btn--primary:hover {
+    background: var(--accent-primary);
+    color: #ffffff;
+    border-color: var(--accent-primary);
     transform: translateY(-4px);
-    box-shadow: 0 20px 50px -10px rgba(255, 255, 255, 0.5);
-    background: #ffffff;
+    box-shadow: 0 20px 50px -10px var(--accent-glow);
 }
 
 .btn--glass {
