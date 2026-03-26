@@ -110,20 +110,28 @@
                 <div class="hero__content">
                     <h1 class="hero__title">
                         Engineering <br />
-                        <span class="text-gradient">Reliable</span> <br />
+                        <span class="text-gradient">Secure</span> <br />
                         Infrastructure.
                     </h1>
 
 
                     <div class="hero__bio-wrapper">
                         <p class="hero__bio">
-                            I am <strong>Nrishinghananda Roy</strong>, a <strong>DevSecOps Engineer</strong> and <strong>Rust Developer</strong> building highly reliable and secure infrastructure.
+                            I am <strong>Nrishinghananda Roy</strong>, a <strong>DevSecOps Engineer</strong>
+                            specializing in <strong>AWS</strong>, <strong>Terraform</strong>, and
+                            <strong>Kubernetes</strong>.
                         </p>
                         <p class="hero__bio">
-                            My work centers on secure cloud infrastructure, CI/CD, and advanced automation pipelines using <strong>AWS</strong>, <strong>Terraform</strong>, and <strong>Python</strong>.
+                            My primary focus is building secure, automated environments using <strong>Python</strong>
+                            and <strong>Ansible</strong>, while utilizing my
+                            systems programming background to architect high-performance backends in
+                            <strong>Rust</strong> when necessary.
                         </p>
                         <p class="hero__bio">
-                            I thrive in fast-paced startup environments, architecting high-performance backend services in <strong>Rust</strong> and building powerful internal tooling and scrapers with <strong>Python</strong>.
+                            I provide startups with highly observable and self-healing <strong>CI/CD</strong> pipelines.
+                            By automating
+                            complex infrastructure workflows, I ensure engineering teams can dedicate all their time to
+                            shipping core business value securely and rapidly.
                         </p>
                     </div>
 
@@ -174,88 +182,6 @@
                 </div>
 
                 <div class="grid grid--3-cols impact__grid">
-
-
-                    <article class="card impact-card">
-                        <div class="card__header">
-                            <div class="card__icon-box">
-                                <img src="./static/icons/rust.svg" alt="Rust" />
-                            </div>
-                            <h3 class="card__title">
-                                Document Processing Automation
-                            </h3>
-                        </div>
-                        <p class="card__desc">
-                            Architected and implemented a concurrent
-                            document generation microservice in
-                            <strong>Rust</strong> using the
-                            <strong>lopdf</strong> and
-                            <strong>docx-rs</strong> libraries. Replaced legacy
-                            Python scripts with a highly reliable
-                            service capable of filling templates, generating
-                            PDF and DOCX documents, and programmatically
-                            placing critical elements like signatures.
-                        </p>
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <div class="feature-icon-wrapper">
-                                    <img src="./static/icons/feature-server.svg" alt="Server" />
-                                </div>
-                                <span>Concurrent PDF Processing</span>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon-wrapper">
-                                    <img src="./static/icons/feature-file-text.svg" alt="File text" />
-                                </div>
-                                <span>Custom PDF &amp; DOCX Parsing</span>
-                            </div>
-                        </div>
-                        <div class="tags">
-                            <span class="tag">Rust</span>
-                            <span class="tag">Automation</span>
-                            <span class="tag">Tooling</span>
-                        </div>
-                    </article>
-
-                    <article class="card impact-card">
-                        <div class="card__header">
-                            <div class="card__icon-box">
-                                <img src="./static/icons/python.svg" alt="Python" />
-                            </div>
-                            <h3 class="card__title">
-                                High-Performance Web Scraping
-                            </h3>
-                        </div>
-                        <p class="card__desc">
-                            Engineered a highly productive, multi-threaded,
-                            and asynchronous web scraper for Codefy using
-                            <strong>Python</strong>. Extracted and normalized
-                            complex data from all German courts (names,
-                            pincodes, addresses) into CSV formats
-                            while efficiently circumventing rate limiting.
-                            Integrated detailed <strong>tracing</strong> for observability.
-                        </p>
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <div class="feature-icon-wrapper">
-                                    <img src="./static/icons/feature-zap.svg" alt="Zap" />
-                                </div>
-                                <span>Async Multi-threading</span>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon-wrapper">
-                                    <img src="./static/icons/feature-activity.svg" alt="Activity" />
-                                </div>
-                                <span>Rate-Limit Evasion &amp; Tracing</span>
-                            </div>
-                        </div>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Data Extraction</span>
-                            <span class="tag">Asyncio</span>
-                        </div>
-                    </article>
-
                     <article class="card impact-card">
                         <div class="card__header">
                             <div class="card__icon-box">
@@ -299,6 +225,85 @@
                             <span class="tag">AWS</span>
                             <span class="tag">Terraform</span>
                             <span class="tag">DevOps</span>
+                        </div>
+                    </article>
+
+                    <article class="card impact-card">
+                        <div class="card__header">
+                            <div class="card__icon-box">
+                                <img src="./static/icons/kubernetes.svg" alt="Kubernetes"
+                                    onerror="this.src='./static/icons/cog.svg'" />
+                            </div>
+                            <h3 class="card__title">
+                                Zero-Trust Kubernetes Platform
+                            </h3>
+                        </div>
+                        <p class="card__desc">
+                            Architected and provisioned a fully automated <strong>Kubernetes</strong>
+                            homelab cluster driven entirely by <strong>GitOps</strong> principles via ArgoCD.
+                            Implemented advanced zero-trust networking using Cilium, integrated continuous
+                            vulnerability scanning with Trivy, and deployed a complete
+                            Prometheus &amp; Grafana stack for deep cluster observability.
+                        </p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="./static/icons/feature-git-merge.svg" alt="GitOps" />
+                                </div>
+                                <span>100% GitOps Automation</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="./static/icons/feature-check.svg" alt="Security" />
+                                </div>
+                                <span>Zero-Trust Networking</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Kubernetes</span>
+                            <span class="tag">SecOps</span>
+                            <span class="tag">GitOps</span>
+                        </div>
+                    </article>
+
+                    <article class="card impact-card">
+                        <div class="card__header">
+                            <div class="card__icon-box">
+                                <img src="./static/icons/rust.svg" alt="Rust" />
+                            </div>
+                            <h3 class="card__title">
+                                Document Processing Automation
+                            </h3>
+                        </div>
+                        <p class="card__desc">
+                            Architected and implemented a concurrent
+                            document generation microservice in
+                            <strong>Rust</strong> using the
+                            <strong>lopdf</strong> and
+                            <strong>docx-rs</strong> libraries. Replaced legacy
+                            Python scripts with a highly reliable
+                            service capable of filling templates, generating
+                            PDF and DOCX documents, and programmatically
+                            placing critical elements like signatures.
+                        </p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="./static/icons/feature-server.svg" alt="Server" />
+                                </div>
+                                <span>Concurrent PDF Processing</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="./static/icons/feature-file-text.svg" alt="File text" />
+                                </div>
+                                <span>Custom PDF &amp; DOCX Parsing</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Rust</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Tooling</span>
                         </div>
                     </article>
                 </div>
