@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/css/blog.css" />
+{% endblock styles %}
+
+{% block content %}
+    <div class="blog-container">
+        <header class="blog-header">
+            <h1 class="blog-title">Engineering <span class="text-gradient">Log</span></h1>
+            <p class="blog-subtitle">Ideas, tutorials, and deep dives into DevSecOps, Rust, and systems architecture.</p>
+            
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="search" placeholder="Search the log..." autocomplete="off">
+                </div>
+                <div class="search-results" style="display: none;">
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="blog-list">
+            {% for page in section.pages %}
+                <article class="blog-card">
+                    <a href="{{ page.permalink }}" class="blog-card-link">
+                        <div class="blog-card-content">
+                            <div class="post-meta">
+                                {% if page.date %}
+                                    <time class="blog-card-date" datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+                                {% endif %}
+                                {% if page.taxonomies.tags %}
+                                    <div class="post-tags">
+                                        {% for tag in page.taxonomies.tags %}
+                                            <span class="post-tag">#{{ tag }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <h2 class="blog-card-title">{{ page.title }}</h2>
+                            {% if page.description %}
+                                <p class="blog-card-desc">{{ page.description }}</p>
+                            {% endif %}
+                            <div class="blog-card-footer">
+                                <span class="read-more">Read article &rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/js/elasticlunr.min.js" defer></script>
+    <script src="/js/search.js" defer></script>
+{% endblock scripts %}

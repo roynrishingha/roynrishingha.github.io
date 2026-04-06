@@ -1,0 +1,13 @@
+<div class="callout callout--{{ kind | default(value='info') }}">
+    <div class="callout__icon">
+        {% if kind == "warning" %}⚠️
+        {% elif kind == "tip" %}💡
+        {% elif kind == "danger" %}🚨
+        {% else %}ℹ️
+        {% endif %}
+    </div>
+    <div class="callout__content">
+        {% if title %}<strong class="callout__title">{{ title }}</strong>{% endif %}
+        <p>{{ body }}</p>
+    </div>
+</div>

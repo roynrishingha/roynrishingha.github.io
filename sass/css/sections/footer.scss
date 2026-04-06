@@ -1,0 +1,191 @@
+.footer {
+    position: relative;
+    padding: 120px 0 60px;
+    margin-top: 100px;
+    overflow: hidden;
+    /* Subtle border top */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Atmospheric Background Effects --- */
+
+/* 1. The "Floor Light" - massive glow from bottom */
+.footer__bg-glow {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 600px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(59, 130, 246, 0.15) 0%,
+        rgba(255, 77, 46, 0.05) 40%,
+        transparent 70%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+/* 2. The Grid Overlay (Fading out) */
+.footer__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: linear-gradient(to bottom, transparent, black 40%, transparent);
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 40%,
+        transparent
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__content {
+    max-width: 700px;
+    text-align: center;
+}
+
+/* --- Typography --- */
+
+.footer__title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #fff 20%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer__text {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+
+.footer__text strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* --- Action Area --- */
+
+.footer__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+/* Primary CTA Button */
+.footer__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--text-main);
+    color: var(--bg-void);
+    padding: 18px 40px;
+    border-radius: 100px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.footer__cta-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    background: #fff;
+}
+
+.footer__cta-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.footer__cta-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* Social Links */
+.footer__socials {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--bg-surface);
+    color: var(--text-main);
+    border-color: var(--text-main);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Copyright / Meta --- */
+
+.footer__meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    font-family: "JetBrains Mono", monospace;
+}
+
+.meta-separator {
+    color: var(--border-light);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 80px 0 40px;
+    }
+
+    .footer__meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .meta-separator {
+        display: none;
+    }
+}

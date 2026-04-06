@@ -1,0 +1,10 @@
+// Global stylesheet — single entry point loaded by base.html
+// Combines all foundational styles into one HTTP request.
+
+@import "variables";
+@import "base";
+@import "layout";
+@import "components";
+@import "sections/nav";
+@import "sections/footer";
+@import "sections/syntax";

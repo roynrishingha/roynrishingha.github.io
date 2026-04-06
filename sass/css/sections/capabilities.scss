@@ -1,0 +1,232 @@
+.capabilities__grid {
+    margin-bottom: 80px;
+    gap: 24px;
+    /* Use grid-auto-rows to ensure equal height cards */
+    grid-auto-rows: 1fr;
+}
+
+/* --- The Card: Deep, Dark & Glassy --- */
+.capability-item {
+    position: relative;
+    /* Base: Dark, glassy, slightly translucent */
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 40px 32px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Hardware acceleration for smooth scaling */
+    will-change: transform, box-shadow;
+}
+
+/* --- The "Spotlight" Gradient (Pseudo-element) --- */
+/* This creates a subtle radial glow that seems to emanate from the top-center */
+.capability-item::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 255, 255, 0.03) 0%,
+        transparent 50%
+    );
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Show spotlight on hover */
+.capability-item:hover::before {
+    opacity: 1;
+}
+
+/* --- Hover State: Interactive Luxury --- */
+.capability-item:hover {
+    transform: translateY(-8px) scale(1.01); /* Slight scale up feels more tactile */
+    /* Brighter border on hover */
+    border-color: rgba(255, 255, 255, 0.15);
+    /* Deep shadow lift + Inner Glow */
+    box-shadow:
+        0 30px 60px -20px rgba(0, 0, 0, 0.8),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05); /* Sharper inner border */
+
+    /* Slightly lighter background */
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* --- The "Progress Line" Animation --- */
+/* A line that draws across the top when you hover */
+.capability-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; /* Starts at 0 width */
+    height: 2px;
+    background: var(--accent-primary); /* Your orange/red brand color */
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1); /* Smoother easing */
+    box-shadow: 0 0 15px var(--accent-primary); /* Stronger glow */
+    z-index: 2;
+}
+
+.capability-item:hover::after {
+    width: 100%; /* Draws to full width */
+}
+
+/* --- The Watermark Number Effect --- */
+/* Moves the number from a list item to a background art element */
+.capability-num {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 5rem; /* Larger and more dramatic */
+    font-weight: 800;
+    /* Outline text effect for a technical look */
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.04);
+    font-family: "JetBrains Mono", monospace;
+    line-height: 1;
+    pointer-events: none;
+    transition: all 0.6s ease;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+/* On hover, the number fills in slightly */
+.capability-item:hover .capability-num {
+    -webkit-text-stroke: 2px rgba(255, 77, 46, 0.15); /* Accent color stroke */
+    transform: translateY(-8px) scale(1.05);
+    opacity: 1;
+}
+
+/* --- Content Styling --- */
+/* Ensure text sits ON TOP of the watermark number */
+.capability-item h4 {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem; /* Larger title */
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    /* Gradient Text for Title */
+    background: linear-gradient(to right, #fff, #a1a1aa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.capability-item p {
+    position: relative;
+    z-index: 1;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* --- Tech Note: The "System HUD" Look --- */
+.tech-note {
+    /* Deeper, more solid background for contrast against grid */
+    background: rgba(13, 13, 16, 0.8);
+    border: 1px solid rgba(59, 130, 246, 0.3); /* Distinct Blue Border */
+    border-radius: 20px;
+    padding: 32px 40px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    /* Complex blue glow */
+    box-shadow:
+        0 20px 50px -20px rgba(0, 0, 0, 0.8),
+        inset 0 0 30px rgba(59, 130, 246, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative animated scanline for the "HUD" feel */
+.tech-note::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(59, 130, 246, 0.03) 50%,
+        transparent 100%
+    );
+    background-size: 100% 200%;
+    animation: scanline 4s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes scanline {
+    0% {
+        background-position: 0% -100%;
+    }
+    100% {
+        background-position: 0% 200%;
+    }
+}
+
+.tech-note__icon {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    /* Glowing icon container */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.tech-note__content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.tech-note__content h4 {
+    color: #60a5fa; /* Brighter blue for contrast */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    font-weight: 800;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.tech-note__content p {
+    font-size: 1.1rem; /* Slightly larger for readability */
+    color: #d1d5db; /* Lighter gray */
+}
+
+/* Mobile Tweaks */
+@media (max-width: 768px) {
+    .tech-note {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .capability-num {
+        font-size: 4rem;
+        top: 20px;
+        right: 20px;
+    }
+}

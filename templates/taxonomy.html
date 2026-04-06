@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block custom_seo %}
+<title>#{{ term.name }} | {{ config.title }}</title>
+{% endblock custom_seo %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+{% endblock styles %}
+
+{% block content %}
+    <div class="container blog-container">
+        <header class="blog-header">
+            <h1 class="blog-title">
+                Tag: <span class="text-gradient">#{{ term.name }}</span>
+            </h1>
+            <p class="blog-subtitle">Found {{ term.pages | length }} post(s) mapped to this domain.</p>
+        </header>
+
+        <div class="blog-list">
+            {% for post in term.pages %}
+            <article class="blog-card">
+                <a href="{{ post.permalink }}" class="blog-card-link">
+                    <span class="blog-card-date">{{ post.date | date(format="%B %d, %Y") }}</span>
+                    <h2 class="blog-card-title">{{ post.title }}</h2>
+                    <p class="blog-card-desc">
+                        {% if post.description %}
+                            {{ post.description }}
+                        {% else %}
+                            {{ post.summary | safe }}
+                        {% endif %}
+                    </p>
+                    <span class="read-more">Decrypt Output →</span>
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+        
+        <div style="margin-top: 4rem; text-align: center;">
+            <a href="/blog" class="btn btn--primary">
+                <span>View All Posts</span>
+            </a>
+        </div>
+    </div>
+{% endblock content %}

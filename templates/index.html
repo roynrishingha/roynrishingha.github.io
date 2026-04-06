@@ -1,0 +1,559 @@
+{% extends "base.html" %}
+
+{% block custom_seo %}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Nrishinghananda Roy",
+            "url": "https://roynrishingha.com",
+            "image": "https://roynrishingha.com/roynrishingha.webp",
+            "jobTitle": "DevSecOps Engineer",
+            "description": "DevSecOps Engineer specializing in AWS, Terraform, and Kubernetes. Architecting zero-trust cloud infrastructure and high-performance Rust backends.",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+            },
+            "alumniOf": [
+                {
+                    "@type": "Organization",
+                    "name": "Codefy GmbH"
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Dhiway"
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Trustforum"
+                }
+            ],
+            "sameAs": [
+                "https://github.com/roynrishingha",
+                "https://linkedin.com/in/roynrishingha"
+            ],
+            "knowsAbout": [
+                "AWS",
+                "Terraform",
+                "Kubernetes",
+                "Infrastructure as Code",
+                "CI/CD Pipelines",
+                "Zero-Trust Security",
+                "Cloud Native Architecture",
+                "Observability",
+                "Ansible",
+                "Rust",
+                "Systems Programming"
+            ]
+        }
+    </script>
+{% endblock custom_seo %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/css/index.css" />
+{% endblock styles %}
+
+{% block scripts %}
+    <script src="/js/app.js" defer></script>
+{% endblock scripts %}
+
+{% block content %}
+        <section class="hero" id="home">
+            <div class="hero__glow hero__glow--1"></div>
+            <div class="hero__glow hero__glow--2"></div>
+
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Engineering <br />
+                        <span class="text-gradient">Secure</span> <br />
+                        Infrastructure.
+                    </h1>
+
+
+                    <div class="hero__bio-wrapper">
+                        <p class="hero__bio">
+                            I am <strong>Nrishinghananda Roy</strong>, an <strong>Infrastructure Engineer</strong>
+                            specializing in <strong>AWS</strong>, <strong>Terraform</strong>, and
+                            <strong>Kubernetes</strong>.
+                        </p>
+                        <p class="hero__bio">
+                            I architect secure cloud infrastructure using Infrastructure as Code (IaC),
+                            building environments that scale predictably under heavy load.
+                        </p>
+                        <p class="hero__bio">
+                            I take end-to-end ownership of reliability and security. Through zero-trust networks and
+                            resilient <strong>CI/CD</strong> pipelines, I empower engineering teams to ship rapidly and
+                            friction-free.
+                        </p>
+                    </div>
+
+                    <div class="hero__actions">
+                        <a href="mailto:roynrishingha@gmail.com" class="btn btn--primary btn--shine">
+                            <span>Let's Talk</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <use href="/icons.svg#icon-arrow-right"></use>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/roynrishingha" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub Profile" class="btn btn--glass">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <use href="/icons.svg#icon-github"></use>
+                            </svg>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="profile-wrapper" id="profileWrapper">
+                        <canvas id="sparkCanvas"></canvas>
+
+                        <img src="/roynrishingha.webp" alt="Nrishinghananda Roy" class="profile-image"
+                            id="profileImage" />
+
+                        <div class="profile-status-badge">
+                            <span class="status-dot"></span>
+                            <span>Available for Hire</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section impact" id="impact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Engineering Impact</h2>
+                    <p class="section-subtitle">
+                        My work focuses on improving system performance,
+                        reducing operational overhead, and building reliable
+                        infrastructure that teams can depend on.
+                    </p>
+                </div>
+
+                <div class="grid grid--3-cols impact__grid">
+                    <article class="card impact-card">
+                        <div class="card__header">
+                            <div class="card__icon-box">
+                                <img src="/icons/aws.svg" />
+                            </div>
+                            <h3 class="card__title">
+                                Distributed Cloud Infrastructure
+                            </h3>
+                        </div>
+                        <p class="card__desc">
+                            Provisioned and managed distributed
+                            infrastructure across more than
+                            <strong>60 nodes</strong> using
+                            <strong>AWS</strong> and
+                            <strong>Terraform</strong>, introducing
+                            Infrastructure as Code, centralized monitoring
+                            with Prometheus and Loki, and automated
+                            deployments through GitHub Actions.
+                        </p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="/icons/feature-globe.svg" alt="Globe" />
+                                </div>
+                                <span>60+ Node Distributed Network</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="/icons/feature-iac.svg" alt="Tettaform" />
+                                </div>
+                                <span>Infrastructure as Code</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="/icons/feature-git-merge.svg" alt="Git merge" />
+                                </div>
+                                <span>Observability &amp; CI/CD</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                    </article>
+
+                    <article class="card impact-card">
+                        <div class="card__header">
+                            <div class="card__icon-box">
+                                <img src="/icons/server.svg" alt="Database Architecture" />
+                            </div>
+                            <h3 class="card__title">
+                                LSM-Tree Storage Engine
+                            </h3>
+                        </div>
+                        <p class="card__desc">
+                            Engineered a persistent Key-Value storage engine from scratch in <strong>Rust</strong>.
+                            Implemented core database internals including Write-Ahead Logging (WAL) for absolute crash
+                            recovery, Bloom Filters, LRU block caching, and an arena-allocated SkipList to achieve
+                            zero-cost abstractions.
+                        </p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="/icons/feature-zap.svg" alt="Performance" />
+                                </div>
+                                <span>Lock-Free SkipList</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="/icons/feature-check.svg" alt="Reliability" />
+                                </div>
+                                <span>Write-Ahead Logging (WAL)</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Rust</span>
+                            <span class="tag">Storage Engine</span>
+                            <span class="tag">Systems Programming</span>
+                        </div>
+                    </article>
+
+                    <article class="card impact-card">
+                        <div class="card__header">
+                            <div class="card__icon-box">
+                                <img src="/icons/rust.svg" alt="Rust" />
+                            </div>
+                            <h3 class="card__title">
+                                Document Processing with Rust
+                            </h3>
+                        </div>
+                        <p class="card__desc">
+                            Architected and implemented a concurrent
+                            document generation microservice in
+                            <strong>Rust</strong> using the
+                            <strong>lopdf</strong> and
+                            <strong>docx-rs</strong> libraries. Replaced legacy
+                            Python scripts with a highly reliable
+                            service capable of filling templates, generating
+                            PDF and DOCX documents, and programmatically
+                            placing critical elements like signatures.
+                        </p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="/icons/server.svg" alt="Server" />
+                                </div>
+                                <span>Concurrent PDF Processing</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon-wrapper">
+                                    <img src="/icons/feature-file-text.svg" alt="File text" />
+                                </div>
+                                <span>Custom PDF &amp; DOCX Parsing</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Rust</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Tooling</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section capabilities">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Capabilities</h2>
+                </div>
+
+                <div class="grid grid--3-cols capabilities__grid">
+                    <div class="capability-item">
+                        <span class="capability-num">01</span>
+                        <h4>DevSecOps &amp; Infrastructure</h4>
+                        <p>
+                            I approach infrastructure with a security-first,
+                            reliability-driven mindset. Managing cloud
+                            assets using <strong>AWS</strong> and <strong>Terraform</strong>,
+                            I incorporate strict access controls and robust CI/CD pipelines.
+                        </p>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-num">02</span>
+                        <h4>Rust Backend Development</h4>
+                        <p>
+                            I architect performant backend services
+                            in <strong>Rust</strong> (Axum, Tokio). My focus is
+                            delivering software that handles concurrency safely,
+                            remains predictable under load, and scales efficiently.
+                        </p>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-num">03</span>
+                        <h4>Python Tooling &amp; Automation</h4>
+                        <p>
+                            I heavily utilize <strong>Python</strong> to build
+                            powerful internal toolings, high-performance web scrapers,
+                            and automated DevSecOps workflows, drastically reducing
+                            manual operational effort.
+                        </p>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-num">04</span>
+                        <h4>Observability &amp; Reliability</h4>
+                        <p>
+                            From capturing detailed application traces to
+                            monitoring cluster health, I implement centralized
+                            logging and metrics using Prometheus, Loki, and tracing
+                            frameworks to ensure complete system observability.
+                        </p>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-num">05</span>
+                        <h4>Product &amp; Business Awareness</h4>
+                        <p>
+                            I understand the business context behind the systems
+                            I build. I take full ownership of features, making practical
+                            technical decisions that align with real product goals
+                            and fast-paced startup timelines.
+                        </p>
+                    </div>
+                    <div class="capability-item">
+                        <span class="capability-num">06</span>
+                        <h4>Independent Execution</h4>
+                        <p>
+                            I work comfortably with deep ownership and minimal
+                            supervision. Once the problem is clear, I plan
+                            the implementation, communicate progress, and
+                            deliver reliable solutions end-to-end.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section journey" id="journey">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Journey</h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__badge">Current</span>
+                            <div class="timeline__header">
+                                <h3>Freelance Engineer</h3>
+                                <span class="timeline__date">Nov 2024 - Present</span>
+                            </div>
+                            <p class="timeline__company">
+                                Freelance
+                            </p>
+                            <ul class="timeline__list">
+                                <li>
+                                    <strong>ISKCON Phoenix (USA)</strong> :
+                                    Developed and shipped a cross-platform mobile application (React Native, Expo) to
+                                    the Apple App Store, managing the full release lifecycle including App Store review
+                                    resolution and production deployment.
+                                </li>
+                                <li>
+                                    Built and published an open-source LSM-Tree key-value storage engine in Rust,
+                                    available as both a library and CLI tool on crates.io
+                                </li>
+                                <li>
+                                    Delivered Python and TypeScript automation coaching to a QA engineer, covering
+                                    Cypress and pytest frameworks for test automation workflows.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__header">
+                                <h3>Software Engineer</h3>
+                                <span class="timeline__date">Nov 2023 - Oct 2024</span>
+                            </div>
+                            <p class="timeline__company">
+                                Codefy GmbH | Remote, Germany
+                            </p>
+                            <ul class="timeline__list">
+                                <li>
+                                    Eliminated a critical performance bottleneck by replacing a third-party Java
+                                    microservice with an in-house Rust service, rebuilding <strong>21 APIs with Rust
+                                        (Axum)</strong> and PostgreSQL. Reduced response times from 3+ seconds to
+                                    <strong>&lt;200ms</strong>,
+                                    enabling business growth without additional infrastructure costs.
+                                </li>
+                                <li>
+                                    Reduced manual operational effort by
+                                    <strong>60%</strong> and accelerated
+                                    document generation by
+                                    <strong>7x</strong>, automating legal
+                                    workflows by rewriting legacy Python
+                                    pipelines in Rust with custom <strong>PDF/DOCX parsing</strong> and
+                                    <strong>S3</strong> uploads.
+                                </li>
+                                <li>
+                                    <strong>Built end-to-end features</strong>
+                                    for a legal case management system used
+                                    by 20+ lawyers. Worked extensively
+                                    across React/TypeScript frontend and
+                                    <strong>Rust (axum)</strong>
+                                    backend to ship client intake, document
+                                    automation, case tracking, and sales
+                                    workflows.
+                                </li>
+                                <li>
+                                    Improved React frontend performance by
+                                    <strong>30%</strong> for high-frequency
+                                    workflows by implementing advanced
+                                    caching strategies with Tanstack Query
+                                    and refactoring component architecture.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__header">
+                                <h3>DevOps Engineer</h3>
+                                <span class="timeline__date">Apr 2023 - Oct 2023</span>
+                            </div>
+                            <p class="timeline__company">
+                                Dhiway | Remote, India
+                            </p>
+                            <ul class="timeline__list">
+                                <li>
+                                    Provisioned and managed a globally distributed network of <strong>60+</strong>
+                                    blockchain nodes using
+                                    <strong>Terraform</strong> and <strong>AWS EC2</strong>, enabling reliable
+                                    production infrastructure across multiple regions.
+                                </li>
+                                <li>
+                                    Configured and maintained <strong>Prometheus</strong> and <strong>Loki</strong>
+                                    observability stacks to monitor node health, latency, and log aggregation across the
+                                    distributed network.
+                                </li>
+                                <li>
+                                    Built <strong>CI/CD</strong> pipelines using <strong>Github Actions</strong> to
+                                    automate security scanning and node provisioning, reducing manual deployment errors
+                                    and operational overhead.
+                                </li>
+                                <li>
+                                    Executed a full cloud migration from <strong>AWS</strong> to <strong>GCP</strong>,
+                                    maintaining infrastructure parity while minimising service disruption.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <div class="timeline__header">
+                                <h3>Frontend Developer</h3>
+                                <span class="timeline__date">Jan 2022 - Mar 2023</span>
+                            </div>
+                            <p class="timeline__company">
+                                Trustforum | Remote, France
+                            </p>
+                            <ul class="timeline__list">
+                                <li>
+                                    Built a scalable component system using React and TypeScript for an early-stage
+                                    community platform.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Engineering Showcase</h2>
+                </div>
+
+                <div class="projects__stack">
+                    <article class="project-item lsmdb-project">
+                        <div class="project__content">
+                            <div class="project__header">
+                                <div class="project__header-text">
+                                    <h3 class="project-title">
+                                        LSM-Tree Key-Value Database
+                                    </h3>
+                                </div>
+                                <a href="https://github.com/roynrishingha/lsmdb" target="_blank"
+                                    rel="noopener noreferrer" class="project-link-btn" data-analytics-category="Project"
+                                    data-analytics-action="click_github_lsmdb">GitHub ↗</a>
+                            </div>
+                            <p class="project-desc">
+                                Engineered a persistent Key-Value storage
+                                engine from scratch in
+                                <strong>Rust</strong>. Replaced traditional
+                                database wrappers with a custom engine built
+                                strictly on zero-cost abstractions,
+                                multi-level compactions, and an
+                                arena-allocated SkipList.
+                            </p>
+
+                            <div class="core-architecture">
+                                <h4 class="core-architecture-title">
+                                    Core Architecture Implemented
+                                </h4>
+
+                                <div class="tag-cloud">
+                                    <span class="tag">Lock-Free SkipList MemTable</span>
+                                    <span class="tag">Write-Ahead Logging (WAL)</span>
+                                    <span class="tag">Bloom Filters</span>
+                                    <span class="tag">LRU Block Caching</span>
+                                    <span class="tag">Snappy Prefix Compression</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project__visual-diagram">
+                            <div class="architecture-diagram">
+                                <pre><code id="lsmdb-diagram-container"></code></pre>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-item">
+                        <div class="project__visual">
+                            <img src="/imgs/rathapp.png" alt="Project Screenshot: Jagannath Ratha Yatra App"
+                                class="project__img" loading="lazy" />
+
+                            <div class="project__tech-overlay">
+                                <span class="tag">React Native</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <div class="project__header">
+                                <h3>Jagannath Ratha Yatra App</h3>
+                                <a href="https://apps.apple.com/us/app/jagannath-ry-iskcon-phoenix/id6757489211"
+                                    target="_blank" rel="noopener noreferrer" class="project-link-btn"
+                                    data-analytics-category="Project"
+                                    data-analytics-action="click_app_store_ratha_yatra">App Store ↗</a>
+                            </div>
+                            <p>
+                                Shipped to App Store in weeks with zero
+                                prior mobile experience. Handles festival
+                                info, real-time volunteer management, and
+                                role-based auth.
+                                <strong>100+</strong> downloads.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

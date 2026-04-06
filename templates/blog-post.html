@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block custom_seo %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  {% if page.description %}
+  "description": "{{ page.description }}",
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ config.extra.author }}"
+  },
+  "url": "{{ page.permalink | safe }}"
+}
+</script>
+{% endblock custom_seo %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+{% endblock styles %}
+
+{% block content %}
+
+    <article class="blog-post-container">
+        <header class="blog-post-header">
+            <div class="post-meta post-meta--large">
+                {% if page.date %}
+                    <time class="blog-post-date" datetime="{{ page.date }}">📅 {{ page.date | date(format="%B %d, %Y") }}</time>
+                {% endif %}
+                <span class="post-meta__stat">⏱️ {{ page.reading_time }} min read</span>
+                <span class="post-meta__stat">📄 {{ page.word_count }} words</span>
+                
+                {% if page.taxonomies.tags %}
+                    <div class="post-tags">
+                        {% for tag in page.taxonomies.tags %}
+                            <a href="/tags/{{ tag }}" class="post-tag post-tag--link">#{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <h1 class="blog-post-title">{{ page.title }}</h1>
+            {% if page.description %}
+                <p class="blog-post-subtitle">{{ page.description }}</p>
+            {% endif %}
+        </header>
+        {% if page.toc and page.toc | length > 1 %}
+        <nav class="toc">
+            <div class="toc__title">On This Page</div>
+            <ul>
+                {% for h in page.toc %}
+                <li>
+                    <a href="{{ h.permalink }}">{{ h.title }}</a>
+                    {% if h.children %}
+                    <ul>
+                        {% for child in h.children %}
+                        <li><a href="{{ child.permalink }}">{{ child.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        {% endif %}
+
+        <div class="blog-post-content">
+            {{ page.content | safe }}
+        </div>
+        
+        <footer class="blog-post-footer">
+            <a href="/blog" class="back-link">&larr; Back to all posts</a>
+        </footer>
+    </article>
+{% endblock content %}

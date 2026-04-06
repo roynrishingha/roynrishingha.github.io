@@ -1,0 +1,37 @@
+/* Giallo Syntax Highlighting — Required Helper CSS */
+/* Zola 0.22 uses Giallo with inline styles for colors. */
+/* These classes handle layout structure (lines, line numbers). */
+
+.giallo-l {
+    display: inline-block;
+    min-height: 1lh;
+    width: 100%;
+}
+
+.giallo-ln {
+    display: inline-block;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0.4em;
+    min-width: 3ch;
+    text-align: right;
+    opacity: 0.5;
+}
+
+/* Highlighted lines */
+.giallo-l mark,
+pre mark {
+    display: block;
+    color: currentcolor;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Code block name label */
+pre .giallo-name {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: var(--font-family-mono);
+}

@@ -1,0 +1,31 @@
+// Fonts loaded via <link> in base.html for performance
+
+:root {
+    --bg-void: #050505;
+    --bg-surface: #0d0d10;
+    --bg-glass: rgba(255, 255, 255, 0.025);
+    --bg-glass-hover: rgba(255, 255, 255, 0.06);
+
+    --text-main: #f5f5f5;
+    --text-muted: #8b8b93;
+    --text-dark: #3a3a41;
+
+    --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+    --font-family-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    --accent-primary: #e54d2e;
+    --accent-primary-rgb: 229, 77, 46;
+    --accent-gradient: linear-gradient(135deg, #ffa03a 0%, #e54d2e 100%);
+    --accent-glow: rgba(229, 77, 46, 0.35);
+    --accent-blue: #0ea5e9;
+
+    --border-light: rgba(255, 255, 255, 0.05);
+    --border-hover: rgba(255, 255, 255, 0.15);
+    --glass-blur: blur(24px);
+    --shadow-card: 0 32px 64px -16px rgba(0, 0, 0, 0.85);
+
+    --container-width: 1140px;
+    --radius-lg: 16px;
+    --radius-pill: 100px;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
