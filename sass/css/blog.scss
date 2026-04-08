@@ -505,3 +505,18 @@
     .blog-post-title { font-size: 2.5rem; }
     .blog-card-title { font-size: 1.5rem; }
 }
+
+/* Taxonomy Utilities */
+.tag-grid-center {
+    justify-content: center;
+    gap: 12px;
+}
+
+.tag-count {
+    opacity: 0.6;
+}
+
+.taxonomy-footer {
+    margin-top: 4rem;
+    text-align: center;
+}

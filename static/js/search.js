@@ -1,89 +1,125 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var $searchInput = document.getElementById("search");
-    var $searchResults = document.querySelector(".search-results");
-    var $searchResultsItems = document.querySelector(".search-results__items");
+/**
+ * search.js — Blog search with lazy-loaded elasticlunr
+ * Loaded only on blog.html.
+ */
 
-    if (!$searchInput) return;
+(function () {
+  var $searchInput = document.getElementById("search");
+  var $searchResults = document.querySelector(".search-results");
+  var $searchResultsItems = document.querySelector(".search-results__items");
 
-    var index = null;
+  if (!$searchInput) return;
 
-    function initSearch() {
-        if (index !== null) return;
+  var index = null;
 
-        fetch("/search_index.en.json")
-            .then(function (response) { return response.json(); })
-            .then(function (data) {
-                index = elasticlunr(function () {
-                    this.addField("title");
-                    this.addField("body");
-                    this.setRef("ref");
-                });
+  function loadElasticlunr() {
+    return new Promise(function (resolve, reject) {
+      if (typeof elasticlunr !== "undefined") {
+        resolve();
+        return;
+      }
+      var script = document.createElement("script");
+      script.src = "/js/elasticlunr.min.js";
+      script.onload = function () {
+        resolve();
+      };
+      script.onerror = function () {
+        reject(new Error("Failed to load elasticlunr"));
+      };
+      document.head.appendChild(script);
+    });
+  }
 
-                // Zola produces { index: {...}, docs_urls: [...], docs: { "url": {title, body} } }
-                // or alternatively just an elasticlunr dump — handle both formats
-                if (data.index) {
-                    try {
-                        index = elasticlunr.Index.load(data.index);
-                    } catch (e) {
-                        console.warn("Failed to load pre-built index, building manually");
-                    }
-                }
-            })
-            .catch(function (error) {
-                console.error("Search index failed to load:", error);
-            });
-    }
+  function initSearch() {
+    if (index !== null) return;
 
-    $searchInput.addEventListener("focus", initSearch);
-
-    $searchInput.addEventListener("input", function (e) {
-        var term = e.target.value.trim();
-        if (term === "") {
-            $searchResults.style.display = "none";
-            return;
-        }
-
-        if (index === null) return;
-
-        var results = index.search(term, {
-            bool: "OR",
-            expand: true,
+    loadElasticlunr()
+      .then(function () {
+        return fetch("/search_index.en.json");
+      })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        index = elasticlunr(function () {
+          this.addField("title");
+          this.addField("body");
+          this.setRef("ref");
         });
 
-        if (results.length === 0) {
-            $searchResults.style.display = "block";
-            $searchResultsItems.innerHTML =
-                '<li class="search-results__empty">No results found for &ldquo;' +
-                term + '&rdquo;</li>';
-        } else {
-            $searchResults.style.display = "block";
-            $searchResultsItems.innerHTML = "";
-
-            results.slice(0, 8).forEach(function (result) {
-                var doc = index.documentStore.getDoc(result.ref);
-                if (!doc) return;
-
-                var li = document.createElement("li");
-                li.className = "search-results__item";
-
-                var preview = (doc.body || "").substring(0, 120).replace(/</g, "&lt;");
-
-                li.innerHTML =
-                    '<a href="' + result.ref + '">' +
-                    '<div class="search-results__title">' + (doc.title || "Untitled") + '</div>' +
-                    '<div class="search-results__preview">' + preview + '&hellip;</div>' +
-                    '</a>';
-                $searchResultsItems.appendChild(li);
-            });
+        if (data.index) {
+          try {
+            index = elasticlunr.Index.load(data.index);
+          } catch (e) {
+            console.warn("Failed to load pre-built index, building manually");
+          }
         }
+      })
+      .catch(function (error) {
+        console.error("Search index failed to load:", error);
+      });
+  }
+
+  $searchInput.addEventListener("focus", initSearch);
+
+  $searchInput.addEventListener("input", function (e) {
+    var term = e.target.value.trim();
+    if (term === "") {
+      $searchResults.style.display = "none";
+      return;
+    }
+
+    if (index === null) return;
+
+    var results = index.search(term, {
+      bool: "OR",
+      expand: true,
     });
 
-    document.addEventListener("click", function (event) {
-        if (
-            !$searchInput.contains(event.target) &&
-            !$searchResults.contains(event.target)
-        ) {
-            $searchResults.style.display = "none";
-        }
-    });
-});
+    if (results.length === 0) {
+      $searchResults.style.display = "block";
+      $searchResultsItems.innerHTML = "";
+
+      var emptyLi = document.createElement("li");
+      emptyLi.className = "search-results__empty";
+      emptyLi.textContent = "No results found for \u201C" + term + "\u201D";
+      $searchResultsItems.appendChild(emptyLi);
+    } else {
+      $searchResults.style.display = "block";
+      $searchResultsItems.innerHTML = "";
+
+      results.slice(0, 8).forEach(function (result) {
+        var doc = index.documentStore.getDoc(result.ref);
+        if (!doc) return;
+
+        var li = document.createElement("li");
+        li.className = "search-results__item";
+
+        var link = document.createElement("a");
+        link.href = result.ref;
+
+        var titleDiv = document.createElement("div");
+        titleDiv.className = "search-results__title";
+        titleDiv.textContent = doc.title || "Untitled";
+
+        var previewDiv = document.createElement("div");
+        previewDiv.className = "search-results__preview";
+        previewDiv.textContent = (doc.body || "").substring(0, 120) + "\u2026";
+
+        link.appendChild(titleDiv);
+        link.appendChild(previewDiv);
+        li.appendChild(link);
+        $searchResultsItems.appendChild(li);
+      });
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+      !$searchInput.contains(event.target) &&
+      !$searchResults.contains(event.target)
+    ) {
+      $searchResults.style.display = "none";
+    }
+  });
+})();

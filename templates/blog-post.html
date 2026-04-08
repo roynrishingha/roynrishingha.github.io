@@ -9,6 +9,9 @@
   {% if page.description %}
   "description": "{{ page.description }}",
   {% endif %}
+  {% if page.date %}"datePublished": "{{ page.date | date(format='%Y-%m-%d') }}",{% endif %}
+  {% if page.updated %}"dateModified": "{{ page.updated | date(format='%Y-%m-%d') }}",{% endif %}
+  {% if page.extra.image %}"image": "{{ config.base_url }}{{ page.extra.image }}",{% endif %}
   "author": {
     "@type": "Person",
     "name": "{{ config.extra.author }}"
@@ -37,7 +40,7 @@
                 {% if page.taxonomies.tags %}
                     <div class="post-tags">
                         {% for tag in page.taxonomies.tags %}
-                            <a href="/tags/{{ tag }}" class="post-tag post-tag--link">#{{ tag }}</a>
+                            <a href="/tags/{{ tag | slugify }}" class="post-tag post-tag--link">#{{ tag }}</a>
                         {% endfor %}
                     </div>
                 {% endif %}

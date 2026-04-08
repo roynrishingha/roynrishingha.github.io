@@ -16,7 +16,7 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" id="search" placeholder="Search the log..." autocomplete="off">
+                    <input type="text" id="search" placeholder="Search the log..." autocomplete="off" aria-label="Search blog posts">
                 </div>
                 <div class="search-results" style="display: none;">
                     <ul class="search-results__items"></ul>
@@ -57,6 +57,5 @@
 {% endblock content %}
 
 {% block scripts %}
-    <script src="/js/elasticlunr.min.js" defer></script>
     <script src="/js/search.js" defer></script>
 {% endblock scripts %}

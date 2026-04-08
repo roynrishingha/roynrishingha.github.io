@@ -1,50 +1,33 @@
 {% extends "base.html" %}
 
 {% block custom_seo %}
-<script type="application/ld+json">
+<link rel="preload" href="/roynrishingha.webp" as="image" type="image/webp" />
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Nrishinghananda Roy",
-            "url": "https://roynrishingha.com",
-            "image": "https://roynrishingha.com/roynrishingha.webp",
-            "jobTitle": "DevSecOps Engineer",
-            "description": "DevSecOps Engineer specializing in AWS, Terraform, and Kubernetes. Architecting zero-trust cloud infrastructure and high-performance Rust backends.",
+            "name": "{{ config.extra.author }}",
+            "url": "{{ config.base_url }}",
+            "image": "{{ config.base_url }}/roynrishingha.webp",
+            "jobTitle": "{{ config.extra.job_title }}",
+            "description": "{{ config.description }}",
             "worksFor": {
                 "@type": "Organization",
-                "name": "Freelance"
+                "name": "{{ config.extra.works_for }}"
             },
             "alumniOf": [
+                {% for org in config.extra.alumni_of %}
                 {
                     "@type": "Organization",
-                    "name": "Codefy GmbH"
-                },
-                {
-                    "@type": "Organization",
-                    "name": "Dhiway"
-                },
-                {
-                    "@type": "Organization",
-                    "name": "Trustforum"
-                }
+                    "name": "{{ org }}"
+                }{% if not loop.last %},{% endif %}
+                {% endfor %}
             ],
             "sameAs": [
-                "https://github.com/roynrishingha",
-                "https://linkedin.com/in/roynrishingha"
+                "{{ config.extra.github }}",
+                "{{ config.extra.linkedin }}"
             ],
-            "knowsAbout": [
-                "AWS",
-                "Terraform",
-                "Kubernetes",
-                "Infrastructure as Code",
-                "CI/CD Pipelines",
-                "Zero-Trust Security",
-                "Cloud Native Architecture",
-                "Observability",
-                "Ansible",
-                "Rust",
-                "Systems Programming"
-            ]
+            "knowsAbout": {{ config.extra.knows_about | json_encode | safe }}
         }
     </script>
 {% endblock custom_seo %}
@@ -55,6 +38,8 @@
 
 {% block scripts %}
 <script src="/js/app.js" defer></script>
+<script src="/js/spark.js" defer></script>
+<script src="/js/diagram.js" defer></script>
 {% endblock scripts %}
 
 {% block content %}
@@ -92,15 +77,11 @@
             <div class="hero__actions">
                 <a href="mailto:roynrishingha@gmail.com" class="btn btn--primary btn--shine">
                     <span>Let's Talk</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <use href="/icons.svg#icon-arrow-right"></use>
-                    </svg>
+                    <img src="/icons/arrow-right.svg" alt="Arrow Right" width="20" height="20" />
                 </a>
                 <a href="https://github.com/roynrishingha" target="_blank" rel="noopener noreferrer"
                     aria-label="GitHub Profile" class="btn btn--glass">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <use href="/icons.svg#icon-github"></use>
-                    </svg>
+                    <img src="/icons/github.svg" alt="GitHub Logo" width="22" height="22" />
                     <span>GitHub</span>
                 </a>
             </div>
@@ -110,7 +91,8 @@
             <div class="profile-wrapper" id="profileWrapper">
                 <canvas id="sparkCanvas"></canvas>
 
-                <img src="/roynrishingha.webp" alt="Nrishinghananda Roy" class="profile-image" id="profileImage" />
+                <img src="/roynrishingha.webp" alt="Nrishinghananda Roy" class="profile-image" id="profileImage"
+                    width="420" height="420" />
 
                 <div class="profile-status-badge">
                     <span class="status-dot"></span>
@@ -136,7 +118,7 @@
             <article class="card impact-card">
                 <div class="card__header">
                     <div class="card__icon-box">
-                        <img src="/icons/server.svg" alt="Database Architecture" />
+                        <img src="/icons/server.svg" alt="Database Architecture" width="48" height="48" />
                     </div>
                     <h3 class="card__title">
                         LSM-Tree Storage Engine in Rust
@@ -153,13 +135,13 @@
                 <div class="feature-list">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-zap.svg" alt="Performance" />
+                            <img src="/icons/feature-zap.svg" alt="Performance" width="14" height="14" />
                         </div>
                         <span>Lock-Free SkipList</span>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-check.svg" alt="Reliability" />
+                            <img src="/icons/feature-check.svg" alt="Reliability" width="14" height="14" />
                         </div>
                         <span>Write-Ahead Logging (WAL)</span>
                     </div>
@@ -174,7 +156,7 @@
             <article class="card impact-card">
                 <div class="card__header">
                     <div class="card__icon-box">
-                        <img src="/icons/aws.svg" />
+                        <img src="/icons/aws.svg" alt="AWS" width="48" height="48" />
                     </div>
                     <h3 class="card__title">
                         Observability Infrastructure at Scale
@@ -191,19 +173,19 @@
                 <div class="feature-list">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-globe.svg" alt="Globe" />
+                            <img src="/icons/feature-globe.svg" alt="Globe" width="14" height="14" />
                         </div>
                         <span>60+ Node Distributed Network</span>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-iac.svg" alt="Tettaform" />
+                            <img src="/icons/feature-iac.svg" alt="Terraform" width="14" height="14" />
                         </div>
                         <span>Infrastructure as Code</span>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-git-merge.svg" alt="Git merge" />
+                            <img src="/icons/feature-git-merge.svg" alt="Git merge" width="14" height="14" />
                         </div>
                         <span>Observability &amp; CI/CD</span>
                     </div>
@@ -220,7 +202,7 @@
             <article class="card impact-card">
                 <div class="card__header">
                     <div class="card__icon-box">
-                        <img src="/icons/rust.svg" alt="Rust" />
+                        <img src="/icons/rust.svg" alt="Rust" width="48" height="48" />
                     </div>
                     <h3 class="card__title">
                         Rust Backend Systems at Codefy
@@ -240,13 +222,13 @@
                 <div class="feature-list">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/server.svg" alt="Server" />
+                            <img src="/icons/server.svg" alt="Server" width="14" height="14" />
                         </div>
                         <span>Concurrent PDF Processing</span>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-file-text.svg" alt="File text" />
+                            <img src="/icons/feature-file-text.svg" alt="File text" width="14" height="14" />
                         </div>
                         <span>Custom PDF &amp; DOCX Parsing</span>
                     </div>
@@ -426,7 +408,7 @@
                 <div class="timeline__marker"></div>
                 <div class="timeline__content">
                     <div class="timeline__header">
-                        <h3>DevOps Engineer</h3>
+                        <h3>Associate Software Engineer</h3>
                         <span class="timeline__date">Apr 2023 - Oct 2023</span>
                     </div>
                     <p class="timeline__company">
@@ -469,7 +451,7 @@
                     </p>
                     <ul class="timeline__list">
                         <li>
-                            Built a scalable component system using React and TypeScript for an early-stage
+                            Built a scalable component system using Vue3 and TypeScript for an early-stage
                             community platform.
                         </li>
                     </ul>
@@ -531,8 +513,10 @@
 
             <article class="project-item">
                 <div class="project__visual">
-                    <img src="/imgs/rathapp.png" alt="Project Screenshot: Jagannath Ratha Yatra App"
-                        class="project__img" loading="lazy" />
+                    {% set rathapp = resize_image(path="static/imgs/rathapp.png", width=800, op="fit_width",
+                    format="webp", quality=85) %}
+                    <img src="{{ rathapp.url }}" alt="Project Screenshot: Jagannath Ratha Yatra App"
+                        class="project__img" loading="lazy" width="{{ rathapp.width }}" height="{{ rathapp.height }}" />
 
                     <div class="project__tech-overlay">
                         <span class="tag">React Native</span>

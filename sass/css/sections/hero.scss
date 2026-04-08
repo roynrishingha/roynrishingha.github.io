@@ -59,15 +59,7 @@
     margin-bottom: 32px;
 }
 
-.text-gradient {
-    background: linear-gradient(135deg,
-            var(--accent-primary) 20%,
-            #ff9f80 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 40px var(--accent-glow));
-}
+
 
 /* Bio Text */
 .hero__bio-wrapper {
@@ -94,34 +86,22 @@
     margin-bottom: 0;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
+.hero__actions .btn {
     justify-content: center;
     gap: 12px;
     padding: 18px 40px;
     border-radius: 100px;
     font-weight: 700;
     font-size: 1.05rem;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
 }
 
 /* Primary CTA */
-.btn--primary {
-    background: var(--text-main);
-    color: var(--bg-void);
-    border: 1px solid var(--text-main);
+.hero__actions .btn--primary {
     box-shadow: 0 10px 40px -10px rgba(255, 255, 255, 0.4);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.btn--primary:hover {
-    background: var(--accent-primary);
-    color: #ffffff;
-    border-color: var(--accent-primary);
-    transform: translateY(-4px);
+.hero__actions .btn--primary:hover {
     box-shadow: 0 20px 50px -10px var(--accent-glow);
 }
 
@@ -263,68 +243,7 @@
     animation: pulse 2s infinite;
 }
 
-/* --- Tech Stack Strip (Now Below Image) --- */
-.hero__tech-stack {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    /* Center content */
-    gap: 16px;
-    padding: 24px 40px;
-    background: var(--bg-glass);
-    border: 1px solid var(--border-light);
-    border-radius: 24px;
-    backdrop-filter: blur(12px);
-    width: fit-content;
-    /* Fade in effect */
-    animation: fadeUp 1s ease-out 0.5s backwards;
-}
 
-.tech-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    font-weight: 700;
-}
-
-.tech-list {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.95rem;
-    color: var(--text-main);
-    font-weight: 500;
-}
-
-.tech-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.rust-dot {
-    background: var(--accent-primary);
-    box-shadow: 0 0 8px var(--accent-primary);
-}
-
-.db-dot {
-    background: var(--accent-blue);
-    box-shadow: 0 0 8px var(--accent-blue);
-}
-
-.aws-dot {
-    background: #eab308;
-    box-shadow: 0 0 8px #eab308;
-}
 
 /* Animations */
 @keyframes shine {
