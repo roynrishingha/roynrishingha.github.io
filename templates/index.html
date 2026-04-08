@@ -2,7 +2,7 @@
 
 {% block custom_seo %}
 <link rel="preload" href="/roynrishingha.webp" as="image" type="image/webp" />
-    <script type="application/ld+json">
+<script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Person",
@@ -59,14 +59,14 @@
             <div class="hero__bio-wrapper">
                 <p class="hero__bio">
                     I am <strong>Nrishinghananda Roy</strong>, a <strong>Rust Systems Engineer</strong>
-                    focused on distributed observability infrastructure.
+                    focused on distributed infrastructure.
                 </p>
                 <p class="hero__bio">
-                    I write production <strong>Rust</strong>: async services with <strong>Tokio</strong>, gRPC with
-                    <strong>Tonic</strong>, HTTP APIs with <strong>Axum</strong>. I have operated
-                    <strong>Prometheus</strong> and <strong>Loki</strong> observability stacks at scale, built a
-                    persistent storage engine with a <strong>Write-Ahead Log</strong> in Rust, and contributed to open
-                    source systems that handle millions of events per second.
+                    I write production <strong>Rust</strong>: async services with <strong>Tokio</strong>,
+                    gRPC with <strong>Tonic</strong>, HTTP APIs with <strong>Axum</strong>. I have built
+                    a persistent <strong>storage engine</strong> with a Write-Ahead Log in Rust, and
+                    operated <strong>Prometheus</strong> and <strong>Loki</strong> observability stacks
+                    across 60+ distributed nodes in production.
                 </p>
                 <p class="hero__bio">
                     I am an active contributor to <strong> Rust Clippy</strong>, the official Rust compiler linting
@@ -125,12 +125,10 @@
                     </h3>
                 </div>
                 <p class="card__desc">
-                    Engineered a persistent Key-Value storage engine from scratch in <strong>Rust</strong>, published on
-                    crates.io as both a library and CLI binary.
-                    Implemented the core internals of a log-structured storage system:
-                    Write-Ahead Logging (WAL) for crash recovery, Bloom Filters for
-                    read amplification reduction, LRU block caching, and an
-                    arena-allocated SkipList for zero-cost abstractions.
+                    Built a persistent key-value storage engine from scratch in Rust,
+                    published on crates.io as a library and CLI binary. Implemented
+                    Write-Ahead Logging for crash recovery, Bloom Filters, LRU block
+                    caching, and an arena-allocated SkipList.
                 </p>
                 <div class="feature-list">
                     <div class="feature-item">
@@ -159,16 +157,15 @@
                         <img src="/icons/aws.svg" alt="AWS" width="48" height="48" />
                     </div>
                     <h3 class="card__title">
-                        Observability Infrastructure at Scale
+                        Distributed Cloud Infrastructure
                     </h3>
                 </div>
                 <p class="card__desc">
-                    Provisioned and operated a globally distributed network of 60+
-                    nodes using <strong>Terraform</strong> and <strong>AWS EC2</strong>. Configured
-                    <strong>Prometheus</strong> and <strong>Loki</strong>
-                    observability stacks to monitor node health, latency, and log
-                    aggregation across all regions. Built <strong>CI/CD pipelines</strong> via
-                    <strong>GitHub Actions</strong> for automated deployment and security scanning.
+                    Provisioned and operated 60+ globally distributed nodes using
+                    <strong>Terraform</strong> and <strong>AWS EC2</strong>. Configured
+                    <strong>Prometheus</strong> and <strong>Loki</strong> to monitor
+                    node health and log aggregation across all regions. Built GitHub
+                    Actions pipelines for automated deployment and security scanning.
                 </p>
                 <div class="feature-list">
                     <div class="feature-item">
@@ -205,19 +202,15 @@
                         <img src="/icons/rust.svg" alt="Rust" width="48" height="48" />
                     </div>
                     <h3 class="card__title">
-                        Rust Backend Systems at Codefy
+                        Rust Backend Systems
                     </h3>
                 </div>
                 <p class="card__desc">
-                    Replaced a Java microservice with a Rust service built on <strong>Axum</strong>
-                    and <strong>Tokio</strong>, rebuilding 21 APIs and cutting response times from
-                    3+ seconds to under 200ms. Automated legal document generation
-                    workflows using custom PDF and DOCX parsing in Rust, reducing
-                    manual effort by 60% and accelerating processing 7x.
-                </p>
-                <p class="card__desc">
-                    Production experience writing async Rust under real performance
-                    and reliability constraints, in a remote international team.
+                    Replaced a Java microservice with <strong>Rust</strong> on <strong>Axum</strong> and
+                    <strong>Tokio</strong>, rebuilding APIs and cutting response times from 3+ seconds
+                    to under 200ms. Automated document generation workflows with
+                    custom PDF and DOCX parsing in Rust, reducing manual effort
+                    by 60% and accelerating processing 7x.
                 </p>
                 <div class="feature-list">
                     <div class="feature-item">
@@ -235,8 +228,9 @@
                 </div>
                 <div class="tags">
                     <span class="tag">Rust</span>
-                    <span class="tag">Automation</span>
-                    <span class="tag">Tooling</span>
+                    <span class="tag">Parsing</span>
+                    <span class="tag">OCR</span>
+                    <span class="tag">Asynchronous Processing</span>
                 </div>
             </article>
         </div>

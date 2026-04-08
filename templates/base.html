@@ -1,37 +1,42 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        media="print" onload="this.media='all'" />
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" />
     </noscript>
     {% set current_title = config.title %}
     {% set current_description = config.description | default(value="DevSecOps Engineer and Systems Programmer.") %}
     {% set current_image = config.base_url ~ "/roynrishingha.webp" %}
 
     {% if page %}
-        {% if page.title %}
-            {% set current_title = page.title %}
-        {% endif %}
-        {% if page.description %}
-            {% set current_description = page.description %}
-        {% endif %}
-        {% if page.extra.image %}
-            {% set current_image = config.base_url ~ page.extra.image %}
-        {% endif %}
+    {% if page.title %}
+    {% set current_title = page.title %}
+    {% endif %}
+    {% if page.description %}
+    {% set current_description = page.description %}
+    {% endif %}
+    {% if page.extra.image %}
+    {% set current_image = config.base_url ~ page.extra.image %}
+    {% endif %}
     {% elif section %}
-        {% if section.title %}
-            {% set current_title = section.title %}
-        {% endif %}
-        {% if section.description %}
-            {% set current_description = section.description %}
-        {% endif %}
+    {% if section.title %}
+    {% set current_title = section.title %}
+    {% endif %}
+    {% if section.description %}
+    {% set current_description = section.description %}
+    {% endif %}
     {% endif %}
 
     {% block title %}
@@ -45,7 +50,8 @@
 
     {% if page %}
     <meta property="og:type" content="article" />
-    {% if page.date %}<meta property="article:published_time" content="{{ page.date }}" />{% endif %}
+    {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date }}" />{% endif %}
     {% else %}
     <meta property="og:type" content="website" />
     {% endif %}
@@ -64,11 +70,12 @@
     <meta name="twitter:description" content="{{ current_description }}" />
     <meta name="twitter:image" content="{{ current_image }}" />
 
-    <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") }}" />
-    <link rel="apple-touch-icon" href="{{ get_url(path="favicon.png") }}" />
+    <link rel="icon" type="image/png" href="{{ get_url(path=" favicon.png") }}" />
+    <link rel="apple-touch-icon" href="{{ get_url(path=" favicon.png") }}" />
     <meta name="theme-color" content="#050505" />
     <meta name="generator" content="Zola" />
-    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed" href="{{ get_url(path="atom.xml") }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed" href="{{ get_url(path=" atom.xml")
+        }}" />
 
     {% block custom_seo %}
     {% endblock custom_seo %}
@@ -94,13 +101,23 @@
     {% block scripts %}
     {% endblock scripts %}
 </head>
+
 <body>
     <noscript>
-        <div style="background-color: var(--accent-primary, #ff4c29); color: white; padding: 10px; text-align: center; z-index: 10000; position: relative;">
-            This site relies on JavaScript for interactions and animations. Please enable JavaScript for the best experience.
+        <div
+            style="background-color: var(--accent-primary, #ff4c29); color: white; padding: 10px; text-align: center; z-index: 10000; position: relative;">
+            This site relies on JavaScript for interactions and animations. Please enable JavaScript for the best
+            experience.
         </div>
         <style>
-            .hero__content > *, .hero__visual, .section-title, .section-subtitle, .card, .capability-item, .timeline__item, .project-item {
+            .hero__content>*,
+            .hero__visual,
+            .section-title,
+            .section-subtitle,
+            .card,
+            .capability-item,
+            .timeline__item,
+            .project-item {
                 opacity: 1 !important;
                 transform: translateY(0) !important;
             }
@@ -114,7 +131,8 @@
         <nav class="top-nav">
             <div class="container top-nav__container">
                 <a href="/" class="top-nav__logo" title="Home">
-                    <img src="/roynrishingha.webp" alt="Nrishinghananda Roy" class="top-nav__img" width="38" height="38" />
+                    <img src="/roynrishingha.webp" alt="Nrishinghananda Roy" class="top-nav__img" width="38"
+                        height="38" />
                 </a>
                 <div class="top-nav__links">
                     <a href="/blog" class="top-nav__link">Blog</a>
@@ -122,7 +140,8 @@
             </div>
         </nav>
         <a href="#" id="back-to-top" class="back-to-top" title="Back to top">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="12" y1="19" x2="12" y2="5"></line>
                 <polyline points="5 12 12 5 19 12"></polyline>
             </svg>
@@ -131,7 +150,7 @@
 
         {% block content %}
         {% endblock content %}
-        
+
         {% block footer %}
         <footer class="footer">
             <div class="footer__bg-glow"></div>
@@ -140,21 +159,22 @@
             <div class="container footer__container">
                 <div class="footer__content">
                     <h2 class="footer__title">
-                        Building <br />
-                        <span class="text-gradient">Systems That Run Reliably?</span>
+                        Open to <br />
+                        <span class="text-gradient">Rust Engineering Roles.</span>
                     </h2>
                     <p class="footer__text">
-                        I am currently actively seeking roles in <strong>DevSecOps</strong>,
-                        <strong>SRE</strong>, <strong>DevOps</strong>, and <strong>Rust Backend Development</strong>.
-                        My work focuses on securing cloud infrastructure, scaling backend services,
-                        and building robust automation tools using <strong>AWS</strong>,
-                        <strong>Terraform</strong>, <strong>Rust</strong>, and <strong>Python</strong>.
+                        I am actively looking for <strong>Rust backend engineering</strong> roles,
+                        particularly in observability, storage, and distributed systems.
+                        I contribute to <strong>Rust Clippy</strong>,
+                        and bring production experience in <strong>Axum</strong>, <strong>Tokio</strong>,
+                        <strong>Tonic</strong>, <strong>AWS</strong>, and <strong>Terraform</strong>.
                     </p>
 
                     <div class="footer__actions">
                         <a href="mailto:roynrishingha@gmail.com" class="footer__cta-btn">
                             <span>Start a Conversation</span>
-                            <img src="/icons/arrow-right-alt.svg" alt="Arrow Right" width="20" height="20" aria-hidden="true" />
+                            <img src="/icons/arrow-right-alt.svg" alt="Arrow Right" width="20" height="20"
+                                aria-hidden="true" />
                         </a>
 
                         <div class="footer__socials">
@@ -180,4 +200,5 @@
         {% endblock footer %}
     </main>
 </body>
+
 </html>
