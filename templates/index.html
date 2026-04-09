@@ -58,19 +58,19 @@
 
             <div class="hero__bio-wrapper">
                 <p class="hero__bio">
-                    I am <strong>Nrishinghananda Roy</strong>, a <strong>Rust Systems Engineer</strong>
+                    I am <strong>Nrishinghananda Roy</strong>, a <strong>Rust Software Engineer</strong>
                     focused on distributed infrastructure.
                 </p>
                 <p class="hero__bio">
                     I write production <strong>Rust</strong>: async services with <strong>Tokio</strong>,
                     gRPC with <strong>Tonic</strong>, HTTP APIs with <strong>Axum</strong>. I have built
                     a persistent <strong>storage engine</strong> with a Write-Ahead Log in Rust, and
-                    operated <strong>Prometheus</strong> and <strong>Loki</strong> observability stacks
-                    across 60+ distributed nodes in production.
+                    provisioned <strong>60+ distributed nodes</strong> on <strong>AWS</strong> with
+                    <strong>Kubernetes</strong> and <strong>Terraform</strong> in production.
                 </p>
                 <p class="hero__bio">
-                    I am an active contributor to <strong> Rust Clippy</strong>, the official Rust compiler linting
-                    tool.
+                    I am an active contributor to <strong>Rust Clippy</strong>,
+                    the official Rust compiler linting tool.
                 </p>
             </div>
 
@@ -108,9 +108,7 @@
         <div class="section-header">
             <h2 class="section-title">Engineering Impact</h2>
             <p class="section-subtitle">
-                My work focuses on improving system performance,
-                reducing operational overhead, and building reliable
-                infrastructure that teams can depend on.
+                Selected work in systems programming, distributed infrastructure, and production Rust engineering.
             </p>
         </div>
 
@@ -118,30 +116,37 @@
             <article class="card impact-card">
                 <div class="card__header">
                     <div class="card__icon-box">
-                        <img src="/icons/server.svg" alt="Database Architecture" width="48" height="48" />
+                        <img src="/icons/server.svg" alt="Storage Engine" width="48" height="48" />
                     </div>
                     <h3 class="card__title">
-                        LSM-Tree Storage Engine in Rust
+                        LSM-Tree Storage Engine
                     </h3>
                 </div>
                 <p class="card__desc">
-                    Built a persistent key-value storage engine from scratch in Rust,
-                    published on crates.io as a library and CLI binary. Implemented
-                    Write-Ahead Logging for crash recovery, Bloom Filters, LRU block
-                    caching, and an arena-allocated SkipList.
+                    Built a persistent key-value storage engine from scratch in
+                    <strong>Rust</strong>, published on crates.io as a library and
+                    CLI binary. Implemented Write-Ahead Logging for crash recovery,
+                    Bloom Filters, LRU block caching, and an arena-allocated SkipList.
+                    The same architecture underpins production storage systems like RocksDB.
                 </p>
                 <div class="feature-list">
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
                             <img src="/icons/feature-zap.svg" alt="Performance" width="14" height="14" />
                         </div>
-                        <span>Lock-Free SkipList</span>
+                        <span>Arena-Allocated SkipList</span>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
                             <img src="/icons/feature-check.svg" alt="Reliability" width="14" height="14" />
                         </div>
                         <span>Write-Ahead Logging (WAL)</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <img src="/icons/feature-check.svg" alt="Reliability" width="14" height="14" />
+                        </div>
+                        <span>Bloom Filter + LRU Cache</span>
                     </div>
                 </div>
                 <div class="tags">
@@ -150,7 +155,43 @@
                     <span class="tag">Systems Programming</span>
                 </div>
             </article>
-
+            <article class="card impact-card">
+                <div class="card__header">
+                    <div class="card__icon-box">
+                        <img src="/icons/rust.svg" alt="Rust" width="48" height="48" />
+                    </div>
+                    <h3 class="card__title">
+                        Rust Backend Systems
+                    </h3>
+                </div>
+                <p class="card__desc">
+                    Replaced a Java microservice with <strong>Rust</strong> on
+                    <strong>Axum</strong> and <strong>Tokio</strong>, rebuilding APIs
+                    and cutting response times from 3+ seconds to under 200ms. Automated
+                    legal document generation with custom PDF and DOCX parsing in Rust,
+                    reducing manual effort by 60% and accelerating processing 7x.
+                </p>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <img src="/icons/feature-zap.svg" alt="Performance" width="14" height="14" />
+                        </div>
+                        <span>3s to 200ms Response Time</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-wrapper">
+                            <img src="/icons/feature-file-text.svg" alt="Documents" width="14" height="14" />
+                        </div>
+                        <span>Custom PDF and DOCX Parsing</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Rust</span>
+                    <span class="tag">Axum</span>
+                    <span class="tag">Tokio</span>
+                    <span class="tag">Async</span>
+                </div>
+            </article>
             <article class="card impact-card">
                 <div class="card__header">
                     <div class="card__icon-box">
@@ -164,8 +205,9 @@
                     Provisioned and operated 60+ globally distributed nodes using
                     <strong>Terraform</strong> and <strong>AWS EC2</strong>. Configured
                     <strong>Prometheus</strong> and <strong>Loki</strong> to monitor
-                    node health and log aggregation across all regions. Built GitHub
-                    Actions pipelines for automated deployment and security scanning.
+                    node health and log aggregation across all regions. Built
+                    <strong>GitHub Actions</strong> pipelines for automated deployment
+                    and security scanning.
                 </p>
                 <div class="feature-list">
                     <div class="feature-item">
@@ -182,55 +224,16 @@
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-git-merge.svg" alt="Git merge" width="14" height="14" />
+                            <img src="/icons/feature-git-merge.svg" alt="CI/CD" width="14" height="14" />
                         </div>
-                        <span>Observability &amp; CI/CD</span>
+                        <span>Observability and CI/CD</span>
                     </div>
                 </div>
                 <div class="tags">
                     <span class="tag">AWS</span>
                     <span class="tag">Terraform</span>
-                    <span class="tag">DevOps</span>
-                </div>
-            </article>
-
-
-
-            <article class="card impact-card">
-                <div class="card__header">
-                    <div class="card__icon-box">
-                        <img src="/icons/rust.svg" alt="Rust" width="48" height="48" />
-                    </div>
-                    <h3 class="card__title">
-                        Rust Backend Systems
-                    </h3>
-                </div>
-                <p class="card__desc">
-                    Replaced a Java microservice with <strong>Rust</strong> on <strong>Axum</strong> and
-                    <strong>Tokio</strong>, rebuilding APIs and cutting response times from 3+ seconds
-                    to under 200ms. Automated document generation workflows with
-                    custom PDF and DOCX parsing in Rust, reducing manual effort
-                    by 60% and accelerating processing 7x.
-                </p>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img src="/icons/server.svg" alt="Server" width="14" height="14" />
-                        </div>
-                        <span>Concurrent PDF Processing</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img src="/icons/feature-file-text.svg" alt="File text" width="14" height="14" />
-                        </div>
-                        <span>Custom PDF &amp; DOCX Parsing</span>
-                    </div>
-                </div>
-                <div class="tags">
-                    <span class="tag">Rust</span>
-                    <span class="tag">Parsing</span>
-                    <span class="tag">OCR</span>
-                    <span class="tag">Asynchronous Processing</span>
+                    <span class="tag">Prometheus</span>
+                    <span class="tag">Loki</span>
                 </div>
             </article>
         </div>
@@ -261,19 +264,17 @@
                     I understand how storage systems are built from first principles:
                     Write-Ahead Logs, MemTables, SSTable compaction, Bloom Filters,
                     and columnar formats. I have implemented these in Rust and read
-                    production storage systems, including OpenObserve's WAL and
-                    DataFusion-based query engine, as primary sources.
+                    production storage systems at the source level.
                 </p>
             </div>
             <div class="capability-item">
                 <span class="capability-num">03</span>
                 <h4>Distributed Systems</h4>
                 <p>
-                    I study distributed systems from primary sources: Designing
-                    Data-Intensive Applications, the OpenObserve cluster codebase,
-                    and NATS-based coordination patterns. I understand replication,
-                    partitioning, consistency tradeoffs, and what happens when
-                    nodes fail, not just in theory but in the code that handles it.
+                    I study distributed systems from primary sources: replication,
+                    partitioning, consistency tradeoffs, and failure handling. I
+                    read production codebases to understand how these concepts
+                    are applied under real constraints, not just in theory.
                 </p>
             </div>
             <div class="capability-item">
@@ -283,19 +284,17 @@
                     I have operated Prometheus and Loki stacks in production and
                     studied OpenTelemetry from protocol to implementation. I
                     understand the full pipeline: SDK instrumentation, OTLP
-                    transport, collector configuration, and backend storage. I
-                    contribute to OpenObserve, an OTel-native observability platform
-                    written in Rust.
+                    transport, collector configuration, and backend storage.
                 </p>
             </div>
             <div class="capability-item">
                 <span class="capability-num">05</span>
-                <h4>Product &amp; Business Awareness</h4>
+                <h4>Open Source Contribution</h4>
                 <p>
-                    I understand the business context behind the systems
-                    I build. I take full ownership of features, making practical
-                    technical decisions that align with real product goals
-                    and fast-paced startup timelines.
+                    Contributor to Rust Clippy, the official Rust compiler linting
+                    tool. I read production codebases as a primary learning method
+                    and write technical posts explaining architectural decisions
+                    at the source level, not surface-level tutorials.
                 </p>
             </div>
             <div class="capability-item">
