@@ -34,7 +34,8 @@
                     <div class="post-meta">
                         <div class="post-meta-primary">
                             {% if page.date %}
-                            <time class="blog-card-date" datetime="{{ page.date }}">{{ page.date | date(format="%b %d, %Y") }}</time>
+                            <time class="blog-card-date" datetime="{{ page.date }}">{{ page.date | date(format="%b %d,
+                                %Y") }}</time>
                             {% endif %}
                             <span class="meta-separator">&bull;</span>
                             <span class="blog-card-read-time">{{ page.reading_time }} min read</span>
@@ -53,7 +54,8 @@
                     {% endif %}
                     <div class="blog-card-footer">
                         <span class="read-more">Read article &rarr;</span>
-                        <button class="share-button" data-title="{{ page.title }}" data-url="{{ config.base_url }}{{ page.permalink | safe }}" aria-label="Share this post">
+                        <button class="share-button" data-title="{{ page.title }}"
+                            data-url="{{ config.base_url }}{{ page.permalink | safe }}" aria-label="Share this post">
                             <img src="/icons/share.svg" alt="Share" width="18" height="18" />
                         </button>
                     </div>

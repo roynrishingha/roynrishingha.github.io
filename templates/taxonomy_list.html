@@ -6,25 +6,25 @@
 {% endblock custom_seo %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/css/blog.css" />
-    <link rel="stylesheet" href="/css/components.css" />
+<link rel="stylesheet" href="/css/blog.css" />
+<link rel="stylesheet" href="/css/components.css" />
 {% endblock styles %}
 
 {% block content %}
-    <div class="container blog-container">
-        <header class="blog-header">
-            <h1 class="blog-title">
-                All <span class="text-gradient">Tags</span>
-            </h1>
-            <p class="blog-subtitle">Browse posts by topic.</p>
-        </header>
+<div class="container blog-container">
+    <header class="blog-header">
+        <h1 class="blog-title">
+            All <span class="text-gradient">Tags</span>
+        </h1>
+        <p class="blog-subtitle">Browse posts by topic.</p>
+    </header>
 
-        <div class="post-tags tag-grid-center">
-            {% for term in terms %}
-                <a href="{{ term.permalink }}" class="post-tag post-tag--link">
-                    #{{ term.name }} <span class="tag-count">({{ term.pages | length }})</span>
-                </a>
-            {% endfor %}
-        </div>
+    <div class="post-tags tag-grid-center">
+        {% for term in terms %}
+        <a href="{{ term.permalink }}" class="post-tag post-tag--link">
+            #{{ term.name }} <span class="tag-count">({{ term.pages | length }})</span>
+        </a>
+        {% endfor %}
     </div>
+</div>
 {% endblock content %}

@@ -93,6 +93,20 @@
         <div class="blog-post-content">
             {{ page.content | safe }}
         </div>
+        <nav class="post-navigation">
+            <div class="post-navigation__prev">
+                {% if page.lower %}
+                <span class="nav-label">&larr; Previous Post</span>
+                <a href="{{ page.lower.permalink | safe }}">{{ page.lower.title }}</a>
+                {% endif %}
+            </div>
+            <div class="post-navigation__next">
+                {% if page.higher %}
+                <span class="nav-label">Next Post &rarr;</span>
+                <a href="{{ page.higher.permalink | safe }}">{{ page.higher.title }}</a>
+                {% endif %}
+            </div>
+        </nav>
         
         <footer class="blog-post-footer">
             <div class="blog-post-actions blog-post-actions--bottom">
