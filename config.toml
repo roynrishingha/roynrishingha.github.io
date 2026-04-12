@@ -1,6 +1,6 @@
 base_url = "https://roynrishingha.com"
-title = "Nrishinghananda Roy | Rust Systems Engineer"
-description = "Rust systems engineer focused on distributed observability infrastructure. Production experience with Tokio, Axum, and Tonic. Active contributor to Rust Clippy."
+title = "Nrishinghananda Roy | roynrishingha"
+description = "Rust Software Engineer focused on distributed observability infrastructure. Production experience with Tokio, Axum, and Tonic. Active contributor to Rust Clippy."
 default_language = "en"
 compile_sass = true
 minify_html = true
@@ -14,23 +14,21 @@ taxonomies = [{ name = "tags" }]
 
 [extra]
 author = "Nrishinghananda Roy"
-job_title = "DevSecOps Engineer"
+job_title = "Software Engineer"
 works_for = "Freelance"
 github = "https://github.com/roynrishingha"
 linkedin = "https://linkedin.com/in/roynrishingha"
 alumni_of = ["Codefy GmbH", "Dhiway", "Trustforum"]
 knows_about = [
-    "AWS",
-    "Terraform",
-    "Kubernetes",
-    "Infrastructure as Code",
-    "CI/CD Pipelines",
-    "Zero-Trust Security",
-    "Cloud Native Architecture",
-    "Observability",
-    "Ansible",
     "Rust",
     "Systems Programming",
+    "AWS",
+    "Terraform",
+    "Ansible",
+    "Infrastructure as Code",
+    "CI/CD Pipelines",
+    "Cloud Native Architecture",
+    "Observability",
 ]
 
 [markdown.highlighting]
