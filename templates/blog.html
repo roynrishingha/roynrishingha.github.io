@@ -32,10 +32,13 @@
             <a href="{{ page.permalink }}" class="blog-card-link">
                 <div class="blog-card-content">
                     <div class="post-meta">
-                        {% if page.date %}
-                        <time class="blog-card-date" datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y")
-                            }}</time>
-                        {% endif %}
+                        <div class="post-meta-primary">
+                            {% if page.date %}
+                            <time class="blog-card-date" datetime="{{ page.date }}">{{ page.date | date(format="%b %d, %Y") }}</time>
+                            {% endif %}
+                            <span class="meta-separator">&bull;</span>
+                            <span class="blog-card-read-time">{{ page.reading_time }} min read</span>
+                        </div>
                         {% if page.taxonomies.tags %}
                         <div class="post-tags">
                             {% for tag in page.taxonomies.tags %}
@@ -50,6 +53,9 @@
                     {% endif %}
                     <div class="blog-card-footer">
                         <span class="read-more">Read article &rarr;</span>
+                        <button class="share-button" data-title="{{ page.title }}" data-url="{{ config.base_url }}{{ page.permalink | safe }}" aria-label="Share this post">
+                            <img src="/icons/share.svg" alt="Share" width="18" height="18" />
+                        </button>
                     </div>
                 </div>
             </a>
@@ -61,4 +67,5 @@
 
 {% block scripts %}
 <script src="/js/search.js" defer></script>
+<script src="/js/share.js" defer></script>
 {% endblock scripts %}

@@ -143,10 +143,11 @@
 }
 
 .blog-card-date, .blog-post-date {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.9rem;
-    color: var(--accent-primary);
-    margin-bottom: 0.5rem;
+    color: var(--text-muted); /* Let SVGs and text be neutral, actually Zola had --accent-primary before, but let's keep text-muted for the horizontal bar */
     font-family: var(--font-family-mono);
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -155,10 +156,30 @@
 /* Post Meta Row (date + read time + word count + tags) */
 .post-meta {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: baseline;
-    margin-bottom: 0.5rem;
+    gap: 15px;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.post-meta-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+}
+
+.meta-separator {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.8em;
+}
+
+.blog-card-read-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-family: var(--font-family-mono);
+    color: var(--text-muted);
 }
 
 .post-meta--large {
@@ -167,6 +188,9 @@
 }
 
 .post-meta__stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: var(--text-muted);
     font-size: 0.95rem;
     font-family: var(--font-family-mono);
@@ -225,15 +249,73 @@
     color: var(--accent-primary);
 }
 
+.blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.share-button {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.share-button:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.share-toast {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    background: rgba(20, 20, 20, 0.95);
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    pointer-events: none;
+    z-index: 100;
+}
+
 /* Blog Post */
 .blog-post-header {
     margin-bottom: 3rem;
 }
 
+.blog-post-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.share-button--post {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    font-weight: 500;
+}
+
 .blog-post-title {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--text-main);
+    color: var(--accent-primary);
     line-height: 1.2;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
@@ -258,7 +340,7 @@
 .blog-post-content h2, .blog-post-content h3 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--text-main);
+    color: var(--accent-primary);
 }
 
 .blog-post-content h2 { font-size: 2rem; }
@@ -277,17 +359,62 @@
 }
 
 .blog-post-content pre {
-    background: #111;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0d0d10;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem 1.5rem; /* Extra top padding for standalone mac dots */
     overflow-x: auto;
     margin: 2rem 0;
+    position: relative;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 8px 30px rgba(0,0,0,0.3);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+/* Standalone macOS dots */
+.blog-post-content pre::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ed6a5e;
+    box-shadow: 20px 0 0 #f4bf4f, 40px 0 0 #61c554;
+    z-index: 10;
+}
+
+/* Custom Webkit scrollbar for code blocks */
+.blog-post-content pre::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+.blog-post-content pre::-webkit-scrollbar-track {
+    background: transparent;
+}
+.blog-post-content pre::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+}
+.blog-post-content pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.blog-post-content pre ::selection {
+    background: rgba(var(--accent-primary-rgb), 0.3);
 }
 
 .blog-post-content code {
     font-family: var(--font-family-mono, monospace);
     font-size: 0.9em;
+}
+
+.blog-post-content pre code {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
 }
 
 .blog-post-content p code {
@@ -331,6 +458,58 @@
 
 .blog-post-content blockquote p {
     margin-bottom: 0;
+}
+
+/* Code Block Filename Headers */
+.blog-post-content blockquote:has(> p:only-child > code:only-child) {
+    margin: 2.5rem 0 0 0;
+    padding: 0.75rem 1.25rem;
+    background: #151515;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 8px 8px 0 0;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-post-content blockquote:has(> p:only-child > code:only-child)::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ed6a5e; /* macOS red */
+    box-shadow: 20px 0 0 #f4bf4f, 40px 0 0 #61c554;
+    margin-right: 48px;
+}
+
+.blog-post-content blockquote:has(> p:only-child > code:only-child) p {
+    display: flex;
+    align-items: center;
+}
+
+.blog-post-content blockquote:has(> p:only-child > code:only-child) code {
+    background: transparent;
+    padding: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: var(--font-family-mono);
+}
+
+.blog-post-content blockquote:has(> p:only-child > code:only-child) + pre {
+    margin-top: 0;
+    padding-top: 1.5rem; /* Reset top padding because the blockquote header took care of it */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* Hide the standalone macOS dots when attached to a file header */
+.blog-post-content blockquote:has(> p:only-child > code:only-child) + pre::before {
+    display: none;
 }
 
 /* Tables */
@@ -396,6 +575,14 @@
     margin-top: 5rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.blog-post-actions--bottom {
+    margin-top: 0;
 }
 
 .back-link {
