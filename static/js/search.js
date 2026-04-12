@@ -30,33 +30,40 @@
     });
   }
 
+  function loadSearchIndex() {
+    return new Promise(function (resolve, reject) {
+      if (window.searchIndex) {
+        resolve();
+        return;
+      }
+      var script = document.createElement("script");
+      script.src = "/search_index.en.js";
+      script.onload = resolve;
+      script.onerror = function () {
+        reject(new Error("Failed to load search index script"));
+      };
+      document.head.appendChild(script);
+    });
+  }
+
   function initSearch() {
     if (index !== null) return;
 
     loadElasticlunr()
       .then(function () {
-        return fetch("/search_index.en.json");
+        return loadSearchIndex();
       })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        index = elasticlunr(function () {
-          this.addField("title");
-          this.addField("body");
-          this.setRef("ref");
-        });
-
-        if (data.index) {
+      .then(function () {
+        if (window.searchIndex) {
           try {
-            index = elasticlunr.Index.load(data.index);
+            index = elasticlunr.Index.load(window.searchIndex);
           } catch (e) {
-            console.warn("Failed to load pre-built index, building manually");
+            console.warn("Failed to load pre-built index:", e);
           }
         }
       })
       .catch(function (error) {
-        console.error("Search index failed to load:", error);
+        console.error("Search index configuration failed:", error);
       });
   }
 
