@@ -22,107 +22,109 @@
 {% endblock custom_seo %}
 
 {% block styles %}
-    <link rel="stylesheet" href="/css/blog.css" />
-    <link rel="stylesheet" href="/css/components.css" />
+<link rel="stylesheet" href="/css/blog.css" />
+<link rel="stylesheet" href="/css/components.css" />
 {% endblock styles %}
 
 {% block content %}
 
-    <article class="blog-post-container">
-        <header class="blog-post-header">
-            <div class="post-meta post-meta--large">
-                <div class="post-meta-primary">
-                    {% if page.date %}
-                        <time class="blog-post-date" datetime="{{ page.date }}">
-                            <img src="/icons/calendar.svg" alt="Date" width="16" height="16" />
-                            {{ page.date | date(format="%B %d, %Y") }}
-                        </time>
-                        <span class="meta-separator">&bull;</span>
-                    {% endif %}
-                    <span class="post-meta__stat">
-                        <img src="/icons/clock.svg" alt="Reading Time" width="16" height="16" />
-                        {{ page.reading_time }} min read
-                    </span>
-                    <span class="meta-separator">&bull;</span>
-                    <span class="post-meta__stat">
-                        <img src="/icons/feature-file-text.svg" alt="Word Count" width="16" height="16" />
-                        {{ page.word_count }} words
-                    </span>
-                </div>
-                
-                {% if page.taxonomies.tags %}
-                    <div class="post-tags">
-                        {% for tag in page.taxonomies.tags %}
-                            <a href="/tags/{{ tag | slugify }}" class="post-tag post-tag--link">#{{ tag }}</a>
-                        {% endfor %}
-                    </div>
+<article class="blog-post-container">
+    <header class="blog-post-header">
+        <div class="post-meta post-meta--large">
+            <div class="post-meta-primary">
+                {% if page.date %}
+                <time class="blog-post-date" datetime="{{ page.date }}">
+                    <img src="/icons/calendar.svg" alt="Date" width="16" height="16" />
+                    {{ page.date | date(format="%B %d, %Y") }}
+                </time>
+                <span class="meta-separator">&bull;</span>
                 {% endif %}
+                <span class="post-meta__stat">
+                    <img src="/icons/clock.svg" alt="Reading Time" width="16" height="16" />
+                    {{ page.reading_time }} min read
+                </span>
+                <span class="meta-separator">&bull;</span>
+                <span class="post-meta__stat">
+                    <img src="/icons/feature-file-text.svg" alt="Word Count" width="16" height="16" />
+                    {{ page.word_count }} words
+                </span>
             </div>
-            <h1 class="blog-post-title">{{ page.title }}</h1>
-            {% if page.description %}
-                <p class="blog-post-subtitle">{{ page.description }}</p>
-            {% endif %}
-            
-            <div class="blog-post-actions">
-                <button class="share-button share-button--post" data-title="{{ page.title }}" data-url="{{ config.base_url }}{{ page.permalink | safe }}" aria-label="Share this post">
-                    <img src="/icons/share.svg" alt="Share" width="18" height="18" />
-                    <span>Share Post</span>
-                </button>
-            </div>
-        </header>
-        {% if page.toc and page.toc | length > 1 %}
-        <nav class="toc">
-            <div class="toc__title">On This Page</div>
-            <ul>
-                {% for h in page.toc %}
-                <li>
-                    <a href="{{ h.permalink }}">{{ h.title }}</a>
-                    {% if h.children %}
-                    <ul>
-                        {% for child in h.children %}
-                        <li><a href="{{ child.permalink }}">{{ child.title }}</a></li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </li>
+
+            {% if page.taxonomies.tags %}
+            <div class="post-tags">
+                {% for tag in page.taxonomies.tags %}
+                <a href="/tags/{{ tag | slugify }}" class="post-tag post-tag--link">#{{ tag }}</a>
                 {% endfor %}
-            </ul>
-        </nav>
+            </div>
+            {% endif %}
+        </div>
+        <h1 class="blog-post-title">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="blog-post-subtitle">{{ page.description }}</p>
         {% endif %}
 
-        <div class="blog-post-content">
-            {{ page.content | safe }}
+        <div class="blog-post-actions">
+            <button class="share-button share-button--post" data-title="{{ page.title }}"
+                data-url="{{ page.permalink | safe }}" aria-label="Share this post">
+                <img src="/icons/share.svg" alt="Share" width="18" height="18" />
+                <span>Share Post</span>
+            </button>
         </div>
-        <nav class="post-navigation">
-            <div class="post-navigation__prev">
-                {% if page.lower %}
-                <span class="nav-label">&larr; Previous Post</span>
-                <a href="{{ page.lower.permalink | safe }}">{{ page.lower.title }}</a>
+    </header>
+    {% if page.toc and page.toc | length > 1 %}
+    <nav class="toc">
+        <div class="toc__title">On This Page</div>
+        <ul>
+            {% for h in page.toc %}
+            <li>
+                <a href="{{ h.permalink }}">{{ h.title }}</a>
+                {% if h.children %}
+                <ul>
+                    {% for child in h.children %}
+                    <li><a href="{{ child.permalink }}">{{ child.title }}</a></li>
+                    {% endfor %}
+                </ul>
                 {% endif %}
-            </div>
-            <div class="post-navigation__next">
-                {% if page.higher %}
-                <span class="nav-label">Next Post &rarr;</span>
-                <a href="{{ page.higher.permalink | safe }}">{{ page.higher.title }}</a>
-                {% endif %}
-            </div>
-        </nav>
-        
-        <footer class="blog-post-footer">
-            <div class="blog-post-actions blog-post-actions--bottom">
-                <button class="share-button share-button--post" data-title="{{ page.title }}" data-url="{{ config.base_url }}{{ page.permalink | safe }}" aria-label="Share this post">
-                    <img src="/icons/share.svg" alt="Share" width="18" height="18" />
-                    <span>Share This Article</span>
-                </button>
-            </div>
-            
-            <div class="taxonomy-footer">
-                <a href="/blog" class="btn btn--primary">
-                    <span>&larr; Back to all posts</span>
-                </a>
-            </div>
-        </footer>
-    </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+
+    <div class="blog-post-content">
+        {{ page.content | safe }}
+    </div>
+    <nav class="post-navigation">
+        <div class="post-navigation__prev">
+            {% if page.lower %}
+            <span class="nav-label">&larr; Previous Post</span>
+            <a href="{{ page.lower.permalink | safe }}">{{ page.lower.title }}</a>
+            {% endif %}
+        </div>
+        <div class="post-navigation__next">
+            {% if page.higher %}
+            <span class="nav-label">Next Post &rarr;</span>
+            <a href="{{ page.higher.permalink | safe }}">{{ page.higher.title }}</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <footer class="blog-post-footer">
+        <div class="blog-post-actions blog-post-actions--bottom">
+            <button class="share-button share-button--post" data-title="{{ page.title }}"
+                data-url="{{ config.base_url }}{{ page.permalink | safe }}" aria-label="Share this post">
+                <img src="/icons/share.svg" alt="Share" width="18" height="18" />
+                <span>Share This Article</span>
+            </button>
+        </div>
+
+        <div class="taxonomy-footer">
+            <a href="/blog" class="btn btn--primary">
+                <span>&larr; Back to all posts</span>
+            </a>
+        </div>
+    </footer>
+</article>
 {% endblock content %}
 
 {% block scripts %}
