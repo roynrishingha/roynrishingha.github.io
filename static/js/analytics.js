@@ -22,18 +22,6 @@ function setupAnalytics() {
   });
 }
 
-// Email copy tracking
-var emailLink = document.querySelector('a[href^="mailto:"]');
-if (emailLink) {
-  emailLink.addEventListener("copy", function () {
-    if (typeof gtag === "function") {
-      gtag("event", "copy_email", {
-        event_category: "Contact",
-        event_label: "roynrishingha@gmail.com",
-      });
-    }
-  });
-}
 
 setupAnalytics();
 
