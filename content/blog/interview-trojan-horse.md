@@ -177,14 +177,6 @@ This meant their over engineered trap actually saved me. Even if I had made a mi
 
 They built a complex system to keep security researchers out, but a basic, everyday VPN habit was enough to completely break their malware deployment.
 
-## Knowing When to Walk Away
-
-At this point, I had the Stage 1 dropper and the URL for the Stage 2 payload. I could have tried to download the final `tokenlinux.sh` file to see exactly how their info stealer worked.
-
-But I stopped right there.
-
-I am a software engineer, not a reverse engineering malware analyst. I do not have the deep operational security skills required to safely poke at a live command and control server. Attempting to download Stage 2 would have required me to send a direct network request to the attacker's server. I had no interest in handing over my actual IP address to them, nor did I want to risk giving them any network telemetry just to satisfy my curiosity.
-
 ## What Were They Actually After?
 
 This was not some random kid playing a prank. This was a highly organized and automated cyberattack. But why go through all this effort to trick a developer into running a script?
@@ -196,6 +188,16 @@ If I had let the Stage 1 dropper finish its job, it would have downloaded and ex
 Unlike ransomware that loudly encrypts your hard drive and demands money, an Info-Stealer is designed to be completely silent. Its only goal is to quickly recursively search your local directories for high value secrets, zip them up, and upload them to the attacker's server.
 
 They are looking for very specific things. They want your `~/.ssh/` directory so they can steal your private keys and access your GitHub or production servers. They want your `~/.aws/credentials` file so they can spin up crypto mining rigs on your company's dime. They are hunting for local `.env` files that might contain expensive AI platform API keys. They also target your browser's hidden data folders to scrape your session cookies, allowing them to bypass two-factor authentication on your web accounts. And of course, they look for local cryptocurrency wallet files.
+
+## The Decision to Dig Deeper
+
+At this point, I had the Stage 1 dropper and the URL for the Stage 2 payload in my hands. My initial instinct was to walk away. 
+I am a software engineer, not a cybersecurity expert or a malware analyst. So I initially stopped my at the first stage. 
+
+But the puzzle was too compelling to ignore for me. So in the next day, I decided to deep dive.
+
+I documented the complete technical teardown in a dedicated follow-up post: 
+[Down the Rabbit Hole: Reverse Engineering a Multi-Stage Malware Attack](https://roynrishingha.com/blog/reverse-engineering-multi-stage-malware/)
 
 ## Conclusion & Developer OPSEC
 
