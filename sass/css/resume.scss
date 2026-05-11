@@ -260,14 +260,22 @@
         size: A4;
     }
 
-    body, .app-container, .resume-wrapper {
-        background: white !important;
+    /* Aggressively strip all backgrounds, shadows, and colors for clean PDF */
+    *, *::before, *::after {
+        background: transparent !important;
         color: black !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    body, html, .app-container {
+        background: white !important;
         margin: 0;
         padding: 0;
         min-height: auto;
     }
 
+    /* Hide non-print elements */
     .bg-layer, .hero__glow, .no-print, .top-nav, .footer, #back-to-top {
         display: none !important;
     }
@@ -277,10 +285,10 @@
     }
 
     .resume-print {
-        font-family: "Georgia", "Times New Roman", serif;
-        font-size: 11pt;
-        line-height: 1.4;
-        color: black;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+        color: black !important;
         max-width: 100%;
     }
 
@@ -289,25 +297,26 @@
         margin-bottom: 24px;
 
         h1 {
-            font-size: 18pt;
-            font-weight: bold;
+            font-size: 18pt !important;
+            font-weight: bold !important;
+            color: black !important;
             margin: 0 0 4px 0;
             text-transform: uppercase;
         }
 
         h2 {
-            font-size: 12pt;
-            font-weight: normal;
+            font-size: 14pt !important;
+            font-weight: bold !important;
+            color: black !important;
             margin: 0 0 8px 0;
         }
 
         .print-contact {
-            font-family: "Helvetica", "Arial", sans-serif;
-            font-size: 10pt;
+            font-size: 10pt !important;
 
             a {
-                color: black;
-                text-decoration: none;
+                color: black !important;
+                text-decoration: underline !important;
             }
         }
     }
@@ -316,15 +325,17 @@
         margin-bottom: 20px;
 
         h3 {
-            font-size: 12pt;
-            font-weight: bold;
+            font-size: 12pt !important;
+            font-weight: bold !important;
+            color: black !important;
             text-transform: uppercase;
-            border-bottom: 1px solid black;
+            border-bottom: none !important; /* No underline */
             margin: 0 0 10px 0;
-            padding-bottom: 2px;
+            padding: 0;
         }
 
         p {
+            font-size: 11pt !important;
             margin: 0 0 8px 0;
         }
     }
@@ -336,9 +347,9 @@
     .print-item-header {
         margin-bottom: 4px;
         
-        a {
-            color: black;
-            text-decoration: none;
+        strong {
+            font-weight: bold !important;
+            color: black !important;
         }
     }
 
@@ -348,6 +359,7 @@
         margin: 0;
 
         li {
+            font-size: 11pt !important;
             margin-bottom: 4px;
         }
     }
@@ -363,7 +375,13 @@
         margin-bottom: 6px;
 
         strong {
-            font-size: 11pt;
+            font-size: 11pt !important;
+            font-weight: bold !important;
+            color: black !important;
+        }
+        
+        span em {
+            font-style: italic !important;
         }
     }
 
@@ -372,12 +390,13 @@
         padding-left: 18px;
 
         li {
+            font-size: 11pt !important;
             margin-bottom: 4px;
         }
     }
 
     a {
-        color: black;
-        text-decoration: none;
+        color: black !important;
+        text-decoration: underline !important;
     }
 }
