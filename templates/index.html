@@ -42,62 +42,30 @@
     <div class="container hero__container">
         <div class="hero__content">
             <h1 class="hero__title">
-                Engineering <br />
-                Systems <br />
-                with <span class="text-gradient">Rust</span>.
+                Nrishinghananda <span class="text-gradient">Roy</span>.
             </h1>
 
             <div class="hero__bio-wrapper">
                 <p class="hero__bio">
-                    I am <strong>Nrishinghananda Roy</strong>, a
-                    <strong>Rust Software Engineer</strong>. I help growing
-                    <strong>startups</strong> scale their backend infrastructure
-                    with confidence.
+                    Systems engineer working toward data infrastructure in Rust.
                 </p>
                 <p class="hero__bio">
-                    If your current stack is buckling under load or inflating
-                    your cloud budget, I rewrite those critical bottlenecks into
-                    predictable, lightning-fast Rust services.
-                </p>
-                <p class="hero__bio">
-                    I rely on a battle-tested stack. I build concurrent HTTP
-                    APIs and gRPC services leveraging
-                    <strong>Tokio</strong>, <strong>Axum</strong>, and
-                    <strong>Tonic</strong>, and I provision rock-solid cloud
-                    infrastructure on <strong>AWS</strong> using
-                    <strong>Terraform</strong>.
+                    I have production experience in Rust backend services and distributed cloud infrastructure. My
+                    current focus is the internals of storage engines, query systems, and observability backends. I read
+                    production Rust codebases, work toward contributing to open-source projects in this space, and write
+                    about what I find.
                 </p>
             </div>
 
             <div class="hero__actions">
-                <a
-                    href="{{ config.extra.linkedin }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn Profile"
-                    class="btn btn--primary btn--shine"
-                >
+                <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile" class="btn btn--primary btn--shine">
                     <span>LinkedIn</span>
-                    <img
-                        src="/icons/arrow-right.svg"
-                        alt="Arrow Right"
-                        width="20"
-                        height="20"
-                    />
+                    <img src="/icons/arrow-right.svg" alt="Arrow Right" width="20" height="20" />
                 </a>
-                <a
-                    href="{{ config.extra.github }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Profile"
-                    class="btn btn--glass"
-                >
-                    <img
-                        src="/icons/github.svg"
-                        alt="GitHub Logo"
-                        width="22"
-                        height="22"
-                    />
+                <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub Profile" class="btn btn--glass">
+                    <img src="/icons/github.svg" alt="GitHub Logo" width="22" height="22" />
                     <span>GitHub</span>
                 </a>
             </div>
@@ -107,14 +75,8 @@
             <div class="profile-wrapper" id="profileWrapper">
                 <canvas id="sparkCanvas"></canvas>
 
-                <img
-                    src="/roynrishingha.webp"
-                    alt="Nrishinghananda Roy"
-                    class="profile-image"
-                    id="profileImage"
-                    width="420"
-                    height="420"
-                />
+                <img src="/roynrishingha.webp" alt="Nrishinghananda Roy" class="profile-image" id="profileImage"
+                    width="260" height="260" />
 
                 <div class="profile-status-badge">
                     <span class="status-dot"></span>
@@ -125,372 +87,110 @@
     </div>
 </section>
 
-<section class="section impact" id="impact">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Engineering Impact</h2>
-            <p class="section-subtitle">
-                Selected work in systems programming, cloud infrastructure, and
-                production Rust engineering.
-            </p>
-        </div>
+<div class="container tech-content">
+    <div class="tech-content__glow"></div>
 
-        <div class="grid grid--3-cols impact__grid">
-            <article class="card impact-card">
-                <div class="card__header">
-                    <div class="card__icon-box">
-                        <img
-                            src="/icons/server.svg"
-                            alt="Storage Engine"
-                            width="48"
-                            height="48"
-                        />
-                    </div>
-                    <h3 class="card__title">Malware Reverse Engineering</h3>
-                </div>
-                <p class="card__desc">
-                    Intercepted and reverse-engineered a sophisticated malware
-                    campaign disguised as a developer coding interview. Safely
-                    isolated a <strong>Visual Studio Code</strong> zero-click
-                    exploit, stripped custom Node.js obfuscation, and decrypted
-                    the payload to expose a modular InfoStealer and SSH RAT.
-                </p>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-zap.svg"
-                                alt="Performance"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>Zero-Click Exploit Reversal</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-check.svg"
-                                alt="Reliability"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>AST Deobfuscation & Decryption</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-check.svg"
-                                alt="Reliability"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>Command & Control Network Interception</span>
-                    </div>
-                </div>
-                <div class="tags">
-                    <span class="tag">Cybersecurity</span>
-                    <span class="tag">Reverse Engineering</span>
-                    <span class="tag">Malware Analysis</span>
-                </div>
-            </article>
-            <article class="card impact-card">
-                <div class="card__header">
-                    <div class="card__icon-box">
-                        <img
-                            src="/icons/rust.svg"
-                            alt="Rust"
-                            width="48"
-                            height="48"
-                        />
-                    </div>
-                    <h3 class="card__title">Rust Backend Systems</h3>
-                </div>
-                <p class="card__desc">
-                    Replaced a Java microservice with <strong>Rust</strong> on
-                    <strong>Axum</strong> and <strong>Tokio</strong>, rebuilding
-                    APIs and cutting response times from 3+ seconds to under
-                    200ms. Automated legal document generation with custom PDF
-                    and DOCX parsing in Rust, reducing manual effort by 60% and
-                    accelerating processing 7x.
-                </p>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-zap.svg"
-                                alt="Performance"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>3s to 200ms Response Time</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-file-text.svg"
-                                alt="Documents"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>Custom PDF and DOCX Parsing</span>
-                    </div>
-                </div>
-                <div class="tags">
-                    <span class="tag">Rust</span>
-                    <span class="tag">Axum</span>
-                    <span class="tag">Tokio</span>
-                    <span class="tag">Async</span>
-                </div>
-            </article>
-            <article class="card impact-card">
-                <div class="card__header">
-                    <div class="card__icon-box">
-                        <img
-                            src="/icons/aws.svg"
-                            alt="AWS"
-                            width="48"
-                            height="48"
-                        />
-                    </div>
-                    <h3 class="card__title">Cloud Infrastructure & DevOps</h3>
-                </div>
-                <p class="card__desc">
-                    Provisioned and operated a fleet of 60+ global nodes using
-                    <strong>Terraform</strong> and <strong>AWS EC2</strong>.
-                    Configured <strong>Prometheus</strong> and
-                    <strong>Loki</strong> to monitor node health and log
-                    aggregation across all regions. Built
-                    <strong>GitHub Actions</strong> pipelines for automated
-                    deployment and security scanning.
-                </p>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-globe.svg"
-                                alt="Globe"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>60+ Node Global Fleet</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-iac.svg"
-                                alt="Terraform"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>Infrastructure as Code</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon-wrapper">
-                            <img
-                                src="/icons/feature-git-merge.svg"
-                                alt="CI/CD"
-                                width="14"
-                                height="14"
-                            />
-                        </div>
-                        <span>Observability and CI/CD</span>
-                    </div>
-                </div>
-                <div class="tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">Terraform</span>
-                    <span class="tag">Prometheus</span>
-                    <span class="tag">Loki</span>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section class="section capabilities">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Technical Capabilities</h2>
-        </div>
-
-        <div class="grid grid--3-cols capabilities__grid">
-            <div class="capability-item">
-                <span class="capability-num">01</span>
-                <h4>Rust Backend Engineering</h4>
-                <p>
-                    I build lightning-fast async backends using
-                    <strong>Tokio</strong>, <strong>Axum</strong>, and
-                    <strong>Tonic</strong>. By prioritizing zero-cost
-                    abstractions and memory safety, I help teams eliminate
-                    performance bottlenecks, cutting API response times from
-                    seconds to milliseconds under heavy load.
-                </p>
-            </div>
-            <div class="capability-item">
-                <span class="capability-num">02</span>
-                <h4>Cloud Infrastructure</h4>
-                <p>
-                    I design and manage resilient cloud environments on
-                    <strong>AWS</strong> and <strong>GCP</strong>. Using
-                    <strong>Terraform</strong>, I deploy infrastructure as code
-                    (IaC) and set up <strong>GitHub Actions</strong>
-                    to automate CI/CD pipelines, security scanning, and reliable
-                    deployments.
-                </p>
-            </div>
-            <div class="capability-item">
-                <span class="capability-num">03</span>
-                <h4>Rescuing Bottlenecked MVPs</h4>
-                <p>
-                    When your initial MVP inevitably hits its scaling ceiling, I
-                    step in. Instead of demanding a multi-year rewrite, I
-                    identify your most critical, resource-heavy pathways and
-                    surgically replace them with lightning-fast Rust
-                    microservices capable of handling massive load.
-                </p>
-            </div>
-            <div class="capability-item">
-                <span class="capability-num">04</span>
-                <h4>Fearless, Rapid Shipping</h4>
-                <p>
-                    Speed is a startup's greatest asset, but breaking production
-                    is fatal. By combining automated AWS deployments with Rust's
-                    strict compiler guarantees, I ship complex backend features
-                    rapidly. I help you move fast and capture market share
-                    without suffering crippling downtime.
-                </p>
-            </div>
-            <div class="capability-item">
-                <span class="capability-num">05</span>
-                <h4>Future-Proof Code Quality</h4>
-                <p>
-                    Fast growth means your engineering team will multiply
-                    quickly. I don't write clever, unreadable spaghetti code. I
-                    enforce strict linting and write exceptionally clean,
-                    production-ready Rust that your future engineering hires can
-                    inherit, understand, and build upon immediately.
-                </p>
-            </div>
-            <div class="capability-item">
-                <span class="capability-num">06</span>
-                <h4>Autonomous Delivery</h4>
-                <p>
-                    I operate independently across remote teams in the US,
-                    Europe, and India. I take full ownership from the initial
-                    system design to final production deployment, focusing on
-                    clear, asynchronous written communication and reliable
-                    project delivery without requiring micromanagement.
-                </p>
+    <section class="tech-section" id="current-direction">
+        <h2 class="tech-section__title">What I am working on</h2>
+        <div class="tech-section__body">
+            <div class="tech-panel">
+                <p>I am studying the internals of data infrastructure and observability systems built in <code
+                        class="tech-tag">Rust</code>, working
+                    toward open-source contributions in this domain. My method is self-directed: I read source code,
+                    trace
+                    data paths end to end through unfamiliar systems, and form architectural opinions before looking at
+                    how
+                    the project's authors resolved the same problems.</p>
+                <p>The systems I focus on sit at the intersection of storage engine design, query execution, and
+                    high-throughput observability: how log-structured storage engines manage compaction strategies to
+                    balance read and write amplification, how columnar formats exploit memory layout to accelerate
+                    analytical workloads, and how observability backends sustain high ingestion rates without query
+                    latency
+                    degrading under cardinality pressure.</p>
+                <p>Contributions to open-source <code class="tech-tag">Rust</code> infrastructure projects in this space
+                    are in progress.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section projects" id="projects">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Engineering Showcase</h2>
+    <section class="tech-section" id="selected-work">
+        <h2 class="tech-section__title">Selected work</h2>
+        <div class="tech-section__body">
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">Java to Rust service migration</h3>
+                <p>At Codefy GmbH I read an open-source <code class="tech-tag">Java</code> microservice
+                    and its <code class="tech-tag">PostgreSQL</code> schema in full, then rebuilt the entire service in
+                    <code class="tech-tag">Rust</code> using <code class="tech-tag">Axum</code> and <code
+                        class="tech-tag">Tokio</code>. The
+                    work required understanding an unfamiliar codebase from first principles, replicating its behavior
+                    correctly, and producing something measurably better. API response times dropped from over three
+                    seconds
+                    to under 200 milliseconds.
+                </p>
+            </div>
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">Document processing pipelines in Rust</h3>
+                <p>At Codefy GmbH I built automated legal document
+                    workflows in <code class="tech-tag">Rust</code>: PDF editing, image format conversion, page-level
+                    image placement, and DOCX generation
+                    from form data, using <code class="tech-tag">lopdf</code>, <code class="tech-tag">image</code>, and
+                    <code class="tech-tag">nom</code>. The interesting parts required reading library source code
+                    directly because documentation stopped where the actual problems started.
+                </p>
+            </div>
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">Distributed infrastructure at scale</h3>
+                <p>At Dhiway I provisioned and operated a globally
+                    distributed network of 60-plus nodes across <code class="tech-tag">AWS EC2</code> and <code
+                        class="tech-tag">GCP</code> using <code class="tech-tag">Terraform</code>. Set up <code
+                        class="tech-tag">Prometheus</code> and <code class="tech-tag">Loki</code>
+                    for observability across all regions, built <code class="tech-tag">GitHub Actions</code> pipelines
+                    for deployment automation and
+                    security scanning, and executed a full cloud migration from AWS to GCP without significant service
+                    disruption.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="projects__stack">
-            <article class="project-item lsmdb-project">
-                <div class="project__content">
-                    <div class="project__header">
-                        <div class="project__header-text">
-                            <h3 class="project-title">
-                                LSM-Tree Key-Value Database
-                            </h3>
-                        </div>
-                        <a
-                            href="https://github.com/roynrishingha/lsmdb"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link-btn"
-                            data-analytics-category="Project"
-                            data-analytics-action="click_github_lsmdb"
-                            >GitHub ↗</a
-                        >
-                    </div>
-                    <p class="project-desc">
-                        Engineered a persistent Key-Value storage engine from
-                        scratch in
-                        <strong>Rust</strong>. Replaced traditional database
-                        wrappers with a custom engine built strictly on
-                        zero-cost abstractions, multi-level compactions, and an
-                        arena-allocated SkipList.
-                    </p>
-
-                    <div class="core-architecture">
-                        <h4 class="core-architecture-title">
-                            Core Architecture Implemented
-                        </h4>
-
-                        <div class="tag-cloud">
-                            <span class="tag">Lock-Free SkipList MemTable</span>
-                            <span class="tag">Write-Ahead Logging (WAL)</span>
-                            <span class="tag">Bloom Filters</span>
-                            <span class="tag">LRU Block Caching</span>
-                            <span class="tag">Snappy Prefix Compression</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project__visual-diagram">
-                    <div class="architecture-diagram">
-                        <pre><code id="lsmdb-diagram-container"></code></pre>
-                    </div>
-                </div>
-            </article>
-
-            <article class="project-item">
-                <div class="project__visual">
-                    {% set rathapp =
-                    resize_image(path="static/imgs/rathapp.png", width=800,
-                    op="fit_width", format="webp", quality=85) %}
-                    <img
-                        src="{{ rathapp.url }}"
-                        alt="Project Screenshot: Jagannath Ratha Yatra App"
-                        class="project__img"
-                        loading="lazy"
-                        width="{{ rathapp.width }}"
-                        height="{{ rathapp.height }}"
-                    />
-
-                    <div class="project__tech-overlay">
-                        <span class="tag">React Native</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Firebase</span>
-                    </div>
-                </div>
-                <div class="project__content">
-                    <div class="project__header">
-                        <h3>Jagannath Ratha Yatra App</h3>
-                        <a
-                            href="https://apps.apple.com/us/app/jagannath-ry-iskcon-phoenix/id6757489211"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link-btn"
-                            data-analytics-category="Project"
-                            data-analytics-action="click_app_store_ratha_yatra"
-                            >App Store ↗</a
-                        >
-                    </div>
-                    <p>
-                        Shipped to App Store in weeks with zero prior mobile
-                        experience. Handles festival info, real-time volunteer
-                        management, and role-based auth.
-                        <strong>100+</strong> downloads.
-                    </p>
-                </div>
-            </article>
+    <section class="tech-section" id="open-source">
+        <h2 class="tech-section__title">Open source</h2>
+        <div class="tech-section__body">
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">Rust Clippy</h3>
+                <p>Clippy is the official <code class="tech-tag">Rust</code> linter used across the entire Rust
+                    ecosystem. I contributed lints and
+                    improvements to the project and am resuming active contribution now.</p>
+                <a href="https://github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha" target="_blank"
+                    rel="noopener noreferrer"
+                    class="tech-link">github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha</a>
+            </div>
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">lsmdb</h3>
+                <p>A persistent key-value storage engine built on the Log-Structured Merge Tree architecture in <code
+                        class="tech-tag">Rust</code>.
+                    Implements a SkipList MemTable, Write-Ahead Log, Bloom filters, LRU block cache, and <code
+                        class="tech-tag">Snappy</code>
+                    compression. Published on crates.io as both a library and CLI binary.</p>
+                <a href="{{ config.extra.github }}/lsmdb" target="_blank" rel="noopener noreferrer" class="tech-link">{{
+                    config.extra.github | replace(from="https://", to="") }}/lsmdb</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="tech-section" id="writing">
+        <h2 class="tech-section__title">Writing</h2>
+        <div class="tech-section__body">
+            <div class="tech-panel">
+                <p>I write about <code class="tech-tag">Rust</code> and storage system internals, and what I learn from
+                    reading production codebases. The
+                    goal is to make the design decisions inside complex systems legible to engineers approaching these
+                    projects for the first time.</p>
+                <a href="{{ config.base_url }}/blog" class="tech-link">{{ config.base_url | replace(from="https://",
+                    to="")
+                    }}/blog</a>
+            </div>
+        </div>
+    </section>
+</div>
 
 {% endblock content %}

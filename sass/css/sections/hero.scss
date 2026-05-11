@@ -36,9 +36,12 @@
 .hero__container {
     position: relative;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: center;
-    gap: 80px;
+    grid-template-columns: 1fr 260px;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 60px;
     z-index: 1;
 }
 
@@ -51,12 +54,14 @@
 
 /* Main Title */
 .hero__title {
-    font-size: clamp(3.5rem, 5vw, 5rem);
+    font-size: clamp(1.4rem, 5vw, 3.2rem);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.03em;
     color: var(--text-main);
     margin-bottom: 32px;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 
@@ -88,11 +93,11 @@
 
 .hero__actions .btn {
     justify-content: center;
-    gap: 12px;
-    padding: 18px 40px;
+    gap: 10px;
+    padding: 12px 28px;
     border-radius: 100px;
     font-weight: 700;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
 }
 
 /* Primary CTA */
@@ -138,19 +143,17 @@
 .hero__visual {
     display: flex;
     flex-direction: column;
-    /* Stack Image and Skills */
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
-    /*gap: 40px;*/
-    /* Space between image and tech stack */
+    padding-top: 16px; /* small optical offset for top alignment */
 }
 
 /* Wrapper */
 .profile-wrapper {
     position: relative;
     width: 100%;
-    max-width: 420px;
+    max-width: 260px;
     aspect-ratio: 1;
     z-index: 1;
     perspective: 1000px;
@@ -197,7 +200,6 @@
         0 0 0 1px var(--accent-primary);
 }
 
-/* --- NEW: Profile Status Badge (The LinkedIn Style Pill) --- */
 .profile-status-badge {
     position: absolute;
     bottom: -15px;
@@ -208,8 +210,8 @@
 
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 8px 20px;
+    gap: 8px;
+    padding: 6px 16px;
 
     /* Premium Glass Material */
     background: rgba(15, 15, 20, 0.85);
@@ -220,7 +222,7 @@
 
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
 
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-main);
     white-space: nowrap;
@@ -308,7 +310,7 @@
     }
 
     .profile-wrapper {
-        max-width: 350px;
+        max-width: min(320px, 80vw);
     }
 }
 
@@ -317,18 +319,17 @@
         padding: 100px 0;
     }
 
-    .hero__title {
-        font-size: 3rem;
-    }
-
     .hero__actions {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
-        max-width: 320px;
+        max-width: none;
+        gap: 16px;
     }
 
     .btn {
-        width: 100%;
+        width: auto;
     }
 
     .tech-list {

@@ -7,7 +7,7 @@
 (function () {
   // --- Scroll Reveal ---
   var revealElements = document.querySelectorAll(
-    ".hero__content > *, .hero__visual, .section-title, .section-subtitle, .card, .capability-item, .timeline__item, .project-item",
+    ".hero__content > *, .hero__visual, .tech-section__title, .tech-panel, .footer__content > *",
   );
 
   var delayCounter = 0;

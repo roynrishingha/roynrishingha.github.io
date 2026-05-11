@@ -155,45 +155,24 @@
         {% block footer %}
         <footer class="footer">
             <div class="footer__bg-glow"></div>
-            <div class="footer__grid"></div>
-
             <div class="container footer__container">
                 <div class="footer__content">
-                    <h2 class="footer__title">
-                        Open to <br />
-                        <span class="text-gradient">Rust Engineering Roles.</span>
-                    </h2>
-                    <p class="footer__text">
-                        I am actively looking for <strong>Rust backend engineering</strong> roles,
-                        particularly in observability, storage, and distributed systems.
-                        I contribute to <strong>Rust Clippy</strong>,
-                        and bring production experience in <strong>Axum</strong>, <strong>Tokio</strong>,
-                        <strong>Tonic</strong>, <strong>AWS</strong>, and <strong>Terraform</strong>.
+                    <p class="footer__bio">
+                        Rust systems engineer with production experience in backend services and distributed
+                        infrastructure. Focused on storage systems, query engines, and observability infrastructure
+                        in Rust.
                     </p>
-
-                    <div class="footer__actions">
-                        <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer" class="footer__cta-btn">
-                            <span>Connect on LinkedIn</span>
-                            <img src="/icons/arrow-right-alt.svg" alt="Arrow Right" width="20" height="20"
-                                aria-hidden="true" />
+                    <p class="footer__status">
+                        Open to remote roles in data infrastructure and observability engineering.
+                    </p>
+                    <div class="footer__links">
+                        <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer" class="footer__link">
+                            {{ config.extra.github | replace(from="https://", to="") }}
                         </a>
-
-                        <div class="footer__socials">
-                            <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer"
-                                class="social-link" aria-label="GitHub">
-                                <img src="/icons/github.svg" alt="GitHub Logo" width="24" height="24" />
-                            </a>
-                            <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer"
-                                class="social-link" aria-label="LinkedIn">
-                                <img src="/icons/linkedin.svg" alt="LinkedIn Logo" width="24" height="24" />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="footer__meta">
-                        <span>&copy; 2026 Nrishinghananda Roy</span>
-                        <span class="meta-separator">•</span>
-                        <span>Engineering globally from India 🇮🇳</span>
+                        <span class="footer__separator">|</span>
+                        <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer" class="footer__link">
+                            {{ config.extra.linkedin | replace(from="https://", to="") }}
+                        </a>
                     </div>
                 </div>
             </div>

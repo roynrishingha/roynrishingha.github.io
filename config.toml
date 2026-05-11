@@ -1,6 +1,6 @@
 base_url = "https://roynrishingha.com"
 title = "Nrishinghananda Roy | roynrishingha"
-description = "Rust Software Engineer focused on distributed observability infrastructure. Production experience with Tokio, Axum, and Tonic. Active contributor to Rust Clippy."
+description = "Rust systems engineer with production experience in backend services and distributed infrastructure. Focused on storage systems and observability infrastructure."
 default_language = "en"
 compile_sass = true
 minify_html = true

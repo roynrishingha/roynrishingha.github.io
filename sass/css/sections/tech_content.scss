@@ -1,0 +1,146 @@
+.tech-content {
+    max-width: 1000px; /* Expanded master width */
+    margin: 0 auto;
+    padding: 0 24px;
+    padding-bottom: 120px;
+    position: relative;
+    width: 100%;
+}
+
+.tech-content__glow {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 800px;
+    background: radial-gradient(circle, rgba(120, 119, 198, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.tech-section {
+    margin-bottom: 120px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tech-section__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 40px 0;
+    letter-spacing: -0.02em;
+    display: inline-block;
+}
+
+.tech-section__body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* Uniform spacing between panels */
+}
+
+.tech-panel {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.04);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.tech-panel__title {
+    color: #FAFAFA;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+}
+
+.tech-panel p {
+    color: #E4E4E7; /* High contrast reading color */
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    max-width: 800px; /* Keep text from getting too long */
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tech-tag {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.9em;
+    color: var(--accent-primary);
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.tech-link {
+    display: inline-flex;
+    align-items: center;
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 4px;
+    margin-top: 16px;
+    transition: color 0.3s ease;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.3);
+        transition: background 0.3s ease;
+    }
+    
+    &:hover {
+        color: var(--accent-primary);
+        
+        &::after {
+            background: var(--accent-primary);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-panel {
+        padding: 32px 24px;
+        border-radius: 16px;
+    }
+
+    .tech-section {
+        margin-bottom: 80px;
+    }
+
+    .tech-panel p {
+        font-size: 1.05rem;
+    }
+    
+    .tech-content {
+        padding-bottom: 64px;
+    }
+}
