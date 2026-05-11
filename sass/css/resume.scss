@@ -47,8 +47,10 @@
 
 .resume-contact {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    font-size: 0.9rem;
 }
 
 .contact-link {
@@ -104,14 +106,62 @@
 }
 
 @media (max-width: 800px) {
+    .resume-wrapper {
+        padding: 100px 0 60px;
+    }
+
     .resume-header {
         flex-direction: column;
-        gap: 32px;
+        gap: 24px;
     }
 
     .resume-grid {
         grid-template-columns: 1fr;
         gap: 48px;
+    }
+
+    .resume-name {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .resume-title {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    .resume-contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        flex-wrap: unset;
+    }
+
+    .resume-contact .contact-separator {
+        display: none;
+    }
+
+    .contact-link {
+        font-size: 0.85rem;
+        word-break: break-all;
+    }
+
+    .resume-actions {
+        width: 100%;
+        order: -1;
+    }
+
+    .resume-actions .print-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .job-title {
+        font-size: 1.1rem;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 

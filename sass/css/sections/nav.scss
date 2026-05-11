@@ -162,3 +162,18 @@
     transform: translateY(-4px);
     color: var(--text-main);
 }
+
+@media (max-width: 768px) {
+    .top-nav__link {
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+    }
+
+    .top-nav__links {
+        gap: 1rem;
+    }
+
+    .top-nav__container {
+        padding: 0 16px 0 4px;
+    }
+}

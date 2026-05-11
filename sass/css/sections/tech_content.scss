@@ -142,9 +142,24 @@
 
     .tech-panel p {
         font-size: 1.05rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
     
     .tech-content {
         padding-bottom: 64px;
+    }
+
+    .tech-link {
+        word-break: break-all;
+        font-size: 0.85rem;
+    }
+
+    .tech-section__title {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    #current-direction {
+        margin-top: 40px;
     }
 }
