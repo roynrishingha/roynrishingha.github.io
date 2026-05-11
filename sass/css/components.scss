@@ -23,7 +23,7 @@
     color: white;
     border-color: transparent;
     transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(255, 77, 46, 0.3);
+    box-shadow: 0 12px 24px rgba(66, 184, 131, 0.3);
 }
 
 .btn--secondary {
@@ -99,7 +99,7 @@
     font-family: "JetBrains Mono", monospace;
     font-size: 0.75rem;
     color: var(--accent-primary);
-    background: rgba(255, 77, 46, 0.1);
+    background: rgba(66, 184, 131, 0.1);
     padding: 4px 10px;
     border-radius: 6px;
 }
@@ -142,7 +142,7 @@
 }
 
 .feature-item:hover {
-    background: linear-gradient(90deg, rgba(229, 77, 46, 0.1) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(66, 184, 131, 0.1) 0%, transparent 100%);
     transform: translateX(4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -162,7 +162,7 @@
 
 /* Text Gradient (Global brand gradient) */
 .text-gradient {
-    background: linear-gradient(135deg, var(--accent-primary) 20%, #ff9f80 100%);
+    background: linear-gradient(135deg, var(--accent-primary) 20%, #7dd3a8 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -38,9 +38,9 @@
     display: grid;
     grid-template-columns: 1fr 260px;
     align-items: flex-start;
-    max-width: 1000px;
+    max-width: var(--container-width);
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     gap: 60px;
     z-index: 1;
 }
@@ -54,7 +54,7 @@
 
 /* Main Title */
 .hero__title {
-    font-size: clamp(1.4rem, 5vw, 3.2rem);
+    font-size: clamp(1.6rem, 5vw, 3.8rem);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.03em;

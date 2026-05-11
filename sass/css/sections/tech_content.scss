@@ -1,10 +1,14 @@
 .tech-content {
-    max-width: 1000px; /* Expanded master width */
+    max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 24px;
     padding-bottom: 120px;
     position: relative;
-    width: 100%;
+    width: 90%;
+}
+
+#current-direction {
+    margin-top: 80px;
 }
 
 .tech-content__glow {
