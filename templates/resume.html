@@ -13,24 +13,6 @@
             <div class="resume-header__content" style="max-width: 100%;">
                 <h1 class="resume-name">{{ config.extra.author }}</h1>
                 <h2 class="resume-title">{{ config.extra.job_title }}</h2>
-                <div class="resume-contact">
-                    <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer"
-                        class="contact-link">
-                        <span>linkedin.com/in/roynrishingha</span>
-                    </a>
-                    <span class="contact-separator" style="color: var(--text-muted);">|</span>
-                    <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <span>github.com/roynrishingha</span>
-                    </a>
-                    <span class="contact-separator" style="color: var(--text-muted);">|</span>
-                    <a href="https://roynrishingha.com" target="_blank" rel="noopener noreferrer" class="contact-link">
-                        <span>roynrishingha.com</span>
-                    </a>
-                    <span class="contact-separator" style="color: var(--text-muted);">|</span>
-                    <a href="#" class="contact-link email-obfuscated">
-                        <span>Email</span>
-                    </a>
-                </div>
             </div>
             <div class="resume-actions">
                 <button onclick="window.print()" class="btn btn--primary btn--shine print-btn">
@@ -45,38 +27,60 @@
             </div>
         </header>
 
-        <div class="resume-grid">
-            <aside class="resume-sidebar">
-                <section class="resume-section">
-                    <h3 class="resume-section-title">Professional Summary</h3>
-                    <p class="resume-summary">
-                        {{ page.extra.summary }}
-                    </p>
-                </section>
+        <div class="resume-content">
+            <section class="resume-section">
+                <h3 class="resume-section-title">Professional Summary</h3>
+                <p class="resume-summary">
+                    {{ page.extra.summary }}
+                </p>
+            </section>
 
-                <section class="resume-section">
-                    <h3 class="resume-section-title">Technical Skills</h3>
+            <section class="resume-section">
+                <h3 class="resume-section-title">Technical Skills</h3>
+                <div class="skills-vertical glass-panel">
                     {% for skill_group in page.extra.skills %}
-                    <div class="skills-category">
-                        <h4 class="skills-category-title"
-                            style="font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">{{ skill_group.category }}
-                        </h4>
-                        <div class="skills-list" style="margin-bottom: 16px;">
+                    <div class="skills-category-vertical">
+                        <h4 class="skills-category-title">{{ skill_group.category }}</h4>
+                        <p class="skills-list-text">
                             {% for item in skill_group.items %}
-                            <span class="skill-tag">{{ item }}</span>
+                            {{ item }}{% if not loop.last %}, {% endif %}
                             {% endfor %}
-                        </div>
+                        </p>
                     </div>
                     {% endfor %}
-                </section>
+                </div>
+            </section>
 
-                <section class="resume-section">
-                    <h3 class="resume-section-title">Projects</h3>
+            <section class="resume-section">
+                <h3 class="resume-section-title">Professional Experience</h3>
+                <div class="experience-list">
+                    {% for exp in page.extra.experiences %}
+                    <div class="experience-item card-hover">
+                        <div class="experience-header">
+                            <div class="experience-title-group">
+                                <h4 class="job-title">{{ exp.title }}</h4>
+                                <span class="company">{{ exp.company | markdown(inline=true) | safe }}</span>
+                            </div>
+                            <span class="job-date">{{ exp.date }}</span>
+                        </div>
+                        <ul class="experience-bullets">
+                            {% for bullet in exp.bullets %}
+                            <li>{{ bullet | markdown(inline=true) | safe }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h3 class="resume-section-title">Projects</h3>
+                <div class="projects-list">
                     {% for project in page.extra.projects %}
-                    <div class="experience-item">
+                    <div class="experience-item card-hover">
                         <div class="experience-header" style="margin-bottom: 8px;">
                             <div class="experience-title-group">
-                                <h4 class="job-title" style="font-size: 1.05rem;">{{ project.title }}</h4>
+                                <h4 class="job-title" style="font-size: 1.15rem;">{{ project.title }}</h4>
                                 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; margin-top: 4px;">
                                     {% if project.github_url %}
                                     <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer"
@@ -98,14 +102,14 @@
                         </p>
                     </div>
                     {% endfor %}
-                </section>
-            </aside>
+                </div>
+            </section>
 
-            <main class="resume-main">
-                <section class="resume-section" style="margin-bottom: 40px;">
-                    <h3 class="resume-section-title">Open Source Contributions</h3>
+            <section class="resume-section">
+                <h3 class="resume-section-title">Open Source Contributions</h3>
+                <div class="opensource-list">
                     {% for os in page.extra.opensource %}
-                    <div class="experience-item">
+                    <div class="experience-item card-hover">
                         <div class="experience-header" style="margin-bottom: 8px;">
                             <div class="experience-title-group">
                                 <h4 class="job-title" style="font-size: 1.15rem;">{{ os.title }}</h4>
@@ -125,31 +129,10 @@
                         {% endif %}
                     </div>
                     {% endfor %}
-                </section>
+                </div>
+            </section>
 
-                <section class="resume-section" style="margin-bottom: 40px;">
-                    <h3 class="resume-section-title">Professional Experience</h3>
-
-                    <div class="experience-list">
-                        {% for exp in page.extra.experiences %}
-                        <div class="experience-item">
-                            <div class="experience-header">
-                                <div class="experience-title-group">
-                                    <h4 class="job-title">{{ exp.title }}</h4>
-                                    <span class="company">{{ exp.company | markdown(inline=true) | safe }}</span>
-                                </div>
-                                <span class="job-date">{{ exp.date }}</span>
-                            </div>
-                            <ul class="experience-bullets">
-                                {% for bullet in exp.bullets %}
-                                <li>{{ bullet | markdown(inline=true) | safe }}</li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </section>
-            </main>
+            <!-- Technical skills moved above -->
         </div>
     </div>
 </div>

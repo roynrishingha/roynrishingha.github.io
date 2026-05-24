@@ -8,7 +8,7 @@ summary = "Systems-focused Software Engineer specializing in high-throughput bac
 
 [[extra.skills]]
 category = "Languages"
-items = ["Rust", "C", "Python"]
+items = ["Rust", "Python", "TypeScript"]
 
 [[extra.skills]]
 category = "Backend Systems"
