@@ -7,7 +7,6 @@
     overflow: hidden;
 }
 
-/* --- Atmospheric Background Glows --- */
 .hero__glow {
     position: absolute;
     width: 900px;
@@ -75,7 +74,7 @@
 .hero__bio {
     font-size: 1.15rem;
     line-height: 1.75;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin-bottom: 24px;
 }
 
@@ -152,7 +151,8 @@
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    padding-top: 16px; /* small optical offset for top alignment */
+    padding-top: 16px;
+    /* small optical offset for top alignment */
 }
 
 /* Wrapper */

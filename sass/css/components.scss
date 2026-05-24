@@ -162,9 +162,6 @@
 
 /* Text Gradient (Global brand gradient) */
 .text-gradient {
-    background: linear-gradient(135deg, var(--accent-primary) 20%, #7dd3a8 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-primary);
     filter: drop-shadow(0 0 40px var(--accent-glow));
 }
