@@ -59,6 +59,11 @@
             {% endif %}
         </div>
         <h1 class="blog-post-title">{{ page.title }}</h1>
+        
+        {% if page.extra.image %}
+        <img src="{{ page.extra.image }}" alt="Featured image for {{ page.title }}" class="blog-post-featured-image" loading="eager" style="margin-top: 1.5rem; margin-bottom: 1.5rem;" />
+        {% endif %}
+
         {% if page.description %}
         <p class="blog-post-subtitle">{{ page.description }}</p>
         {% endif %}
@@ -71,10 +76,6 @@
             </button>
         </div>
     </header>
-
-    {% if page.extra.image %}
-    <img src="{{ page.extra.image }}" alt="Featured image for {{ page.title }}" class="blog-post-featured-image" loading="eager" />
-    {% endif %}
 
     {% if page.toc and page.toc | length > 1 %}
     <nav class="toc">
