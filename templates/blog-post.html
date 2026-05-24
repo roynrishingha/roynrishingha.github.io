@@ -71,6 +71,11 @@
             </button>
         </div>
     </header>
+
+    {% if page.extra.image %}
+    <img src="{{ page.extra.image }}" alt="Featured image for {{ page.title }}" class="blog-post-featured-image" loading="eager" />
+    {% endif %}
+
     {% if page.toc and page.toc | length > 1 %}
     <nav class="toc">
         <div class="toc__title">On This Page</div>

@@ -124,7 +124,9 @@
         </style>
     </noscript>
     <a href="#main-content" class="skip-link">Skip to content</a>
-    <div class="bg-layer"></div>
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="stars-overlay"></div>
+    </div>
 
     <main class="app-container" id="main-content">
         {% block nav %}
@@ -158,19 +160,22 @@
             <div class="container footer__container">
                 <div class="footer__content">
                     <p class="footer__bio">
-                        Rust systems engineer with production experience in backend services and distributed
-                        infrastructure. Focused on storage systems, query engines, and observability infrastructure
-                        in Rust.
+                        Cloud Infrastructure & Systems Engineer with production experience in distributed architectures
+                        and backend services. Focused on scalable cloud environments, deployment automation, and
+                        high-performance observability pipelines.
                     </p>
                     <p class="footer__status">
-                        Open to remote roles in data infrastructure and observability engineering.
+                        Open to remote roles in Cloud Infrastructure, Site Reliability (SRE), and Observability
+                        Engineering.
                     </p>
                     <div class="footer__links">
-                        <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer" class="footer__link">
+                        <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer"
+                            class="footer__link">
                             {{ config.extra.github | replace(from="https://", to="") }}
                         </a>
                         <span class="footer__separator">|</span>
-                        <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer" class="footer__link">
+                        <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer"
+                            class="footer__link">
                             {{ config.extra.linkedin | replace(from="https://", to="") }}
                         </a>
                     </div>

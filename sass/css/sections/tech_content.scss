@@ -34,9 +34,7 @@
 .tech-section__title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-primary);
     margin: 0 0 40px 0;
     letter-spacing: -0.02em;
     display: inline-block;
@@ -75,7 +73,7 @@
 }
 
 .tech-panel p {
-    color: #E4E4E7; /* High contrast reading color */
+    color: var(--text-secondary); /* High contrast reading color */
     font-size: 1.15rem;
     line-height: 1.8;
     margin-bottom: 24px;
