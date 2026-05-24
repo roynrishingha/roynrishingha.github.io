@@ -1,32 +1,7 @@
 {% extends "base.html" %} {% block custom_seo %}
 <link rel="preload" href="/roynrishingha.webp" as="image" type="image/webp" />
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "{{ config.extra.author }}",
-        "url": "{{ config.base_url }}",
-        "image": "{{ config.base_url }}/roynrishingha.webp",
-        "jobTitle": "{{ config.extra.job_title }}",
-        "description": "{{ config.description }}",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "{{ config.extra.works_for }}"
-        },
-        "alumniOf": [
-            {% for org in config.extra.alumni_of %}
-            {
-                "@type": "Organization",
-                "name": "{{ org }}"
-            }{% if not loop.last %},{% endif %}
-            {% endfor %}
-        ],
-        "sameAs": [
-            "{{ config.extra.github }}",
-            "{{ config.extra.linkedin }}"
-        ],
-        "knowsAbout": {{ config.extra.knows_about | json_encode | safe }}
-    }
+{"@context":"https://schema.org","@type":"Person","name":"{{ config.extra.author }}","url":"{{ config.base_url }}","image":"{{ config.base_url }}/roynrishingha.webp","jobTitle":"{{ config.extra.job_title }}","description":"{{ config.description }}","worksFor":{"@type":"Organization","name":"{{ config.extra.works_for }}"},"alumniOf":[{% for org in config.extra.alumni_of %}{"@type":"Organization","name":"{{ org }}"}{% if not loop.last %},{% endif %}{% endfor %}],"sameAs":["{{ config.extra.github }}","{{ config.extra.linkedin }}"],"knowsAbout":{{ config.extra.knows_about | json_encode | safe }}}
 </script>
 {% endblock custom_seo %} {% block styles %}
 <link rel="stylesheet" href="/css/index.css" />
@@ -36,8 +11,6 @@
 <script src="/js/diagram.js" defer></script>
 {% endblock scripts %} {% block content %}
 <section class="hero" id="home">
-    <div class="hero__glow hero__glow--1"></div>
-    <div class="hero__glow hero__glow--2"></div>
 
     <div class="container hero__container">
         <div class="hero__content">
@@ -47,13 +20,17 @@
 
             <div class="hero__bio-wrapper">
                 <p class="hero__bio hero__bio--tagline">
-                    Systems engineer working toward data infrastructure in Rust.
+                    Platform & DevSecOps Engineer.
                 </p>
                 <p class="hero__bio">
-                    I have production experience in Rust backend services and distributed cloud infrastructure. My
-                    current focus is the internals of storage engines, query systems, and observability backends. I read
-                    production Rust codebases, work toward contributing to open-source projects in this space, and write
-                    about what I find.
+                    I have production experience architecting distributed cloud infrastructure and bridging the gap
+                    between high-throughput backend systems and scalable deployments.
+                </p>
+                <p class="hero__bio">
+                    My focus is practical and execution-driven: securing containerized workloads, conducting threat
+                    analysis,
+                    eliminating critical performance bottlenecks with Rust, and designing systems that scale reliably
+                    under production constraints.
                 </p>
             </div>
 
@@ -88,27 +65,22 @@
 </section>
 
 <div class="container tech-content">
-    <div class="tech-content__glow"></div>
 
     <section class="tech-section" id="current-direction">
         <h2 class="tech-section__title">What I am working on</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
-                <p>I am studying the internals of data infrastructure and observability systems built in <code
-                        class="tech-tag">Rust</code>, working
-                    toward open-source contributions in this domain. My method is self-directed: I read source code,
-                    trace
-                    data paths end to end through unfamiliar systems, and form architectural opinions before looking at
-                    how
-                    the project's authors resolved the same problems.</p>
-                <p>The systems I focus on sit at the intersection of storage engine design, query execution, and
-                    high-throughput observability: how log-structured storage engines manage compaction strategies to
-                    balance read and write amplification, how columnar formats exploit memory layout to accelerate
-                    analytical workloads, and how observability backends sustain high ingestion rates without query
-                    latency
-                    degrading under cardinality pressure.</p>
-                <p>Contributions to open-source <code class="tech-tag">Rust</code> infrastructure projects in this space
-                    are in progress.</p>
+                <p>I am currently operating as an independent Platform Engineer, expanding my cloud infrastructure
+                    expertise into <code class="tech-tag">Kubernetes</code> orchestration, DevSecOps, and GitOps.
+                    My method is execution-driven: I build secure cloud architectures, automate complex
+                    infrastructure provisioning, and leverage <code class="tech-tag">Rust</code> and
+                    <code class="tech-tag">Python</code> to resolve bottlenecks.
+                </p>
+                <p>The problems I focus on sit at the intersection of platform engineering and site reliability: how to
+                    deploy secure environments using Infrastructure as Code, how to enforce strict access controls in
+                    containerized workloads, and how to analyze and mitigate security threats before they impact
+                    production.</p>
+                <p>Contributions to open-source cloud-native tools and security research are actively in progress.</p>
             </div>
         </div>
     </section>
@@ -117,37 +89,33 @@
         <h2 class="tech-section__title">Selected work</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
-                <h3 class="tech-panel__title">Java to Rust service migration</h3>
-                <p>At Codefy GmbH I read an open-source <code class="tech-tag">Java</code> microservice
-                    and its <code class="tech-tag">PostgreSQL</code> schema in full, then rebuilt the entire service in
-                    <code class="tech-tag">Rust</code> using <code class="tech-tag">Axum</code> and <code
-                        class="tech-tag">Tokio</code>. The
-                    work required understanding an unfamiliar codebase from first principles, replicating its behavior
-                    correctly, and producing something measurably better. API response times dropped from over three
-                    seconds
-                    to under 200 milliseconds.
-                </p>
-            </div>
-            <div class="tech-panel">
-                <h3 class="tech-panel__title">Document processing pipelines in Rust</h3>
-                <p>At Codefy GmbH I built automated legal document
-                    workflows in <code class="tech-tag">Rust</code>: PDF editing, image format conversion, page-level
-                    image placement, and DOCX generation
-                    from form data, using <code class="tech-tag">lopdf</code>, <code class="tech-tag">image</code>, and
-                    <code class="tech-tag">nom</code>. The interesting parts required reading library source code
-                    directly because documentation stopped where the actual problems started.
+                <h3 class="tech-panel__title">DevSecOps and containerized infrastructure</h3>
+                <p>As an independent Platform Engineer I architected and deployed containerized infrastructure using
+                    <code class="tech-tag">Docker</code> for client applications. I designed automated <code
+                        class="tech-tag">CI/CD</code> pipelines to ensure zero-downtime releases and environment parity.
+                    Alongside infrastructure provisioning I conducted advanced threat modeling and reverse-engineered
+                    multi-stage malware, publishing technical research on attack vectors and payload delivery to drive
+                    server hardening best practices.
                 </p>
             </div>
             <div class="tech-panel">
                 <h3 class="tech-panel__title">Distributed infrastructure at scale</h3>
-                <p>At Dhiway I provisioned and operated a globally
-                    distributed network of 60-plus nodes across <code class="tech-tag">AWS EC2</code> and <code
-                        class="tech-tag">GCP</code> using <code class="tech-tag">Terraform</code>. Set up <code
-                        class="tech-tag">Prometheus</code> and <code class="tech-tag">Loki</code>
-                    for observability across all regions, built <code class="tech-tag">GitHub Actions</code> pipelines
-                    for deployment automation and
-                    security scanning, and executed a full cloud migration from AWS to GCP without significant service
-                    disruption.</p>
+                <p>At Dhiway I executed a zero-downtime full cloud infrastructure migration from <code
+                        class="tech-tag">AWS</code> to <code class="tech-tag">GCP</code>. I provisioned and managed a
+                    highly available globally distributed network of 60 enterprise nodes using <code
+                        class="tech-tag">Terraform</code> to manage complex cloud state. I architected a centralized
+                    observability stack and engineered deployment pipelines ensuring high availability and system
+                    reliability across multiple regions.</p>
+            </div>
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">High-concurrency systems optimization</h3>
+                <p>At Codefy GmbH I eliminated a critical performance bottleneck by replacing a third-party <code
+                        class="tech-tag">Java</code> microservice with an in-house <code class="tech-tag">Rust</code>
+                    service using <code class="tech-tag">Axum</code> and <code class="tech-tag">PostgreSQL</code>. The
+                    work required understanding an unfamiliar distributed system from first principles and optimizing
+                    memory allocation. API response times dropped from over three seconds to under 200 milliseconds
+                    under production load.
+                </p>
             </div>
         </div>
     </section>
@@ -170,7 +138,8 @@
                         class="tech-tag">Rust</code>.
                     Implements a SkipList MemTable, Write-Ahead Log, Bloom filters, LRU block cache, and <code
                         class="tech-tag">Snappy</code>
-                    compression. Published on crates.io as both a library and CLI binary.</p>
+                    compression. Building this from scratch provided deep intuition into how databases fail under load,
+                    enabling me to better architect highly available cloud data tiers and debug I/O latency spikes.</p>
                 <a href="{{ config.extra.github }}/lsmdb" target="_blank" rel="noopener noreferrer" class="tech-link">{{
                     config.extra.github | replace(from="https://", to="") }}/lsmdb</a>
             </div>
@@ -181,10 +150,10 @@
         <h2 class="tech-section__title">Writing</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
-                <p>I write about <code class="tech-tag">Rust</code> and storage system internals, and what I learn from
-                    reading production codebases. The
-                    goal is to make the design decisions inside complex systems legible to engineers approaching these
-                    projects for the first time.</p>
+                <p>I write about platform engineering, DevSecOps, cloud infrastructure, and what I learn from analyzing
+                    production architectures. The goal is to make the design decisions inside complex <code
+                        class="tech-tag">Rust</code> backends, threat models, and cloud-native environments legible to
+                    engineers approaching these systems for the first time.</p>
                 <a href="{{ config.base_url }}/blog" class="tech-link">{{ config.base_url | replace(from="https://",
                     to="")
                     }}/blog</a>

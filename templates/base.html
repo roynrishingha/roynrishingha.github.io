@@ -17,7 +17,7 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" />
     </noscript>
     {% set current_title = config.title %}
-    {% set current_description = config.description | default(value="DevSecOps Engineer and Systems Programmer.") %}
+    {% set current_description = config.description %}
     {% set current_image = config.base_url ~ "/roynrishingha.webp" %}
 
     {% if page %}
@@ -160,13 +160,12 @@
             <div class="container footer__container">
                 <div class="footer__content">
                     <p class="footer__bio">
-                        Cloud Infrastructure & Systems Engineer with production experience in distributed architectures
-                        and backend services. Focused on scalable cloud environments, deployment automation, and
-                        high-performance observability pipelines.
+                        Platform & DevSecOps Engineer with production experience in distributed cloud architectures and
+                        high-throughput backend services. Focused on secure cloud environments, containerized deployment
+                        automation, and high-performance systems engineering.
                     </p>
                     <p class="footer__status">
-                        Open to remote roles in Cloud Infrastructure, Site Reliability (SRE), and Observability
-                        Engineering.
+                        Open to remote roles in Platform Engineering, Site Reliability (SRE), and DevSecOps.
                     </p>
                     <div class="footer__links">
                         <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer"

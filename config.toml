@@ -1,6 +1,6 @@
 base_url = "https://roynrishingha.com"
 title = "Nrishinghananda Roy | roynrishingha"
-description = "Rust systems engineer with production experience in backend services and distributed infrastructure. Focused on storage systems and observability infrastructure."
+description = "Nrishinghananda Roy is a Platform and DevSecOps Engineer specializing in Kubernetes, secure cloud infrastructure, Terraform automation, and high-performance Rust systems."
 default_language = "en"
 compile_sass = true
 minify_html = true
@@ -14,14 +14,14 @@ taxonomies = [{ name = "tags" }]
 
 [extra]
 author = "Nrishinghananda Roy"
-job_title = "Software Engineer"
+job_title = "Platform Engineer"
 works_for = "Freelance"
 github = "https://github.com/roynrishingha"
 linkedin = "https://linkedin.com/in/roynrishingha"
 alumni_of = ["Codefy GmbH", "Dhiway", "Trustforum"]
 knows_about = [
     "Rust",
-    "Systems Programming",
+    "Kubernetes",
     "AWS",
     "Terraform",
     "Ansible",
@@ -29,6 +29,7 @@ knows_about = [
     "CI/CD Pipelines",
     "Cloud Native Architecture",
     "Observability",
+    "GitOps",
 ]
 
 [markdown.highlighting]
