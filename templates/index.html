@@ -8,7 +8,6 @@
 {% endblock styles %} {% block scripts %}
 <script src="/js/app.js" defer></script>
 <script src="/js/spark.js" defer></script>
-<script src="/js/diagram.js" defer></script>
 {% endblock scripts %} {% block content %}
 <section class="hero" id="home">
 
@@ -19,18 +18,14 @@
             </h1>
 
             <div class="hero__bio-wrapper">
-                <p class="hero__bio hero__bio--tagline">
-                    Platform Engineer.
+                <p class="hero__bio hero__bio--tagline">Engineering Resilient Infrastructure.</p>
+                <p class="hero__bio">
+                    I am a platform and infrastructure engineer specializing in Kubernetes, and DevSecOps.
+                    I build and operate the systems that other engineers depend on: container orchestration,
+                    cloud provisioning with Terraform on AWS and GCP, CI/CD pipelines, and secure deployment workflows.
                 </p>
                 <p class="hero__bio">
-                    I have production experience architecting distributed cloud infrastructure and bridging the gap
-                    between high-throughput backend systems and scalable deployments.
-                </p>
-                <p class="hero__bio">
-                    My focus is practical and execution-driven: securing containerized workloads, conducting threat
-                    analysis,
-                    eliminating critical performance bottlenecks with Rust, and designing systems that scale reliably
-                    under production constraints.
+                    I work remotely. I always have.
                 </p>
             </div>
 
@@ -57,7 +52,7 @@
 
                 <div class="profile-status-badge">
                     <span class="status-dot"></span>
-                    <span>Available for Hire</span>
+                    <span>Available for Work</span>
                 </div>
             </div>
         </div>
@@ -65,56 +60,65 @@
 </section>
 
 <div class="container tech-content">
-
-    <section class="tech-section" id="current-direction">
-        <h2 class="tech-section__title">What I am working on</h2>
+    <section class="tech-section" id="selected-work">
+        <h2 class="tech-section__title">What I have shipped</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
-                <p>I am currently operating as an independent Platform Engineer, expanding my cloud infrastructure
-                    expertise into <code class="tech-tag">Kubernetes</code> orchestration, DevSecOps, and GitOps.
-                    My method is execution-driven: I build secure cloud architectures, automate complex
-                    infrastructure provisioning, and leverage <code class="tech-tag">Rust</code> and
-                    <code class="tech-tag">Python</code> to resolve bottlenecks.
+                <h3 class="tech-panel__title">A performance problem that needed a real fix, not a workaround</h3>
+                <p>
+                    At Codefy GmbH in Germany, a third-party Java microservice was adding over <code
+                        class="tech-tag">3 seconds of latency</code> to every API request.
+                    I read through the open-source codebase, understood exactly what it was doing, and rebuilt it from
+                    scratch in <code class="tech-tag">Rust (Axum)</code> and <code class="tech-tag">PostgreSQL</code>.
+                    API response times dropped to under 200 milliseconds under production load. That is a <code
+                        class="tech-tag">15x improvement</code> on a live system.
                 </p>
-                <p>The problems I focus on sit at the intersection of platform engineering and site reliability: how to
-                    deploy secure environments using Infrastructure as Code, how to enforce strict access controls in
-                    containerized workloads, and how to analyze and mitigate security threats before they impact
-                    production.</p>
-                <p>Contributions to open-source cloud-native tools and security research are actively in progress.</p>
+            </div>
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">A zero-downtime cloud migration, 60+ nodes, two platforms</h3>
+                <p>
+                    At Dhiway, I provisioned and operated a globally distributed network of over 60 nodes across
+                    <code class="tech-tag">AWS EC2</code> and <code class="tech-tag">GCP</code> using
+                    <code class="tech-tag">Terraform</code>.
+                    When the decision came to migrate fully to GCP, I executed the migration while production stayed
+                    live.
+                    Centralized observability with <code class="tech-tag">Prometheus and Loki</code> ran across the
+                    entire network throughout. No incidents. No service disruption.
+                </p>
+            </div>
+            <div class="tech-panel">
+                <h3 class="tech-panel__title">Linux infrastructure and operations from day one</h3>
+                <p>
+                    At Trustforum in France, I managed <code class="tech-tag">Linux</code> server environments for an
+                    early-stage platform: user
+                    permissions, package management, system updates, log rotation, and automated backups via
+                    <code class="tech-tag">Bash scripting</code>.
+                    The kind of unglamorous work that keeps systems healthy and teams uninterrupted.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="tech-section" id="selected-work">
-        <h2 class="tech-section__title">Selected work</h2>
+    <section class="tech-section">
+        <h2 class="tech-section__title">How I think about infrastructure</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
-                <h3 class="tech-panel__title">DevSecOps and containerized infrastructure</h3>
-                <p>As an independent Platform Engineer I architected and deployed containerized infrastructure using
-                    <code class="tech-tag">Docker</code> for client applications. I designed automated <code
-                        class="tech-tag">CI/CD</code> pipelines to ensure zero-downtime releases and environment parity.
-                    Alongside infrastructure provisioning I conducted advanced threat modeling and reverse-engineered
-                    multi-stage malware, publishing technical research on attack vectors and payload delivery to drive
-                    server hardening best practices.
+                <p>
+                    Most infrastructure problems are not technical problems. They are judgment problems. Knowing which
+                    tool to reach for. Knowing when a system is healthy versus quietly failing. Knowing that the
+                    migration plan that looks clean on paper will not survive contact with production unless you have
+                    tested every assumption.
                 </p>
-            </div>
-            <div class="tech-panel">
-                <h3 class="tech-panel__title">Distributed infrastructure at scale</h3>
-                <p>At Dhiway I executed a zero-downtime full cloud infrastructure migration from <code
-                        class="tech-tag">AWS</code> to <code class="tech-tag">GCP</code>. I provisioned and managed a
-                    highly available globally distributed network of 60 enterprise nodes using <code
-                        class="tech-tag">Terraform</code> to manage complex cloud state. I architected a centralized
-                    observability stack and engineered deployment pipelines ensuring high availability and system
-                    reliability across multiple regions.</p>
-            </div>
-            <div class="tech-panel">
-                <h3 class="tech-panel__title">High-concurrency systems optimization</h3>
-                <p>At Codefy GmbH I eliminated a critical performance bottleneck by replacing a third-party <code
-                        class="tech-tag">Java</code> microservice with an in-house <code class="tech-tag">Rust</code>
-                    service using <code class="tech-tag">Axum</code> and <code class="tech-tag">PostgreSQL</code>. The
-                    work required understanding an unfamiliar distributed system from first principles and optimizing
-                    memory allocation. API response times dropped from over three seconds to under 200 milliseconds
-                    under production load.
+                <p>
+                    I have operated infrastructure in conditions where things going wrong had real consequences. That
+                    shapes how I approach the work. I do not build fragile systems and hope nobody notices.
+                </p>
+                <p>
+                    I also think about security at the infrastructure level, not as an afterthought. Earlier this year I
+                    reverse-engineered a multi-stage malware attack targeting developers through a fake job interview.
+                    Tracing that attack chain changed how I think about container hardening, secrets management, and
+                    what a compromised developer environment actually looks like from the inside. That kind of thinking
+                    is built into how I design systems now.
                 </p>
             </div>
         </div>
@@ -132,31 +136,38 @@
                     rel="noopener noreferrer"
                     class="tech-link">github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha</a>
             </div>
+        </div>
+    </section>
+
+    <section class="tech-section" id="notable-projects">
+        <h2 class="tech-section__title">Notable projects</h2>
+        <div class="tech-section__body tech-section__body--grid">
             <div class="tech-panel">
                 <h3 class="tech-panel__title">lsmdb</h3>
-                <p>A persistent key-value storage engine built on the Log-Structured Merge Tree architecture in <code
-                        class="tech-tag">Rust</code>.
-                    Implements a SkipList MemTable, Write-Ahead Log, Bloom filters, LRU block cache, and <code
-                        class="tech-tag">Snappy</code>
+                <p>A persistent key-value storage engine built on the
+                    <code class="tech-tag">Log-Structured Merge Tree architecture in Rust</code>.
+                    Implements a SkipList MemTable, Write-Ahead Log, Bloom filters, LRU block cache, and Snappy
                     compression. Building this from scratch provided deep intuition into how databases fail under load,
-                    enabling me to better architect highly available cloud data tiers and debug I/O latency spikes.</p>
+                    enabling me to better architect highly available cloud data tiers and debug I/O latency spikes.
+                </p>
                 <a href="{{ config.extra.github }}/lsmdb" target="_blank" rel="noopener noreferrer" class="tech-link">{{
                     config.extra.github | replace(from="https://", to="") }}/lsmdb</a>
             </div>
         </div>
     </section>
 
-    <section class="tech-section" id="writing">
-        <h2 class="tech-section__title">Writing</h2>
+    <section class="tech-section">
+        <h2 class="tech-section__title">Let's work together</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
-                <p>I write about platform engineering, DevSecOps, cloud infrastructure, and what I learn from analyzing
-                    production architectures. The goal is to make the design decisions inside complex <code
-                        class="tech-tag">Rust</code> backends, threat models, and cloud-native environments legible to
-                    engineers approaching these systems for the first time.</p>
-                <a href="{{ config.base_url }}/blog" class="tech-link">{{ config.base_url | replace(from="https://",
-                    to="")
-                    }}/blog</a>
+                <p>
+                    I am open to remote roles in platform engineering, DevOps, infrastructure engineering, and SRE. I am
+                    also available for serious freelance infrastructure engagements.
+                </p>
+                <p>
+                    I have worked remotely for companies in Germany, France, and India. I know how to operate without
+                    hand-holding, communicate clearly across time zones, and deliver work that holds up.
+                </p>
             </div>
         </div>
     </section>

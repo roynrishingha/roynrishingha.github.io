@@ -46,25 +46,43 @@
     gap: 32px; /* Uniform spacing between panels */
 }
 
+/* Advanced Grid layout for Notable Projects */
+.tech-section__body--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+/* Dynamic spanning: if there's an odd number of total projects, the very first project spans full width. 
+   If there's an even number (like 2 or 4), they form a perfect 2-column grid. */
+.tech-section__body--grid > .tech-panel:first-child:nth-last-child(odd) {
+    grid-column: 1 / -1;
+}
+
 .tech-panel {
-    background: rgba(255, 255, 255, 0.025);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     padding: 40px;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 
     &:hover {
-        border-color: rgba(255, 255, 255, 0.25);
+        border-color: rgba(var(--accent-primary-rgb), 0.3);
+        border-top-color: rgba(var(--accent-primary-rgb), 0.5);
         background: rgba(255, 255, 255, 0.04);
         transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(var(--accent-primary-rgb), 0.1);
     }
 }
 
 .tech-panel__title {
-    color: #FAFAFA;
+    color: var(--text-main);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 16px;
@@ -86,19 +104,21 @@
 
 .tech-tag {
     font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    font-weight: 700;
     color: var(--accent-primary);
+    letter-spacing: -0.01em;
     background: transparent;
     border: none;
     padding: 0;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    text-decoration: none;
+    text-shadow: none;
 }
 
 .tech-link {
     display: inline-flex;
     align-items: center;
-    color: #FAFAFA;
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 600;
     font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
@@ -155,6 +175,10 @@
 
     .tech-section__title {
         font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .tech-section__body--grid {
+        grid-template-columns: 1fr;
     }
 
     #current-direction {
