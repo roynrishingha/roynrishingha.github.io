@@ -244,10 +244,9 @@
 .status-dot {
     width: 8px;
     height: 8px;
-    background: #34d399;
-    /* Status Green */
+    background: var(--accent-primary);
     border-radius: 50%;
-    box-shadow: 0 0 10px #34d399;
+    box-shadow: 0 0 10px var(--accent-primary);
     animation: pulse 2s infinite;
 }
 
@@ -268,15 +267,15 @@
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+        box-shadow: 0 0 0 0 rgba(var(--accent-primary-rgb), 0.7);
     }
 
     70% {
-        box-shadow: 0 0 0 10px rgba(52, 211, 153, 0);
+        box-shadow: 0 0 0 10px rgba(var(--accent-primary-rgb), 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+        box-shadow: 0 0 0 0 rgba(var(--accent-primary-rgb), 0);
     }
 }
 

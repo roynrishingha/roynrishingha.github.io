@@ -18,8 +18,8 @@
   var pathOffset = 6;
   var speed = 0.006;
 
-  var rustColor = "rgba(66, 184, 131, 0.25)";
-  var particleColors = ["#ffffff", "#a8e6cf", "#42b883", "#7dd3a8"];
+  var rustColor = "rgba(96, 165, 250, 0.25)";
+  var particleColors = ["#ffffff", "#60a5fa", "#93c5fd", "#bfdbfe"];
 
   var progress = 0;
 
