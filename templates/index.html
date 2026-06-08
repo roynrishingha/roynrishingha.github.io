@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block custom_seo %}
 <link rel="preload" href="/roynrishingha.webp" as="image" type="image/webp" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"{{ config.extra.author }}","url":"{{ config.base_url }}","image":"{{ config.base_url }}/roynrishingha.webp","jobTitle":"{{ config.extra.job_title }}","description":"{{ config.description }}","worksFor":{"@type":"Organization","name":"{{ config.extra.works_for }}"},"alumniOf":[{% for org in config.extra.alumni_of %}{"@type":"Organization","name":"{{ org }}"}{% if not loop.last %},{% endif %}{% endfor %}],"sameAs":["{{ config.extra.github }}","{{ config.extra.linkedin }}"],"knowsAbout":{{ config.extra.knows_about | json_encode | safe }}}
+    {"@context":"https://schema.org","@type":"Person","name":"{{ config.extra.author }}","url":"{{ config.base_url }}","image":"{{ config.base_url }}/roynrishingha.webp","jobTitle":"{{ config.extra.job_title }}","description":"{{ config.description }}","worksFor":{"@type":"Organization","name":"{{ config.extra.works_for }}"},"alumniOf":[{% for org in config.extra.alumni_of %}{"@type":"Organization","name":"{{ org }}"}{% if not loop.last %},{% endif %}{% endfor %}],"sameAs":["{{ config.extra.github }}","{{ config.extra.linkedin }}"],"knowsAbout":{{ config.extra.knows_about | json_encode | safe }}}
 </script>
 {% endblock custom_seo %} {% block styles %}
 <link rel="stylesheet" href="/css/index.css" />
@@ -11,7 +11,6 @@
 <script src="/js/meteor.js" defer></script>
 {% endblock scripts %} {% block content %}
 <section class="hero" id="home">
-
     <div class="container hero__container">
         <div class="hero__content">
             <h1 class="hero__title">
@@ -19,26 +18,49 @@
             </h1>
 
             <div class="hero__bio-wrapper">
-                <p class="hero__bio hero__bio--tagline">Engineering Resilient Infrastructure.</p>
-                <p class="hero__bio">
-                    I am a platform and infrastructure engineer specializing in Kubernetes, and DevSecOps.
-                    I build and operate the systems that other engineers depend on: container orchestration,
-                    cloud provisioning with Terraform on AWS and GCP, CI/CD pipelines, and secure deployment workflows.
+                <p class="hero__bio hero__bio--tagline">
+                    Infrastructure Engineer. Building toward Platform
+                    Engineering.
                 </p>
                 <p class="hero__bio">
-                    I work remotely. I always have.
+                    I have production experience operating distributed cloud
+                    infrastructure across AWS and GCP, provisioning environments
+                    with Terraform, and building backend systems under real
+                    load. I am currently focused on Kubernetes and platform
+                    engineering, working toward CKA certification and building
+                    cloud-native infrastructure publicly.
                 </p>
             </div>
 
             <div class="hero__actions">
-                <a href="{{ config.extra.linkedin }}" target="_blank" rel="noopener noreferrer"
-                    aria-label="LinkedIn Profile" class="btn btn--primary btn--shine">
+                <a
+                    href="{{ config.extra.linkedin }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile"
+                    class="btn btn--primary btn--shine"
+                >
                     <span>LinkedIn</span>
-                    <img src="/icons/arrow-right.svg" alt="Arrow Right" width="20" height="20" />
+                    <img
+                        src="/icons/arrow-right.svg"
+                        alt="Arrow Right"
+                        width="20"
+                        height="20"
+                    />
                 </a>
-                <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer"
-                    aria-label="GitHub Profile" class="btn btn--glass">
-                    <img src="/icons/github.svg" alt="GitHub Logo" width="22" height="22" />
+                <a
+                    href="{{ config.extra.github }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Profile"
+                    class="btn btn--glass"
+                >
+                    <img
+                        src="/icons/github.svg"
+                        alt="GitHub Logo"
+                        width="22"
+                        height="22"
+                    />
                     <span>GitHub</span>
                 </a>
             </div>
@@ -48,8 +70,14 @@
             <div class="profile-wrapper" id="profileWrapper">
                 <canvas id="sparkCanvas"></canvas>
 
-                <img src="/roynrishingha.webp" alt="Nrishinghananda Roy" class="profile-image" id="profileImage"
-                    width="260" height="260" />
+                <img
+                    src="/roynrishingha.webp"
+                    alt="Nrishinghananda Roy"
+                    class="profile-image"
+                    id="profileImage"
+                    width="260"
+                    height="260"
+                />
 
                 <div class="profile-status-badge">
                     <span class="status-dot"></span>
@@ -65,36 +93,53 @@
         <h2 class="tech-section__title">What I have shipped</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
-                <h3 class="tech-panel__title">A performance problem that needed a real fix, not a workaround</h3>
+                <h3 class="tech-panel__title">
+                    A zero-downtime cloud migration, 60+ nodes, two platforms
+                </h3>
                 <p>
-                    At Codefy GmbH in Germany, a third-party Java microservice was adding over <code
-                        class="tech-tag">3 seconds of latency</code> to every API request.
-                    I read through the open-source codebase, understood exactly what it was doing, and rebuilt it from
-                    scratch in <code class="tech-tag">Rust (Axum)</code> and <code class="tech-tag">PostgreSQL</code>.
-                    API response times dropped to under 200 milliseconds under production load. That is a <code
-                        class="tech-tag">15x improvement</code> on a live system.
+                    At Dhiway, I provisioned and operated a globally distributed
+                    network of over 60 nodes across
+                    <code class="tech-tag">AWS EC2</code> and
+                    <code class="tech-tag">GCP</code> using
+                    <code class="tech-tag">Terraform</code>. When the decision
+                    came to migrate fully to GCP, I executed the migration while
+                    production stayed live. Centralized observability with
+                    <code class="tech-tag">Prometheus</code> ran across the
+                    entire network throughout. No incidents. No service
+                    disruption.
                 </p>
             </div>
             <div class="tech-panel">
-                <h3 class="tech-panel__title">A zero-downtime cloud migration, 60+ nodes, two platforms</h3>
+                <h3 class="tech-panel__title">
+                    A performance problem that needed a real fix, not a
+                    workaround
+                </h3>
                 <p>
-                    At Dhiway, I provisioned and operated a globally distributed network of over 60 nodes across
-                    <code class="tech-tag">AWS EC2</code> and <code class="tech-tag">GCP</code> using
-                    <code class="tech-tag">Terraform</code>.
-                    When the decision came to migrate fully to GCP, I executed the migration while production stayed
-                    live.
-                    Centralized observability with <code class="tech-tag">Prometheus and Loki</code> ran across the
-                    entire network throughout. No incidents. No service disruption.
+                    At Codefy GmbH in Germany, a third-party Java microservice
+                    was adding over
+                    <code class="tech-tag">3 seconds of latency</code> to every
+                    API request. I read through the open-source codebase,
+                    understood exactly what it was doing, and rebuilt it from
+                    scratch in <code class="tech-tag">Rust (Axum)</code> and
+                    <code class="tech-tag">PostgreSQL</code>. API response times
+                    dropped to under 200 milliseconds under production load.
+                    That is a <code class="tech-tag">15x improvement</code> on a
+                    live system.
                 </p>
             </div>
+
             <div class="tech-panel">
-                <h3 class="tech-panel__title">Linux infrastructure and operations from day one</h3>
+                <h3 class="tech-panel__title">
+                    Linux infrastructure and operations from day one
+                </h3>
                 <p>
-                    At Trustforum in France, I managed <code class="tech-tag">Linux</code> server environments for an
-                    early-stage platform: user
-                    permissions, package management, system updates, log rotation, and automated backups via
-                    <code class="tech-tag">Bash scripting</code>.
-                    The kind of unglamorous work that keeps systems healthy and teams uninterrupted.
+                    At Trustforum in France, I managed
+                    <code class="tech-tag">Linux</code> server environments for
+                    an early-stage platform: user permissions, package
+                    management, system updates, log rotation, and automated
+                    backups via <code class="tech-tag">Bash scripting</code>.
+                    The kind of unglamorous work that keeps systems healthy and
+                    teams uninterrupted.
                 </p>
             </div>
         </div>
@@ -105,21 +150,29 @@
         <div class="tech-section__body">
             <div class="tech-panel">
                 <p>
-                    Most infrastructure problems are not technical problems. They are judgment problems. Knowing which
-                    tool to reach for. Knowing when a system is healthy versus quietly failing. Knowing that the
-                    migration plan that looks clean on paper will not survive contact with production unless you have
+                    Most infrastructure problems are not technical problems.
+                    They are judgment problems. Knowing which tool to reach for.
+                    Knowing when a system is healthy versus quietly failing.
+                    Knowing that the migration plan that looks clean on paper
+                    will not survive contact with production unless you have
                     tested every assumption.
                 </p>
                 <p>
-                    I have operated infrastructure in conditions where things going wrong had real consequences. That
-                    shapes how I approach the work. I do not build fragile systems and hope nobody notices.
+                    I have operated infrastructure where things going wrong had
+                    real consequences. That shapes how I approach the work. I do
+                    not build fragile systems and hope nobody notices.
                 </p>
                 <p>
-                    I also think about security at the infrastructure level, not as an afterthought. Earlier this year I
-                    reverse-engineered a multi-stage malware attack targeting developers through a fake job interview.
-                    Tracing that attack chain changed how I think about container hardening, secrets management, and
-                    what a compromised developer environment actually looks like from the inside. That kind of thinking
-                    is built into how I design systems now.
+                    Security is part of how I think about infrastructure, not
+                    something added at the end. Earlier this year I
+                    reverse-engineered a multi-stage malware attack that
+                    targeted developers through a fake job interview. It used
+                    obfuscated JavaScript, custom XOR and base64 encoding,
+                    IP-locked payload delivery, and a modular framework designed
+                    to silently extract credentials from developer environments.
+                    Tracing that attack changed how I think about secrets
+                    management, container hardening, and what a compromised
+                    environment actually looks like from the inside.
                 </p>
             </div>
         </div>
@@ -130,12 +183,34 @@
         <div class="tech-section__body">
             <div class="tech-panel">
                 <h3 class="tech-panel__title">Rust Clippy</h3>
-                <p>Clippy is the official <code class="tech-tag">Rust</code> linter used across the entire Rust
-                    ecosystem. I contributed lints and
-                    improvements to the project and am resuming active contribution now.</p>
-                <a href="https://github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha" target="_blank"
+                <p>
+                    Clippy is the official
+                    <code class="tech-tag">Rust</code> linter used across the
+                    entire Rust ecosystem. I contributed lints directly to the
+                    project, which required working through the compiler
+                    internals and the review process with the Rust team.
+                </p>
+                <a
+                    href="https://github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    class="tech-link">github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha</a>
+                    class="tech-link"
+                    >github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha</a
+                >
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-section" id="infrastructure-projects">
+        <h2 class="tech-section__title">Infrastructure projects</h2>
+        <div class="tech-section__body tech-section__body--grid">
+            <div class="tech-panel">
+                <p>
+                    I am currently building and publishing cloud-native
+                    infrastructure projects publicly as I work through
+                    Kubernetes and platform engineering. Each project solves a
+                    real problem and is documented on GitHub and this blog.
+                </p>
             </div>
         </div>
     </section>
@@ -145,14 +220,27 @@
         <div class="tech-section__body tech-section__body--grid">
             <div class="tech-panel">
                 <h3 class="tech-panel__title">lsmdb</h3>
-                <p>A persistent key-value storage engine built on the
-                    <code class="tech-tag">Log-Structured Merge Tree architecture in Rust</code>.
-                    Implements a SkipList MemTable, Write-Ahead Log, Bloom filters, LRU block cache, and Snappy
-                    compression. Building this from scratch provided deep intuition into how databases fail under load,
-                    enabling me to better architect highly available cloud data tiers and debug I/O latency spikes.
+                <p>
+                    A persistent, crash-safe key-value storage engine built from
+                    scratch in Rust on an LSM-Tree architecture. Implements a
+                    Write-Ahead Log, Bloom Filters, LRU block cache, and a
+                    custom arena-allocated SkipList MemTable. Published on
+                    crates.io as a library and CLI binary.
                 </p>
-                <a href="{{ config.extra.github }}/lsmdb" target="_blank" rel="noopener noreferrer" class="tech-link">{{
-                    config.extra.github | replace(from="https://", to="") }}/lsmdb</a>
+                <p>
+                    I built this to understand how storage engines fail under
+                    pressure. That understanding directly informs how I reason
+                    about data tier architecture and I/O latency in production
+                    infrastructure.
+                </p>
+                <a
+                    href="{{ config.extra.github }}/lsmdb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="tech-link"
+                    >{{ config.extra.github | replace(from="https://", to="")
+                    }}/lsmdb</a
+                >
             </div>
         </div>
     </section>
@@ -162,12 +250,22 @@
         <div class="tech-section__body">
             <div class="tech-panel">
                 <p>
-                    I am open to remote roles in platform engineering, DevOps, infrastructure engineering, and SRE. I am
-                    also available for serious freelance infrastructure engagements.
+                    I am available for remote infrastructure and DevOps work:
+                    Terraform provisioning on AWS and GCP, Linux server
+                    administration, observability stack setup with Prometheus
+                    and Loki, and cloud infrastructure operations. As my
+                    Kubernetes work matures, I am actively moving into platform
+                    engineering and container orchestration.
                 </p>
                 <p>
-                    I have worked remotely for companies in Germany, France, and India. I know how to operate without
-                    hand-holding, communicate clearly across time zones, and deliver work that holds up.
+                    I have worked remotely for companies in Germany, France, and
+                    India. I deliver work without hand-holding, communicate
+                    clearly across time zones, and take operational
+                    responsibility seriously.
+                </p>
+                <p>
+                    Open to full-time remote roles and serious freelance
+                    infrastructure engagements.
                 </p>
             </div>
         </div>
