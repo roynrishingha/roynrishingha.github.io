@@ -1,0 +1,27 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+indent_style = space
+indent_size = 4
+
+# YAML and JSON files typically use 2 spaces
+[*.{yml,yaml,json,toml}]
+indent_size = 2
+
+# Markdown files should not trim trailing whitespace as it's used for line breaks
+[*.md]
+trim_trailing_whitespace = false
+
+# Strict HTML formatting
+[*.html]
+charset = utf-8
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true

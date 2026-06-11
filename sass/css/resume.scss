@@ -17,9 +17,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-bottom: 40px;
-    border-bottom: 1px solid var(--border-light);
-    margin-bottom: 48px;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
 
     &__content {
         max-width: 700px;
@@ -37,12 +36,10 @@
 }
 
 .resume-title {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     color: var(--accent-primary);
     font-weight: 500;
     margin-bottom: 24px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
 }
 
 .resume-contact {
@@ -153,7 +150,7 @@
     }
 
     .resume-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 16px;
     }
 

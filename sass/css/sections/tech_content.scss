@@ -93,13 +93,41 @@
 .tech-panel p {
     color: var(--text-secondary); /* High contrast reading color */
     font-size: 1.15rem;
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 24px;
-    max-width: 800px; /* Keep text from getting too long */
     
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+
+.editorial-callout {
+    position: relative;
+    padding: 24px 32px;
+    margin: 32px 0;
+    background: rgba(var(--accent-primary-rgb), 0.03);
+    border-radius: 0 12px 12px 0;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(--accent-primary);
+        border-radius: 4px;
+        box-shadow: 0 0 12px rgba(var(--accent-primary-rgb), 0.4);
+    }
+}
+
+.tech-highlight {
+    color: var(--text-main);
+    font-weight: 700;
+    background: linear-gradient(120deg, rgba(var(--accent-primary-rgb), 0.2) 0%, rgba(var(--accent-primary-rgb), 0) 100%);
+    padding: 0 4px;
+    border-radius: 4px;
 }
 
 .tech-tag {

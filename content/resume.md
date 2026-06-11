@@ -4,19 +4,23 @@ description = "Professional Experience and Resume of Nrishinghananda Roy"
 template = "resume.html"
 
 [extra]
-summary = "Platform Engineer with a strong foundation in Rust and Python, specializing in building secure, highly scalable cloud infrastructure and automated developer workflows. Proven expertise in Infrastructure as Code (Terraform), multi-cloud migrations (AWS/GCP), and containerized deployments."
+summary = "DevOps Engineer specializing in helping startups build scalable, zero-downtime infrastructure. I leverage deep expertise in AWS, Kubernetes, and GitOps to automate deployments and accelerate product delivery."
 
 [[extra.skills]]
-category = "Infrastructure & Cloud"
-items = ["Docker", "AWS", "Terraform"]
+category = "Infrastructure"
+items = [ "Docker", "Kubernetes", "Helm", "Terraform", "GitHub Actions", "ArgoCD", "Prometheus", "Loki", "Grafana" ]
 
 [[extra.skills]]
-category = "Backend"
-items = [ "Rust (axum, tokio)", "Python", "REST API", "gRPC API", "WebSocket", "PostgreSQL"]
+category = "AWS"
+items = ["IAM", "EC2", "Lambda", "Route53", "VPC", "ECS", "EKS", "S3", "RDS"]
 
 [[extra.skills]]
-category = "SysAdmin"
-items = ["Linux (Debian, Fedora)", "Bash", "Nginx"]
+category = "Languages"
+items = [ "Rust", "Python", "Bash" ]
+
+[[extra.skills]]
+category = "Systems"
+items = ["Linux (Debian, Fedora)", "Systemd", "Nginx"]
 
 [[extra.opensource]]
 title = "Rust Clippy"
@@ -32,12 +36,13 @@ blog_url = "https://roynrishingha.com/blog/lsmdb/"
 description = "Persistent, crash-safe key-value storage engine built on Log-Structured Merge Tree architecture in Rust. Published on crates.io as both a library and CLI binary."
 
 [[extra.experiences]]
-title = "Platform Engineer"
+title = "DevOps Engineer"
 company = "Freelance"
 date = "Nov 2024 - Present"
 bullets = [
-    "Architected and deployed containerized infrastructure for independent client applications, designing automated CI/CD pipelines to ensure zero-downtime releases.",
-    "Reverse-engineered multi-stage malware, publishing technical research on attack vectors and payload delivery to drive DevSecOps and Operations Security best practices."
+    "Architected and provisioned scalable AWS infrastructure (VPC, EKS, EC2, RDS) for startup clients using **Terraform**, ensuring highly available and secure environments.",
+    "Designed and implemented GitOps-driven CI/CD pipelines using **GitHub Actions** and **ArgoCD**, cutting deployment times and enabling automated releases to Kubernetes.",
+    "Developed custom automation scripts in **Python** and **Bash** to streamline database backups, handle log rotation, and reduce manual infrastructure management."
 ]
 
 [[extra.experiences]]
