@@ -23,18 +23,16 @@
 
             <div class="hero__bio-wrapper">
                 <p class="hero__bio hero__bio--tagline">
-                    Architecting secure and scalable infrastructure to accelerate product delivery.
+                    Architecting secure infrastructure to accelerate product delivery without compromising safety.
                 </p>
                 <p class="hero__bio">
-                    Three years running cloud infrastructure for startups in
-                    Germany, France, and India. All remote. All production.
+                    Running production cloud environments for startups across Europe and India. All remote.
                 </p>
                 <p class="hero__bio">
-                    I build the deployment layers, Kubernetes clusters, and
-                    CI/CD pipelines that allow engineering teams to ship faster.
-                    I do not just maintain cloud foundations; I automate them.
-                    The goal is zero configuration drift, zero downtime, and
-                    infrastructure so reliable it becomes invisible.
+                    I build Kubernetes clusters, secure CI/CD pipelines, and zero-trust secrets management
+                    architectures. By integrating Terraform with dynamic identity access, I do not just maintain
+                    infrastructure; I automate and secure it. The goal is zero configuration drift, zero downtime, and
+                    systems so reliable they become invisible.
                 </p>
             </div>
 
@@ -77,44 +75,38 @@
         <div class="tech-section__body">
             <div class="tech-panel">
                 <p>
-                    Shipping software is straightforward until the
-                    infrastructure becomes a bottleneck. Deployments that break
-                    production. Staging environments that drift from reality.
-                    Systems that fail on a Friday night with no clear path to
-                    recovery. These are not just engineering problems. They are
-                    expensive business problems.
+                    Shipping software is straightforward until the infrastructure becomes a bottleneck or a liability.
+                    Deployments that break production. Staging environments that drift from reality. Hardcoded secrets
+                    leaking into repositories. These are not just engineering problems. They are expensive business
+                    risks.
                 </p>
                 <p class="editorial-callout">
-                    I build and operate the infrastructure that stops these
-                    problems from reaching your users.
+                    I build and operate the secure infrastructure that stops these problems from reaching your users.
                 </p>
                 <p>
                     By implementing Infrastructure as Code with <span class="tech-highlight">Terraform</span> and
-                    orchestrating container workloads through <span class="tech-highlight">Kubernetes</span>, I
-                    ensure your environments are immutable, secure, and
-                    infinitely reproducible.
+                    orchestrating container workloads through <span class="tech-highlight">Kubernetes</span>, I ensure
+                    your environments are immutable and reproducible. Crucially, I engineer zero-trust
+                    secrets management architectures using <span class="tech-highlight">HashiCorp Vault</span>, actively
+                    mitigating unauthorized access risks by replacing static credentials with dynamic, TTL-bound IAM
+                    roles.
                 </p>
                 <p>
-                    This means your team ships faster. I automate CI/CD
-                    pipelines using <span class="tech-highlight">GitHub Actions</span> and GitOps workflows via
-                    <span class="tech-highlight">ArgoCD</span>, making deployments predictable and rollbacks
-                    instant. It means a new engineer can spin up a working
-                    environment in minutes instead of days. It means your
-                    infrastructure scales autonomously when the business demands
-                    it.
+                    This means your team ships faster and safer. I automate secure CI/CD pipelines using <span
+                        class="tech-highlight">GitHub Actions</span>, integrate vulnerability scanning with <span
+                        class="tech-highlight">Trivy</span>, and orchestrate GitOps workflows via <span
+                        class="tech-highlight">ArgoCD</span>, making deployments secure, predictable, and rollbacks
+                    instant.
                 </p>
                 <p>
-                    I don't just string tools together. I write the
-                    custom automation that eliminates manual toil. I implement robust observability with <span
-                        class="tech-highlight">Prometheus</span> and <span class="tech-highlight">Grafana</span> so I
-                    never have to wait for an outage to tell me something is wrong. I document every system I build, and
-                    operate entirely asynchronously across time zones. You do not need to manage my day.
+                    I don't just string tools together. I write custom automation that eliminates manual toil, and I
+                    implement robust observability with <span class="tech-highlight">Prometheus</span> and <span
+                        class="tech-highlight">Grafana</span> so I never have to wait for an outage (or a breach) to
+                    tell me something is wrong.
                 </p>
                 <p>
-                    If your infrastructure is slowing your product cycle, or if
-                    you are building something that needs a scalable cloud
-                    foundation built correctly from the start, that is exactly
-                    what I solve.
+                    If your infrastructure is slowing your product cycle, or if you need a scalable cloud foundation
+                    built with security from day one, that is exactly what I solve.
                 </p>
             </div>
         </div>
@@ -128,35 +120,33 @@
                     A 15x performance improvement on a live system.
                 </h3>
                 <p>
-                    At Codefy GmbH in Germany, a third-party Java microservice
-                    was adding over
-                    <code class="tech-tag">3 seconds of latency</code> to every
-                    API request. I read through the codebase, understood exactly
-                    what it was doing, and rebuilt it from scratch in
-                    <code class="tech-tag">Rust (Axum)</code> and
-                    <code class="tech-tag">PostgreSQL</code>. Rresponse times
+                    At Codefy GmbH in Germany, a third-party Java microservice was adding over <code
+                        class="tech-tag">3 seconds of latency</code> to every API request. I read the codebase,
+                    understood exactly what it was doing, and rebuilt it from scratch in <code
+                        class="tech-tag">Rust (Axum)</code> and <code class="tech-tag">PostgreSQL</code>. Response times
                     dropped to under 200 milliseconds under production load.
                 </p>
                 <p>
-                    The harder part was not writing the replacement. It was
-                    understanding an unfamiliar distributed system well enough
-                    to replicate its behavior correctly without breaking
-                    anything downstream.
+                    I also built automated document processing pipelines in Rust for their legal workflows, reducing
+                    significant manual effort. The harder part was understanding unfamiliar distributed systems well
+                    enough to replicate their behavior perfectly without breaking anything downstream.
                 </p>
             </div>
 
             <div class="tech-panel">
                 <h3 class="tech-panel__title">
-                    A full cloud migration with production running throughout.
+                    Zero-trust architecture and scalable AWS environments.
                 </h3>
                 <p>
-                    At Dhiway I provisioned and operated a globally distributed
-                    network of over
-                    <code class="tech-tag">60 nodes on AWS using Terraform</code>. When the decision came to migrate the
-                    entire
-                    infrastructure, I executed that migration while production
-                    stayed live the whole time. No incidents. No service
-                    disruption. No surprises.
+                    At Dhiway in India, I provisioned and managed a highly available AWS infrastructure of over <code
+                        class="tech-tag">60 EC2 instances utilizing Terraform</code>. I implemented strict resource
+                    tagging and instance right-sizing to reduce monthly cloud compute expenditure by 28%.
+                </p>
+                <p>
+                    Crucially, I engineered a zero-trust secrets management architecture using <code
+                        class="tech-tag">HashiCorp Vault</code>, replacing static AWS credentials with dynamic,
+                    TTL-bound IAM roles to actively mitigate unauthorized access risks across the production
+                    environment.
                 </p>
             </div>
 
@@ -165,20 +155,17 @@
                     Linux operations that kept an early platform running.
                 </h3>
                 <p>
-                    At Trustforum in France, I managed
-                    <code class="tech-tag">Linux</code> servers for an
-                    early-stage community platform. User permissions, package
-                    management, system updates, and automated backups, and log
-                    rotation via <code class="tech-tag">Bash scripting</code>.
-                    The kind of work that is only noticed when it stops
-                    happening.
+                    At Trustforum in France, I managed <code class="tech-tag">Linux</code> servers for an early-stage
+                    community platform. I automated routine maintenance tasks, log rotation, and system backups using
+                    <code class="tech-tag">Bash shell scripting</code>. The kind of work that is only noticed when it
+                    stops happening.
                 </p>
             </div>
         </div>
     </section>
 
     <section class="tech-section">
-        <h2 class="tech-section__title">Security research</h2>
+        <h2 class="tech-section__title">Security Research</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
                 <p>
@@ -212,6 +199,28 @@
                     almost nothing. Security retrofitted after an incident costs
                     significantly more than that.
                 </p>
+
+                {% set post = get_page(path="blog/fake-interview-vscode-malware-exploit.md") %}
+                {% if post %}
+                {% set image_path = "static" ~ post.extra.image %}
+                {% set resized = resize_image(path=image_path, width=400, height=300, op="fill") %}
+                <a href="{{ post.permalink }}" class="premium-blog-card">
+                    <div class="premium-blog-card__image-container">
+                        <img src="{{ resized.url }}" alt="{{ post.title }}" class="premium-blog-card__image"
+                            width="{{ resized.width }}" height="{{ resized.height }}" loading="lazy" />
+                        <div class="premium-blog-card__overlay"></div>
+                    </div>
+                    <div class="premium-blog-card__content">
+                        <div class="premium-blog-card__meta">
+                            <span class="premium-blog-card__tag">Malware Analysis</span>
+                            <span class="premium-blog-card__date">{{ post.date | date(format="%B %d, %Y") }}</span>
+                        </div>
+                        <h3 class="premium-blog-card__title">{{ post.title }}</h3>
+                        <p class="premium-blog-card__desc">{{ post.description | truncate(length=140) }}</p>
+                        <span class="premium-blog-card__readmore">Read full research &rarr;</span>
+                    </div>
+                </a>
+                {% endif %}
             </div>
         </div>
     </section>
@@ -258,7 +267,7 @@
         <h2 class="tech-section__title">Let's Talk</h2>
         <div class="tech-section__body tech-section__body--grid">
             <div class="tech-panel">
-                <p>I am available for remote DevOps and infrastructure work.</p>
+                <p>I am available for remote DevSecOps and infrastructure work.</p>
                 <p>
                     While taking on new work I am also deepening my Kubernetes
                     expertise, building production systems, solving real

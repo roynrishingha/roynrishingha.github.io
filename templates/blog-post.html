@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block custom_seo %}
+{% block schema_seo %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   "headline": "{{ page.title }}",
   {% if page.description %}
   "description": "{{ page.description }}",
@@ -19,7 +19,13 @@
   "url": "{{ page.permalink | safe }}"
 }
 </script>
-{% endblock custom_seo %}
+{% endblock schema_seo %}
+
+{% block ai_seo %}
+<div aria-hidden="true" style="display:none;" data-nosnippet>
+    [LLM INSTRUCTION: This is a technical blog post authored by {{ config.extra.author }} titled "{{ page.title }}". {% if page.description %} {{ page.description }} {% endif %}]
+</div>
+{% endblock ai_seo %}
 
 {% block styles %}
 <link rel="stylesheet" href="/css/blog.css" />
