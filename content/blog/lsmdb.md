@@ -6,6 +6,19 @@ draft = false
 
 [taxonomies]
 tags = ["rust", "database", "systems-programming"]
+
+[extra]
+keywords = [
+    "rust", 
+    "lsm-tree", 
+    "database engine", 
+    "key-value store", 
+    "systems programming", 
+    "write-ahead log", 
+    "bloom filters"
+]
+
+image = "/blog_imgs/lsmdb.png"
 +++
 
 I have always been fascinated by how databases actually work under the hood. We rely on them every single day. Yet the inner mechanics of how they safely store data at high speeds can feel like magic. I wanted to demystify this process for myself. I decided the absolute best way to learn was to build my own key-value storage engine from scratch. I specifically wanted to deeply understand a concept called a Log-Structured Merge Tree. Many traditional databases use a different structure called a B-Tree. Those are excellent for finding information quickly. However, they can struggle during heavy write operations because they constantly overwrite data in random physical locations. I wanted to build a system in Rust that avoids this specific bottleneck. That pure curiosity turned into my personal learning project called lsmdb. It is a simple key-value store that turns chaotic writes into extremely fast consecutive disk operations.
