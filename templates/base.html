@@ -46,9 +46,9 @@
     <meta name="description" content="{{ current_description }}" />
     {% set current_keywords = config.extra.seo_keywords | join(sep=', ') %}
     {% if page and page.extra and page.extra.keywords %}
-        {% set_global current_keywords = page.extra.keywords | join(sep=', ') %}
+    {% set_global current_keywords = page.extra.keywords | join(sep=', ') %}
     {% elif page and page.taxonomies and page.taxonomies.tags %}
-        {% set_global current_keywords = page.taxonomies.tags | join(sep=', ') %}
+    {% set_global current_keywords = page.taxonomies.tags | join(sep=', ') %}
     {% endif %}
     {% if current_keywords %}
     <meta name="keywords" content="{{ current_keywords }}" />
@@ -83,7 +83,7 @@
     <link rel="apple-touch-icon" href="{{ get_url(path='favicon.png') }}" />
     <meta name="theme-color" content="#050505" />
     <meta name="generator" content="Zola" />
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -92,7 +92,8 @@
       "url": "{{ config.base_url }}/"
     }
     </script>
-    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed" href="{{ get_url(path='atom.xml') }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed"
+        href="{{ get_url(path='atom.xml') }}" />
 
     {% block custom_seo %}
     {% endblock custom_seo %}
@@ -222,10 +223,13 @@
             <div class="container footer__container">
                 <div class="footer__content">
                     <p class="footer__bio">
-                        DevSecOps Engineer specializing in secure AWS infrastructure, Kubernetes, zero-trust secrets management, and GitOps deployments. Focused on building robust, automated systems to accelerate startup delivery securely.
+                        Site Reliability Engineer (SRE) building highly reliable AWS infrastructure, Kubernetes
+                        clusters, and GitOps deployments. If you need a scalable cloud foundation built for absolute
+                        reliability, I am available to take ownership.
                     </p>
                     <p class="footer__status">
-                        Open to remote roles in DevSecOps and Cloud Infrastructure.
+                        🚀 Actively seeking remote full-time or contract roles in DevOps Engineering, Site Reliability
+                        Engineering (SRE).
                     </p>
                     <div class="footer__links">
                         <a href="{{ config.extra.github }}" target="_blank" rel="noopener noreferrer"

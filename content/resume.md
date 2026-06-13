@@ -4,7 +4,7 @@ description = "Professional Experience and Resume of Nrishinghananda Roy"
 template = "resume.html"
 
 [extra]
-summary = "DevSecOps Engineer specializing in helping startups build scalable, zero-downtime infrastructure. I leverage deep expertise in AWS, Kubernetes, and GitOps to automate deployments and accelerate product delivery."
+summary = "Site Reliability Engineer (SRE) specializing in helping startups build scalable, highly reliable, zero-downtime infrastructure. I leverage deep expertise in AWS, Kubernetes, and GitOps to automate deployments and accelerate product delivery."
 
 [[extra.skills]]
 category = "Infrastructure"
@@ -36,7 +36,7 @@ blog_url = "https://roynrishingha.com/blog/lsmdb/"
 description = "Persistent, crash-safe key-value storage engine built on Log-Structured Merge Tree architecture in Rust. Published on crates.io as both a library and CLI binary."
 
 [[extra.experiences]]
-title = "DevSecOps Engineer"
+title = "Site Reliability Engineer (SRE)"
 company = "Independent"
 date = "Nov 2024 - Present"
 bullets = [
