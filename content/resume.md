@@ -4,7 +4,7 @@ description = "Professional Experience and Resume of Nrishinghananda Roy"
 template = "resume.html"
 
 [extra]
-summary = "Site Reliability Engineer (SRE) specializing in helping startups build scalable, highly reliable, zero-downtime infrastructure. I leverage deep expertise in AWS, Kubernetes, and GitOps to automate deployments and accelerate product delivery."
+summary = "DevOps Engineer specializing in helping startups build scalable, highly reliable, zero-downtime infrastructure. I leverage deep expertise in AWS, Kubernetes, and GitOps to automate deployments and accelerate product delivery."
 
 [[extra.skills]]
 category = "Infrastructure"
@@ -36,11 +36,11 @@ blog_url = "https://roynrishingha.com/blog/lsmdb/"
 description = "Persistent, crash-safe key-value storage engine built on Log-Structured Merge Tree architecture in Rust. Published on crates.io as both a library and CLI binary."
 
 [[extra.experiences]]
-title = "Site Reliability Engineer (SRE)"
+title = "DevOps Engineer"
 company = "Independent"
 date = "Nov 2024 - Present"
 bullets = [
-    "Reverse-engineered a zero-click supply chain attack targeting cloud infrastructure credentials, utilizing AST manipulation to decrypt XOR-obfuscation and isolate a live C2 exploitation framework; leveraged this threat intelligence to design resilient DevSecOps architectures, actively mitigating systemic data exfiltration risks by enforcing strict network egress controls, ephemeral secrets management, and hardened zero-trust CI/CD pipelines."
+    "Reverse-engineered a zero-click supply chain attack embedded in a VS Code configuration, isolating a multi-stage info-stealer and dismantling its IP-locked JWT delivery mechanism. Applied these threat intelligence insights to architect hardened CI/CD pipelines and infrastructure deployments with strict network egress controls."
 ]
 
 [[extra.experiences]]
@@ -59,7 +59,6 @@ company = "Dhiway | Remote, India"
 date = "Apr 2023 - Oct 2023"
 bullets = [
     "Provisioned and managed a highly available AWS infrastructure of **60+ EC2** utilizing **Terraform**, implementing strict resource tagging and instance right-sizing to reduce monthly cloud compute **expenditure by 28%**.",
-    "Engineered a zero-trust secrets management architecture using **HashiCorp Vault**, replacing static AWS credentials with dynamic, TTL-bound IAM roles to actively mitigate unauthorized access risks across the production environment.",
     "Deployed a centralized telemetry and log aggregation pipeline utilizing the **Prometheus, Grafana, and Loki** stack, configuring targeted alerting matrices that reduced Mean Time to Resolution (MTTR) for critical infrastructure **incidents by over 35%**."
 ]
 

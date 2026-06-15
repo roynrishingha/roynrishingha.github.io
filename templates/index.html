@@ -29,7 +29,10 @@
                     Running production cloud environments for startups across Europe and India. All remote.
                 </p>
                 <p class="hero__bio">
-                    I build Kubernetes clusters, resilient CI/CD pipelines, and robust architectures incorporating HashiCorp Vault. By integrating Terraform with modern GitOps workflows, I do not just maintain infrastructure; I engineer it for ultimate reliability. The goal is zero configuration drift, zero downtime, and systems so reliable they become invisible.
+                    I build Kubernetes clusters, resilient CI/CD pipelines, and highly scalable cloud architectures. By
+                    integrating Terraform with modern GitOps workflows, I do not just maintain infrastructure; I
+                    engineer it for ultimate reliability. The goal is zero configuration drift, zero downtime, and
+                    systems so reliable they become invisible.
                 </p>
             </div>
 
@@ -78,14 +81,13 @@
                     an expensive business problem.
                 </p>
                 <p class="editorial-callout">
-                    I build and operate the highly reliable infrastructure that stops these problems from reaching your users.
+                    I build and operate the highly reliable infrastructure that stops these problems from reaching your
+                    users.
                 </p>
                 <p>
                     By implementing Infrastructure as Code with <span class="tech-highlight">Terraform</span> and
                     orchestrating container workloads through <span class="tech-highlight">Kubernetes</span>, I ensure
-                    your environments are immutable and reproducible. I also integrate zero-trust principles
-                    using <span class="tech-highlight">HashiCorp Vault</span> for secure secrets management,
-                    replacing static credentials with dynamic IAM roles.
+                    your environments are immutable, infinitely reproducible, and capable of autonomous scaling.
                 </p>
                 <p>
                     This means your team ships faster and safer. I automate robust CI/CD pipelines using <span
@@ -129,7 +131,7 @@
 
             <div class="tech-panel">
                 <h3 class="tech-panel__title">
-                    Zero-trust architecture and scalable AWS environments.
+                    Cloud Cost Optimization & Scalable AWS Environments.
                 </h3>
                 <p>
                     At Dhiway in India, I provisioned and managed a highly available AWS infrastructure of over <code
@@ -137,10 +139,9 @@
                     tagging and instance right-sizing to reduce monthly cloud compute expenditure by 28%.
                 </p>
                 <p>
-                    Crucially, I engineered a zero-trust secrets management architecture using <code
-                        class="tech-tag">HashiCorp Vault</code>, replacing static AWS credentials with dynamic,
-                    TTL-bound IAM roles to actively mitigate unauthorized access risks across the production
-                    environment.
+                    I also deployed a centralized telemetry and log aggregation pipeline utilizing the <code
+                        class="tech-tag">Prometheus, Grafana, and Loki</code> stack, configuring targeted alerting
+                    matrices that reduced resolution times for critical infrastructure incidents by over 35%.
                 </p>
             </div>
 
@@ -159,7 +160,7 @@
     </section>
 
     <section class="tech-section">
-        <h2 class="tech-section__title">Security Research</h2>
+        <h2 class="tech-section__title">Technical Writing & Security Deep Dives</h2>
         <div class="tech-section__body">
             <div class="tech-panel">
                 <p>
@@ -167,31 +168,12 @@
                     already caused damage. A compromised environment, stolen
                     credentials, a breach that nobody noticed for weeks.
                 </p>
-                <p class="editorial-callout">I think about security before the breach, not after.</p>
+                <p class="editorial-callout">I strongly believe that security must be built into infrastructure from day
+                    one, not retrofitted after an incident.</p>
                 <p>
-                    In early 2026 I received what looked like a standard coding
-                    task from a recruiter. It was a carefully constructed
-                    attack, designed to execute silently inside a developer
-                    machine and extract credentials without triggering any
-                    visible warning. Rather than running it, I spent days
-                    pulling it apart stage by stage until I understood exactly
-                    how it worked, how it <span class="tech-highlight">evaded detection</span>, and what it was
-                    built to steal.
-                </p>
-                <p>
-                    That experience sits underneath everything I build now. When
-                    I set up a <span class="tech-highlight">deployment pipeline</span>, I think about what an
-                    attacker would do with access to that pipeline. When I
-                    configure a container environment, I think about what
-                    happens if one workload is compromised and what it can reach
-                    from there. When I handle secrets, I think about every place
-                    those secrets could leak and close those paths before they
-                    become a problem.
-                </p>
-                <p>
-                    Security built into infrastructure from the beginning costs
-                    almost nothing. Security retrofitted after an incident costs
-                    significantly more than that.
+                    Below is a deep-dive into a sophisticated supply-chain attack I recently reverse-engineered,
+                    highlighting exactly why securing deployment pipelines and container environments is an absolute
+                    baseline requirement for modern startups.
                 </p>
 
                 {% set post = get_page(path="blog/fake-interview-vscode-malware-exploit.md") %}
@@ -261,7 +243,8 @@
         <h2 class="tech-section__title">Let's Talk</h2>
         <div class="tech-section__body tech-section__body--grid">
             <div class="tech-panel">
-                <p>I am available for remote Site Reliability Engineering (SRE) and infrastructure work.</p>
+                <p>I am available for remote DevOps Engineering, Cloud Engineering, and Site Reliability Engineering
+                    (SRE) work.</p>
                 <p>
                     While taking on new work I am also deepening my Kubernetes
                     expertise, building production systems, solving real
