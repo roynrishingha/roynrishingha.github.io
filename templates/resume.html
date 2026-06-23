@@ -105,6 +105,7 @@
                 </div>
             </section>
 
+            {% if page.extra.opensource %}
             <section class="resume-section">
                 <h3 class="resume-section-title">Open Source Contributions</h3>
                 <div class="opensource-list">
@@ -131,6 +132,7 @@
                     {% endfor %}
                 </div>
             </section>
+            {% endif %}
 
             <!-- Technical skills moved above -->
         </div>
@@ -157,6 +159,7 @@
         <p>{{ page.extra.summary }}</p>
     </section>
 
+    {% if page.extra.opensource %}
     <section class="print-section">
         <h3>OPEN SOURCE CONTRIBUTIONS</h3>
         {% for os in page.extra.opensource %}
@@ -172,6 +175,7 @@
         </div>
         {% endfor %}
     </section>
+    {% endif %}
 
     <section class="print-section">
         <h3>TECHNICAL SKILLS</h3>

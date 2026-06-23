@@ -4,29 +4,23 @@ description = "Professional Experience and Resume of Nrishinghananda Roy"
 template = "resume.html"
 
 [extra]
-summary = "DevOps Engineer specializing in helping startups build scalable, highly reliable, zero-downtime infrastructure. I leverage deep expertise in AWS, Kubernetes, and GitOps to automate deployments and accelerate product delivery."
+summary = "DevOps Engineer specializing in reliable cloud infrastructure and kubernetes. Proven track record of optimizing operations and delivering solutions for startups."
 
 [[extra.skills]]
 category = "Infrastructure"
-items = [ "Docker", "Kubernetes", "Helm", "Terraform", "GitHub Actions", "ArgoCD", "Prometheus", "Loki", "Grafana" ]
+items = [ "Docker", "Kubernetes", "Helm", "Terraform", "ArgoCD", "GitHub Actions", "Linux" ]
 
 [[extra.skills]]
-category = "AWS"
-items = ["IAM", "EC2", "Lambda", "Route53", "VPC", "ECS", "EKS", "S3", "RDS"]
+category = "Observability & Security"
+items = ["Prometheus", "Grafana", "Trivy"]
+
+[[extra.skills]]
+category = "Cloud"
+items = [ "AWS (IAM, EC2, Lambda, Route53, VPC, EKS, S3, RDS)"]
 
 [[extra.skills]]
 category = "Languages"
-items = [ "Rust", "Python", "Bash" ]
-
-[[extra.skills]]
-category = "Systems"
-items = ["Linux (Debian, Fedora)", "Systemd", "Nginx"]
-
-[[extra.opensource]]
-title = "Rust Clippy"
-url = "http://github.com/rust-lang/rust-clippy"
-description = "Contributed lints and improvements to the official Rust linter used by the entire Rust ecosystem."
-pr_url = "https://github.com/rust-lang/rust-clippy/pulls?q=author:roynrishingha"
+items = [ "Bash", "Python", "Rust" ]
 
 [[extra.projects]]
 title = "lsmdb: LSM-Tree Key-Value Database"
@@ -39,13 +33,11 @@ description = "Persistent, crash-safe key-value storage engine built on Log-Stru
 title = "DevOps Engineer"
 company = "Independent"
 date = "Nov 2024 - Present"
-bullets = [
-    "Reverse-engineered a zero-click supply chain attack embedded in a VS Code configuration, isolating a multi-stage info-stealer and dismantling its IP-locked JWT delivery mechanism. Applied these threat intelligence insights to architect hardened CI/CD pipelines and infrastructure deployments with strict network egress controls."
-]
+bullets = []
 
 [[extra.experiences]]
 title = "Software Engineer"
-company = "Codefy GmbH | Remote, Germany"
+company = "Codefy GmbH | Germany, Remote"
 date = "Nov 2023 - Oct 2024"
 bullets = [
     "Eliminated a critical performance bottleneck by replacing a third-party Java microservice with an in-house Rust service built with **axum (Rust)** and **PostgreSQL**. Analyzed the open-source Java codebase and replicated its behavior in Rust, reducing response times **from 3+ seconds to under 200ms**.",
@@ -55,19 +47,18 @@ bullets = [
 
 [[extra.experiences]]
 title = "Associate Software Engineer"
-company = "Dhiway | Remote, India"
+company = "Dhiway | India, Remote"
 date = "Apr 2023 - Oct 2023"
 bullets = [
-    "Provisioned and managed a highly available AWS infrastructure of **60+ EC2** utilizing **Terraform**, implementing strict resource tagging and instance right-sizing to reduce monthly cloud compute **expenditure by 28%**.",
-    "Deployed a centralized telemetry and log aggregation pipeline utilizing the **Prometheus, Grafana, and Loki** stack, configuring targeted alerting matrices that reduced Mean Time to Resolution (MTTR) for critical infrastructure **incidents by over 35%**."
+    "Provisioned and managed a production multi-cloud blockchain infrastructure on **AWS (EC2)** and **GCP (Compute Engine)** utilizing **Terraform** for consistent environment replication.",
+    "Configured robust monitoring and telemetry for **60+ distributed blockchain nodes** using **Prometheus**, and **Grafana** to track system performance, network latency."
 ]
 
 [[extra.experiences]]
-title = "Linux System Administrator"
-company = "Trustforum | Remote, France"
+title = "System Administrator"
+company = "Independent | France, Remote"
 date = "Jan 2022 - Mar 2023"
 bullets = [
-    "Managed and maintained Linux server environments, handling user permissions, package management, and system updates to ensure high availability for an early-stage community platform.",
-    "Automated routine maintenance tasks, log rotation, and system backups using Bash shell scripting, reducing manual administrative overhead."
+    "Configured and maintained production Linux servers, routine system health checks, log rotation, and data backups using Bash scripts, effectively eliminating manual overhead."
 ]
 +++
