@@ -29,9 +29,8 @@
                     Running production cloud environments for startups across Europe and India. All remote.
                 </p>
                 <p class="hero__bio">
-                    I build Kubernetes clusters, resilient CI/CD pipelines, and multi-cloud architectures on AWS and
-                    GCP.
-                    By integrating Terraform with modern GitOps workflows, I do not just maintain infrastructure; I
+                    I build Kubernetes clusters, resilient CI/CD pipelines, and cloud infrastructure on AWS. By
+                    integrating Terraform with modern GitOps workflows, I do not just maintain infrastructure; I
                     engineer it for ultimate reliability. The goal is zero configuration drift, zero downtime, and
                     systems so reliable they become invisible.
                 </p>
@@ -132,97 +131,82 @@
 
             <div class="tech-panel">
                 <h3 class="tech-panel__title">
-                    Multi-cloud Blockchain Infrastructure & Scale.
+                    Scale & Production Cloud Infrastructure.
                 </h3>
                 <p>
-                    At Dhiway in India, I provisioned and managed a production multi-cloud blockchain infrastructure on
-                    <code class="tech-tag">AWS and GCP (Compute Engine)</code> utilizing Terraform for consistent
-                    environment replication.
+                    At Dhiway in India, I provisioned and managed production cloud infrastructure on <code
+                        class=tech-tag>AWS</code> utilizing Terraform for consistent environment replication.
                 </p>
                 <p>
                     I also configured robust monitoring and telemetry for <code
-                        class="tech-tag">60+ distributed blockchain nodes</code> using Prometheus and Grafana to
-                    precisely track system performance and network latency across cloud boundaries.
-                </p>
+                        class=tech-tag>60+ distributed nodes</code> using Prometheus and Grafana to precisely track
+                    system performance and network latency.
             </div>
-
-            <div class="tech-panel">
-                <h3 class="tech-panel__title">
-                    Linux operations that kept an early platform running.
-                </h3>
-                <p>
-                    At Trustforum in France, I managed <code class="tech-tag">Linux</code> servers for an early-stage
-                    community platform. I automated routine maintenance tasks, log rotation, and system backups using
-                    <code class="tech-tag">Bash shell scripting</code>. The kind of work that is only noticed when it
-                    stops happening.
-                </p>
-            </div>
+            </p>
         </div>
-    </section>
+</div>
+</section>
 
-    <section class="tech-section">
-        <h2 class="tech-section__title">Technical Writing & Security Deep Dives</h2>
-        <div class="tech-section__body">
-            <div class="tech-panel">
-                <p>
-                    Most companies discover a security problem after it has
-                    already caused damage. A compromised environment, stolen
-                    credentials, a breach that nobody noticed for weeks.
-                </p>
-                <p class="editorial-callout">I strongly believe that security must be built into infrastructure from day
-                    one, not retrofitted after an incident.</p>
-                <p>
-                    Below is a deep-dive into a sophisticated supply-chain attack I recently reverse-engineered,
-                    highlighting exactly why securing deployment pipelines and container environments is an absolute
-                    baseline requirement for modern startups.
-                </p>
+<section class="tech-section">
+    <h2 class="tech-section__title">Technical Writing & Security Deep Dives</h2>
+    <div class="tech-section__body">
+        <div class="tech-panel">
+            <p>
+                Most companies discover a security problem after it has
+                already caused damage. A compromised environment, stolen
+                credentials, a breach that nobody noticed for weeks.
+            </p>
+            <p class="editorial-callout">I strongly believe that security must be built into infrastructure from day
+                one, not retrofitted after an incident.</p>
+            <p>
+                Below is a deep-dive into a sophisticated supply-chain attack I recently reverse-engineered,
+                highlighting exactly why securing deployment pipelines and container environments is an absolute
+                baseline requirement for modern startups.
+            </p>
 
-                {% set post = get_page(path="blog/fake-interview-vscode-malware-exploit.md") %}
-                {% if post %}
-                {% set image_path = "static" ~ post.extra.image %}
-                {% set resized = resize_image(path=image_path, width=400, height=300, op="fill") %}
-                <a href="{{ post.permalink }}" class="premium-blog-card">
-                    <div class="premium-blog-card__image-container">
-                        <img src="{{ resized.url }}" alt="{{ post.title }}" class="premium-blog-card__image"
-                            width="{{ resized.width }}" height="{{ resized.height }}" loading="lazy" />
-                        <div class="premium-blog-card__overlay"></div>
+            {% set post = get_page(path="blog/fake-interview-vscode-malware-exploit.md") %}
+            {% if post %}
+            {% set image_path = "static" ~ post.extra.image %}
+            {% set resized = resize_image(path=image_path, width=400, height=300, op="fill") %}
+            <a href="{{ post.permalink }}" class="premium-blog-card">
+                <div class="premium-blog-card__image-container">
+                    <img src="{{ resized.url }}" alt="{{ post.title }}" class="premium-blog-card__image"
+                        width="{{ resized.width }}" height="{{ resized.height }}" loading="lazy" />
+                    <div class="premium-blog-card__overlay"></div>
+                </div>
+                <div class="premium-blog-card__content">
+                    <div class="premium-blog-card__meta">
+                        <span class="premium-blog-card__tag">Malware Analysis</span>
+                        <span class="premium-blog-card__date">{{ post.date | date(format="%B %d, %Y") }}</span>
                     </div>
-                    <div class="premium-blog-card__content">
-                        <div class="premium-blog-card__meta">
-                            <span class="premium-blog-card__tag">Malware Analysis</span>
-                            <span class="premium-blog-card__date">{{ post.date | date(format="%B %d, %Y") }}</span>
-                        </div>
-                        <h3 class="premium-blog-card__title">{{ post.title }}</h3>
-                        <p class="premium-blog-card__desc">{{ post.description | truncate(length=140) }}</p>
-                        <span class="premium-blog-card__readmore">Read full research &rarr;</span>
-                    </div>
-                </a>
-                {% endif %}
-            </div>
+                    <h3 class="premium-blog-card__title">{{ post.title }}</h3>
+                    <p class="premium-blog-card__desc">{{ post.description | truncate(length=140) }}</p>
+                    <span class="premium-blog-card__readmore">Read full research &rarr;</span>
+                </div>
+            </a>
+            {% endif %}
         </div>
-    </section>
+    </div>
+</section>
 
-
-
-    <section class="tech-section">
-        <h2 class="tech-section__title">Let's Talk</h2>
-        <div class="tech-section__body tech-section__body--grid">
-            <div class="tech-panel">
-                <p>I am available for remote DevOps Engineering, Cloud Engineering, and Site Reliability Engineering
-                    (SRE) work.</p>
-                <p>
-                    While taking on new work I am also deepening my Kubernetes
-                    expertise, building production systems, solving real
-                    operational problems.
-                </p>
-                <p>
-                    If you have infrastructure that needs someone to take
-                    ownership of it and deliver on-time, I am the right person
-                    to talk to.
-                </p>
-            </div>
+<section class="tech-section">
+    <h2 class="tech-section__title">Let's Talk</h2>
+    <div class="tech-section__body tech-section__body--grid">
+        <div class="tech-panel">
+            <p>I am available for remote DevOps Engineering and Cloud Engineering work.</p>
+            <p>
+                While taking on new work I am also deepening my Kubernetes
+                expertise, building production systems, solving real
+                operational problems.
+            </p>
+            <p>
+                If you have infrastructure that needs someone to take
+                ownership of it and deliver on-time, I am the right person
+                to talk to.
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 </div>
 
 {% endblock content %}
