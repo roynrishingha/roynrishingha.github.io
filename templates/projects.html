@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/css/projects.css" />
+{% endblock styles %}
+
+{% block content %}
+<div class="projects-container">
+    <header class="projects-header">
+        <h1 class="projects-title">Notable <span class="text-gradient">Projects</span></h1>
+        <p class="projects-subtitle">A collection of my open-source work, side projects, and infrastructure tools.</p>
+
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search" placeholder="Search projects..." autocomplete="off"
+                    aria-label="Search projects">
+            </div>
+            <div class="search-results" style="display: none;">
+                <ul class="search-results__items"></ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="projects-grid">
+        {% for page in section.pages %}
+        <a href="{{ page.permalink }}" class="project-card">
+            <div class="project-card__image-container">
+                {% if page.extra.image %}
+                {% set image_path = "static" ~ page.extra.image %}
+                {% set resized = resize_image(path=image_path, width=600, height=350, op="fill") %}
+                <img src="{{ resized.url }}" alt="{{ page.title }}" class="project-card__image" loading="lazy" />
+                {% endif %}
+                <div class="project-card__overlay"></div>
+            </div>
+            <div class="project-card__content">
+                <div class="project-card__header">
+                    <h2 class="project-card__title">{{ page.title }}</h2>
+                    {% if page.extra.languages %}
+                    <div class="project-langs">
+                        {% for lang in page.extra.languages %}
+                        <img src="/icons/{{ lang }}.svg" alt="{{ lang }}" title="{{ lang }}" class="lang-icon" width="22" height="22">
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <p class="project-card__desc">{{ page.description }}</p>
+                <div class="project-card__footer">
+                    <span class="project-card__readmore">View Project</span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script src="/js/search.js" defer></script>
+{% endblock scripts %}

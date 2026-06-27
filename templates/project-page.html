@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/css/projects.css" />
+{% endblock styles %}
+
+{% block content %}
+<article class="project-detail">
+    <a href="/projects" class="back-to-projects">&larr; Back to all projects</a>
+
+    <header class="project-detail__header">
+        <h1 class="project-detail__title">{{ page.title }}</h1>
+        <div class="project-detail__meta">
+            {% if page.extra.languages %}
+            <div class="project-detail__tech-stack">
+                <span class="tech-stack-label">Built with</span>
+                <div class="project-langs">
+                    {% for lang in page.extra.languages %}
+                    <img src="/icons/{{ lang }}.svg" alt="{{ lang }}" title="{{ lang }}" class="lang-icon" width="24" height="24">
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            {% if page.extra.github_url %}
+            <a href="{{ page.extra.github_url }}" target="_blank" rel="noopener noreferrer" class="project-detail__github">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                View on GitHub
+            </a>
+            {% endif %}
+        </div>
+    </header>
+
+    {% if page.extra.image %}
+        {% set image_path = "static" ~ page.extra.image %}
+        {% set resized = resize_image(path=image_path, width=1200, height=600, op="fill") %}
+        <img src="{{ resized.url }}" alt="{{ page.title }} cover image" class="project-detail__image" loading="lazy" />
+    {% endif %}
+
+    <div class="project-detail__content">
+        {{ page.content | safe }}
+    </div>
+
+    <nav class="project-navigation">
+        <div class="project-navigation__prev">
+            {% if page.lower %}
+            <span class="project-navigation__label">&larr; Previous Project</span>
+            <a href="{{ page.lower.permalink | safe }}">{{ page.lower.title }}</a>
+            {% endif %}
+        </div>
+        <div class="project-navigation__next">
+            {% if page.higher %}
+            <span class="project-navigation__label">Next Project &rarr;</span>
+            <a href="{{ page.higher.permalink | safe }}">{{ page.higher.title }}</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <footer class="project-detail__footer">
+        <a href="/projects" class="back-to-projects">&larr; Back to all projects</a>
+    </footer>
+</article>
+{% endblock content %}
